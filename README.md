@@ -1,2 +1,2 @@
-# nannerplanner
+# GigaPlanner
  Character Planner for Requiem
