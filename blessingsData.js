@@ -1,6 +1,6 @@
-const requiemBlessingsData = {
+const testBlessingsData = {
   id : 0,
-  name : "Requiem",
+  name : "Test",
   
   blessings : [
     "None",
@@ -18,67 +18,5 @@ const requiemBlessingsData = {
   ]
 };
 
-addBlessingsData(requiemBlessingsData);
+addBlessingsData(testBlessingsData);
 
-const requiemWithFozarsBlessingsData = {
-  id : 1,
-  name : "Requiem + Fozar's DB Patch",
-  
-  blessings : [
-    "None",
-    "Akatosh",
-    "Arkay",
-    "Auriel",
-    "Azura",
-    "Boethiah",
-    "Dibella",
-    "Julianos",
-    "Kynareth",
-    "Mara",
-    "Mephala",
-    "Nocturnal",
-    "Stendarr",
-    "Talos",
-    "Zenithar"
-  ]
-};
-
-addBlessingsData(requiemWithFozarsBlessingsData);
-
-const fTweaks14BlessingsData = {
-  id : 2,
-  name : "FTweaks 1.4 and up",
-  
-  blessings : [
-    "None",
-    "Akatosh",
-    "Arkay",
-    "Auriel",
-    "Azura",
-    "Boethiah",
-    "Clavicus Vile",
-    "Dibella",
-    "Hermaeus Mora",
-    "Hircine",
-    "Julianos",
-    "Jyggalag",
-    "Kynareth",
-    "Malacath",
-    "Mara",
-    "Mehrunes Dagon",
-    "Mephala",
-    "Meridia",
-    "Molag Bal",
-    "Namira",
-    "Nocturnal",
-    "Peryite",
-    "Sanguine",
-    "Sheogorath",
-    "Stendarr",
-    "Talos",
-    "Vaermina",
-    "Zenithar"
-  ]
-};
-
-addBlessingsData(fTweaks14BlessingsData);

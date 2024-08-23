@@ -32,7 +32,7 @@ $(document).ready(function(){
   
   attachHandlers();
   
-  $("#mainTitle").html("Requiem Character Planner");
+  $("#mainTitle").html("Test Character Planner");
   $("#mainSkillDisplayDiv").fadeIn(500);
 });
 

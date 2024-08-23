@@ -1,5 +1,5 @@
-const requiem402GameMechanicsData = {
-  name: "Requiem 4.0 and Up",
+const testGameMechanicsData = {
+  name: "Test",
   id : 0,
   
   initialPerks: 3,
@@ -96,17 +96,5 @@ const requiem402GameMechanicsData = {
   }
 };
 
-addGameMechanicsData(requiem402GameMechanicsData);
+addGameMechanicsData(testGameMechanicsData);
 
-const fTweaks17GameMechanicsData = deepmerge({},requiem402GameMechanicsData);
-
-fTweaks17GameMechanicsData.id = 1;
-fTweaks17GameMechanicsData.name = "3/B/FTweaks";
-fTweaks17GameMechanicsData.oghmaData = {perksGiven: 5, hmsGiven :[100,100,100]};
-fTweaks17GameMechanicsData.leveling = {
-  base:150,
-  mult:23,
-  hmsGiven : [5,5,5]
-};
-
-addGameMechanicsData(fTweaks17GameMechanicsData);
