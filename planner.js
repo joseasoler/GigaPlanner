@@ -27,7 +27,10 @@ var characterData = {
   earnedAttributes: 0,
   spentPerks: 0, //The number of perks actually taken
   standingStone : 0,
-  blessing : 0
+  blessing : 0,
+  earnedClassPoints : 1,
+  spentClassPoints: 0,
+  traitPoints : 0
 };
 
 //Returns the preset number given in the URL.
@@ -71,7 +74,7 @@ function initCharacterData(){
     characterData.race = 0;
     characterData.hmsIncreases = [0,0,0];
     characterData.skillLevels = [];
-    for(let i = 0; i < 18; i++){
+    for(let i = 0; i < 20; i++){
       characterData.skillLevels.push(curRaceList.races[0].startingSkills[i]);
     }
     characterData.perksTaken = [];
@@ -89,6 +92,8 @@ function initCharacterData(){
     characterData.standingStone = 0;
     characterData.blessing = 0;
     characterData.earnedAttributes = 0;
+    characterData.earnedClassPoints = 1;
+    characterData.spentClassPoints = 0;
   }
   
   return gotFromURL;
@@ -100,23 +105,29 @@ function initCharacterData(){
 function updateDerivedAttributes(){
   let derAttrData = curGameMechanics.derivedAttributes;
   let baseAttributes = calcBaseAttributes();
-  for(let i = 0; i < derAttrData.attribute.length; i++){
+    for(let i = 0; i < derAttrData.attribute.length; i++){
     let weightedSum = baseAttributes[0] * derAttrData.weight_health[i];
     weightedSum += baseAttributes[1] * derAttrData.weight_magicka[i];
     weightedSum += baseAttributes[2] * derAttrData.weight_stamina[i];
-    
+
     let bonus = 0;
+
+   for(let j = 0; j < 10; j++){
+    if(characterHasPerk(derAttrData.perk[i,j])){
+	bonus = (derAttrData.perk_bonus[i,j])};
+
     if(weightedSum > derAttrData.threshold[i]){
-      bonus = derAttrData.prefactor[i] * Math.sqrt(weightedSum - derAttrData.threshold[i]);
+      bonus += derAttrData.prefactor[i] * Math.sqrt(weightedSum - derAttrData.threshold[i]);
       bonus = Math.floor(bonus);
+}
+
     }
-    
+
     bonus = "+" + bonus;
-    
+
     if(derAttrData.isPercent[i]){
-      bonus += "%";
+     bonus += "%";
     }
-    
     $(`#derivedAttributeValue${i}`).html(bonus);
   }
 }
@@ -130,14 +141,13 @@ function calcBaseAttributes(){
   }
   return theAnswer;
 }
-
 //Remove all perks from the skill and set the skill level back
 //to the starting value for the race. Set skillNum to -1 to do this
 //for ALL skills. Then update the character level and earned perks.
 function resetSkill(skillNum){
   let removeAll = skillNum == -1;
   if(removeAll){
-    for(let i = 0; i < 18; i++){
+    for(let i = 0; i < 20; i++){
       characterData.skillLevels[i] = 
         curRaceList.races[characterData.race].startingSkills[i];
     }
@@ -167,7 +177,7 @@ function changeRace(newRaceNum,respectOld = true){
   //bring them up to the new level. If a skill is at the staring
   //value for the old race, set it to the starting value for the
   //new race.
-  for(let i = 0; i < 18; i++){
+  for(let i = 0; i < 20; i++){
     if(!respectOld || (characterData.skillLevels[i] < newRace.startingSkills[i] || 
        characterData.skillLevels[i] == oldRace.startingSkills[i])){
       characterData.skillLevels[i] = newRace.startingSkills[i];
@@ -218,7 +228,6 @@ function removeInvalidPerks(skillNum){
 //perks in order to take this one. (i.e. one of the pre-reqs has an OR condition in
 //it's pre-reqs)
 function forceTakePerk(perkNum){
-  
   let thePerk = curPerkList.perks[perkNum];
   let hasPerk = characterHasPerk(perkNum);
   let meetsSkillReq = thePerk.skillReq <= characterData.skillLevels[thePerk.skill]
@@ -264,7 +273,7 @@ function forceTakePerk(perkNum){
   }
   
   return tookPerk;
-}
+  }
 
 //Returns true if in the course of force taking the given perk
 //we would need to make a choice about which of the OR pre-reqs
@@ -345,14 +354,22 @@ function hasPerkPreReqs(perkNum){
 
 //Take the perk. Assumes that all the prerequisites are satisfied.
 function actuallyTakePerk(perkNum){
-  characterData.spentPerks++;
-  characterData.perksTaken[perkNum] = true;
+	characterData.perksTaken[perkNum] = true;
+	if ([perkNum] < 228){
+  		characterData.spentPerks++;
+  	}else {characterData.spentClassPoints++;
+  }
+ updateDerivedAttributes()
 }
 
 //Remove the perk. Assumes that the perk has actually been taken.
 function actuallyRemovePerk(perkNum){
   characterData.perksTaken[perkNum] = false;
+  if ([perkNum] < 228){
   characterData.spentPerks--;
+  	}else {characterData.spentClassPoints--;
+	}
+ updateDerivedAttributes()
 }
 
 //Recursively remove the given perk and all of the perks that require
@@ -471,13 +488,29 @@ function calcFreePerks(){
   return characterData.earnedPerks - characterData.spentPerks;
 }
 
+//Calculate how many sub-class points the character has left.
+function calcClassPoints(){
+ return characterData.earnedClassPoints - characterData.spentClassPoints;
+}
+
+//Calculate how many trait points the character has.
+function calcTraitPoints(){
+let answer = 0;
+for(let i = 278; i < curPerkList.perks.length; i++){
+let n = (curPerkList.perks[i].skillReq);
+    if (characterHasPerk(i)){
+   	answer += n;}
+	}
+      return answer;
+ }
+
 //Get what level the player should be based on the skill levels
 function calcLevel(){
   
   let totalXP = calcTotalXP();
   
   //Don't need to check i=0 because the value there should always be 0
-  for(let i = 1; i < curGameMechanics.xpTable.length; i++){
+  for(let i = 1; i < 99; i++){
     if(totalXP < curGameMechanics.xpTable[i]) return i;
   }
   // How would we ever get here???
@@ -486,17 +519,21 @@ function calcLevel(){
 
 //Calculate how much character XP has been earned based on skill levels
 function calcTotalXP(){
-  let answer = 0;
-  for(let i = 0; i < 18; i++){
-    let baseSkill = curRaceList.races[characterData.race].startingSkills[i];
-    let currentSkill = characterData.skillLevels[i];
-    if(baseSkill == currentSkill) continue;
-    
-    let start = baseSkill + 1;
-    let n = (currentSkill - start) + 1;
-    
-    //use formula for sum of consective integers
-    answer += (n/2) * (start + currentSkill);
+let answer = 0;
+for(let i = 0; i < 18; i++){
+	let baseSkill = curRaceList.races[characterData.race].startingSkills[i];
+	let currentSkill = characterData.skillLevels[i];
+	
+	if (currentSkill <= 25) {
+		n = currentSkill - baseSkill;
+	} else if (currentSkill <= 50) {
+		n = 25 + (currentSkill - 25) * 2 - baseSkill;
+	} else if (currentSkill <= 75) {
+		n = 75 + (currentSkill - 50) * 3 - baseSkill; 
+	} else if (currentSkill <= 100) {
+		n = 150 + (currentSkill - 75) * 4 - baseSkill;
+	}
+    answer += (n);
   }
   return answer;
 }
@@ -520,7 +557,7 @@ function generateBuildCode(){
   code += String.fromCodePoint(characterData.hmsIncreases[0]);
   code += String.fromCodePoint(characterData.hmsIncreases[1]);
   code += String.fromCodePoint(characterData.hmsIncreases[2]);
-  for(let i = 0; i < 18; i++){
+  for(let i = 0; i < 20; i++){
     code += String.fromCodePoint(characterData.skillLevels[i]);
   }
   code += String.fromCodePoint(characterData.oghmaChoice << 4);
@@ -598,7 +635,7 @@ function buildCodeParserV1(buildCode){
   
   characterData.skillLevels = [];
   
-  for(let i = 0; i < 18; i++){
+  for(let i = 0; i < 20; i++){
     characterData.skillLevels.push(buildCode.charCodeAt(9+i));
   }
   
@@ -609,7 +646,7 @@ function buildCodeParserV1(buildCode){
   
   characterData.perksTaken = [];
   //this method will be kind of inefficient but EHHHHHHH
-  for(let i = 0; i < curPerkList.perks.length; i++){
+  for(let i = 0; i < 20; i++){
     let index = 31 + Math.floor(i/8);
     let offset = 7 - (i % 8);
     let hasPerk = (buildCode.charCodeAt(index) & (1 << offset)) > 0;
@@ -671,7 +708,9 @@ function calcCharacterLevelAndResults(){
   characterData.level = newLevel;
   characterData.earnedAttributes = newLevel - 1;
   characterData.earnedPerks = curGameMechanics.initialPerks + (newLevel-1);
-  
+   if(newLevel<30){
+	characterData.earnedClassPoints = 1 + Math.floor(newLevel/5);
+   }else {characterData.earnedClassPoints = 7;}
   if(characterData.oghmaChoice > 0){
     characterData.earnedPerks += curGameMechanics.oghmaData.perksGiven;
   }

@@ -24,7 +24,9 @@ skillNames : [
   "Smithing",     // 14
   "Sneak",        // 15
   "Speech",       // 16
-  "Two-Handed"    // 17
+  "Two-Handed",   // 17
+  "Destiny",   	  // 18
+  "Traits",       // 19
 ],
 perks : [
   /*
@@ -944,8 +946,227 @@ perks : [
   {name : "Mighty Strike", skill : 17, skillReq : 100,
    xPos : 205/4, yPos : 10/4, preReqs : [226], nextPerk: -1,
    description : "You can kill almost any foe with a single strike of your two-hander, as your blows even fell giants with ease. [damage x 1.25]"},
-   
-]
+   //228	
+  {name : "Destiny", skill : 18, skillReq : 1,
+   xPos : 200/4, yPos : 375/4, preReqs : [], nextPerk: -1,
+   description : "Increases Health, Stamina and Magicka regeneration by 5%"},  
+   //229	
+  {name : "Focus", skill : 18, skillReq : 5,
+   xPos : 100/4, yPos : 325/4, preReqs : [228], nextPerk: -1,
+   description : "Your Magicka Regeneration is increased by 25%"},
+   //230	
+  {name : "Constitution", skill : 18, skillReq : 5,
+   xPos : 200/4, yPos : 325/4, preReqs : [228], nextPerk: -1,
+   description : "Your Health Regeneration is increased by 25%"},
+   //231	
+  {name : "Endurance", skill : 18, skillReq : 5,
+   xPos : 300/4, yPos : 325/4, preReqs : [228], nextPerk: -1,
+   description : "Your Stamina Regeneration is increased by 25%"},
+   //232
+  {name : "Mage", skill : 18, skillReq : 10,
+   xPos : 100/4, yPos : 275/4, preReqs : [229], nextPerk: -1,
+   description : "Your spells and enchantments cost 10% less Magicka"},
+   //233
+  {name : "Warrior", skill : 18, skillReq : 10,
+   xPos : 200/4, yPos : 275/4, preReqs : [230], nextPerk: -1,
+   description : "You deal 10% more weapon damage"},  
+   //234
+  {name : "Thief", skill : 18, skillReq : 10,
+   xPos : 300/4, yPos : 275/4, preReqs : [231], nextPerk: -1,
+   description : "You move 10% faster"},  
+   //235	
+  {name : "Fortification", skill : 18, skillReq : 15,
+   xPos : 50/4, yPos : 225/4, preReqs : [232], nextPerk: -1,
+   description : "Your Health, Magicka and Stamina are increased by 25"},
+   //236	
+  {name : "Magicka Surge", skill : 18, skillReq : 15,
+   xPos : 100/4, yPos : 200/4, preReqs : [232], nextPerk: -1,
+   description : "Your Magicka Regeneration is increased by 100% when your Magicka falls below 50%"},
+    //237	
+  {name : "Magicka Shell", skill : 18, skillReq : 15,
+   xPos : 150/4, yPos : 225/4, preReqs : [-232,-233], nextPerk: -1,
+   description : "Your magic resistance is increased by 15%"},	
+    //238	
+  {name : "Iron Skin", skill : 18, skillReq : 15,
+   xPos : 200/4, yPos : 200/4, preReqs : [233], nextPerk: -1,
+   description : "Every 10 seconds, taking damage increases your Armor Rating by 150 for 6 seconds"},
+   //239	
+  {name : "Battle Spirit", skill : 18, skillReq : 15,
+   xPos : 250/4, yPos : 225/4, preReqs : [-233,-234], nextPerk: -1,
+   description : "Power attacks increase your attack damage by 20% for 6 seconds"},
+   //240	
+  {name : "Adrenaline", skill : 18, skillReq : 15,
+   xPos : 300/4, yPos : 200/4, preReqs : [234], nextPerk: -1,
+   description : "Your Stamina Regeneration is increased by 100% when your Stamina falls below 50%"},
+  //241	
+  {name : "Swiftness", skill : 18, skillReq : 15,
+   xPos : 350/4, yPos : 225/4, preReqs : [234], nextPerk: -1,
+   description : "Every 10 seconds, taking damage increases your movement speed by 20% for 6 seconds"},   
+   //242	
+  {name : "Agent", skill : 18, skillReq : 20,
+   xPos : 50/4, yPos : 150/4, preReqs : [235], nextPerk: -1,
+   description : "Enemy attacks against you slows them by 25% for 5 seconds"},
+   //243	
+  {name : "Sorcerer", skill : 18, skillReq : 20,
+   xPos : 100/4, yPos : 150/4, preReqs : [236], nextPerk: -1,
+   description : "You take 15% less damage while casting spells"},
+    //244	
+  {name : "Spellsword", skill : 18, skillReq : 20,
+   xPos : 150/4, yPos : 150/4, preReqs : [237], nextPerk: -1,
+   description : "Your move 15% faster while casting spells"},
+    //245	
+  {name : "Knight", skill : 18, skillReq : 20,
+   xPos : 200/4, yPos : 150/4, preReqs : [238], nextPerk: -1,
+   description : "You take 15% less damage while power attacking, drawing a bow, or blocking"},
+   //246	
+  {name : "Acrobat", skill : 18, skillReq : 20,
+   xPos : 250/4, yPos : 150/4, preReqs : [239], nextPerk: -1,
+   description : "Your attacks are 15% faster"},
+   //247	
+  {name : "Scout", skill : 18, skillReq : 20,
+   xPos : 300/4, yPos : 150/4, preReqs : [240], nextPerk: -1,
+   description : "Your power attacks cost 15% less Stamina"},
+  //248	
+  {name : "Spellblade", skill : 18, skillReq : 20,
+   xPos : 350/4, yPos : 150/4, preReqs : [241], nextPerk: -1,
+   description : "Attacks with weapons have a chance to interupt casting enemies"},   
+   //249	
+  {name : "Leadership", skill : 18, skillReq : 25,
+   xPos : 25/4, yPos : 100/4, preReqs : [242], nextPerk: -1,
+   description : "Nearby allies move 25% faster during combat"},
+   //250	
+  {name : "Hard Skin", skill : 18, skillReq : 25,
+   xPos : 50/4, yPos : 75/4, preReqs : [242], nextPerk: -1,
+   description : "Your Armor Rating is increased by 100"},
+   //251	
+  {name : "Healing", skill : 18, skillReq : 25,
+   xPos : 75/4, yPos : 100/4, preReqs : [-242,-243], nextPerk: -1,
+   description : "You heal yourself and nearby allies for 25 Health every 10 seconds"},
+   //252	
+  {name : "Absorbtion", skill : 18, skillReq : 25,
+   xPos : 100/4, yPos : 75/4, preReqs : [243], nextPerk: -1,
+   description : "You have a 15% chance to absorb the Magicka from incoming spells"},
+    //253	
+  {name : "Conjuring", skill : 18, skillReq : 25,
+   xPos : 125/4, yPos : 100/4, preReqs : [-243,-244], nextPerk: -1,
+   description : "Nearby summoned or reanimated allies have 100 increased Health, Armor Rating and reflect 100% physical damage"},
+    //254	
+  {name : "Corrosive", skill : 18, skillReq : 25,
+   xPos : 150/4, yPos : 75/4, preReqs : [237], nextPerk: -1,
+   description : "Power attacks reduces enemies magic resistance by 15% and Armor Rating by 75 for 10 seconds"},
+    //255	
+  {name : "Leeching", skill : 18, skillReq : 25,
+   xPos : 175/4, yPos : 100/4, preReqs : [-244,-245], nextPerk: -1,
+   description : "You absorb 15 Health over 3 seconds from enemies attacking you once every 10 seconds for each enemy. While below 25% Health, absorbed Health is doubled"},
+    //256	
+  {name : "Deflection", skill : 18, skillReq : 25,
+   xPos : 200/4, yPos : 75/4, preReqs : [245], nextPerk: -1,
+   description : "While blocking, attacks against you reduce their attack speed by 25% for 6 seconds"},
+    //257	
+  {name : "Overwhelming", skill : 18, skillReq : 25,
+   xPos : 225/4, yPos : 100/4, preReqs : [-245,-246], nextPerk: -1,
+   description : "Close enemies have 100 reduced Armor Rating"},
+   //258	
+  {name : "Smash", skill : 18, skillReq : 25,
+   xPos : 250/4, yPos : 75/4, preReqs : [246], nextPerk: -1,
+   description : "Power attacks deal 25% more damage"},
+   //259	
+  {name : "Trickster", skill : 18, skillReq : 25,
+   xPos : 275/4, yPos : 100/4, preReqs : [-246,-247], nextPerk: -1,
+   description : "You have a small chance to evade enemy weapon attacks"},
+   //260	
+  {name : "Swift Shadow", skill : 18, skillReq : 25,
+   xPos : 300/4, yPos : 75/4, preReqs : [247], nextPerk: -1,
+   description : "You move 20% faster while sneaking"},
+   //261	
+  {name : "Viper's Blade", skill : 18, skillReq : 25,
+   xPos : 325/4, yPos : 100/4, preReqs : [-247,-248], nextPerk: -1,
+   description : "Power attacks reduces enemies poison resistance by 50% for 10 seconds"},
+  //261	
+  {name : "Evasion", skill : 18, skillReq : 25,
+   xPos : 350/4, yPos : 75/4, preReqs : [248], nextPerk: -1,
+   description : "You have a small chance to evade spells"},  
+  //262	
+  {name : "Silent Blade", skill : 18, skillReq : 25,
+   xPos : 375/4, yPos : 100/4, preReqs : [248], nextPerk: -1,
+   description : "Your attacks deal 25 damage to Magicka"},    
+   //263	
+  {name : "Bard", skill : 18, skillReq : 30,
+   xPos : 25/4, yPos : 50/4, preReqs : [249], nextPerk: -1,
+   description : "Nearby allies deal 25% more physical damage and have 25% magic resistance during combat"},
+   //264	
+  {name : "Shaman", skill : 18, skillReq : 30,
+   xPos : 50/4, yPos : 25/4, preReqs : [250], nextPerk: -1,
+   description : "You deal 25% more damage against impaired enemies"},
+   //265	
+  {name : "Templar", skill : 18, skillReq : 30,
+   xPos : 75/4, yPos : 50/4, preReqs : [251], nextPerk: -1,
+   description : "Every 90 seconds, falling below 25% Health, you are immune to any damage for 6 seconds and heal yourself afterwards for 100 Health"},
+   //266	
+  {name : "Archmage", skill : 18, skillReq : 30,
+   xPos : 100/4, yPos : 25/4, preReqs : [252], nextPerk: -1,
+   description : "Your Spells are 25% stronger or last 50% longer"},
+    //267	
+  {name : "Summoner", skill : 18, skillReq : 30,
+   xPos : 125/4, yPos : 50/4, preReqs : [253], nextPerk: -1,
+   description : "You can summon or reanimate one additional minion"},
+    //268	
+  {name : "Battlemage", skill : 18, skillReq : 30,
+   xPos : 150/4, yPos : 25/4, preReqs : [254], nextPerk: -1,
+   description : "Power attacks cast the non concentration targeted spell in your left hand for 50% of its cost"},
+    //269	
+  {name : "Blood Knight", skill : 18, skillReq : 30,
+   xPos : 175/4, yPos : 50/4, preReqs : [255], nextPerk: -1,
+   description : "While above 50% Health you deal 25% more weapon damage and while below 50% Health, you take 25% less magic damage"},
+    //270	
+  {name : "General", skill : 18, skillReq : 30,
+   xPos : 200/4, yPos : 25/4, preReqs : [256], nextPerk: -1,
+   description : "Your weapon damage and Armor Rating is increased by 25%"},
+    //271	
+  {name : "Monk", skill : 18, skillReq : 30,
+   xPos : 225/4, yPos : 50/4, preReqs : [257], nextPerk: -1,
+   description : "Your attacks deal 50 bleeding damage over 5 seconds"},
+   //272	
+  {name : "Berserker", skill : 18, skillReq : 30,
+   xPos : 250/4, yPos : 25/4, preReqs : [258], nextPerk: -1,
+   description : "You take 25% less damage during power attacking and power attacks increase your attack speed by 20% for 6 seconds"},
+   //273	
+  {name : "Saboteur", skill : 18, skillReq : 30,
+   xPos : 275/4, yPos : 50/4, preReqs : [259], nextPerk: -1,
+   description : "Your attacks have a chance to stagger enemies. You deal 25% more damage against staggered enemies"},
+   //274	
+  {name : "Assassin", skill : 18, skillReq : 30,
+   xPos : 300/4, yPos : 25/4, preReqs : [260], nextPerk: -1,
+   description : "Every 10 seconds, your next attack deals 100% more damage"},
+   //275	
+  {name : "Rogue", skill : 18, skillReq : 30,
+   xPos : 325/4, yPos : 50/4, preReqs : [261], nextPerk: -1,
+   description : "Your attacks deal 50 poison damage over 10 seconds"},
+  //276
+  {name : "Stalker", skill : 18, skillReq : 30,
+   xPos : 350/4, yPos : 25/4, preReqs : [262], nextPerk: -1,
+   description : "Your attacks slows enemies by 50% for 3 seconds"},  
+  //277
+  {name : "Nightblade", skill : 18, skillReq : 30,
+   xPos : 375/4, yPos : 50/4, preReqs : [263], nextPerk: -1,
+   description : "Against enemies that are out of Magicka, your attacks deal 25% more damage and have a chance to dispel magic"},  	
+  //278
+  {name : "Plus 1", skill : 19, skillReq : 1,
+   xPos : 375/4, yPos : 50/4, preReqs : [], nextPerk: -1,
+   description : "test"},  	
+  //279
+  {name : "Plus 6", skill : 19, skillReq : 10,
+   xPos : 200/4, yPos : 50/4, preReqs : [], nextPerk: -1,
+   description : "test6"}, 
+  //280
+  {name : "Minus 1", skill : 19, skillReq : -1,
+   xPos : 375/4, yPos : 150/4, preReqs : [], nextPerk: -1,
+   description : "test -1"}, 
+  //281
+  {name : "Minus 6", skill : 19, skillReq : -6,
+   xPos : 200/4, yPos : 150/4, preReqs : [], nextPerk: -1,
+   description : "test -6"}, 
+ ]
 };
 
 addPerkData(testPerkData);

@@ -27,7 +27,10 @@ const testRaceData = {
                         5,       //Smithing
                        10,       //Sneak
                         5,       //Speech
-                        5]       //Two-handed
+                        5,       //Two-handed
+                        1,       //Destiny
+                        1,       //Positives
+                        1]       //Negatives
     },
     {
      name: "Breton", 
@@ -53,7 +56,8 @@ const testRaceData = {
                         5,       //Smithing
                         5,       //Sneak
                        10,       //Speech
-                        5]       //Two-handed
+                        5,       //Two-handed
+                        1]       //Destiny
     },
     {
      name: "Dark Elf", 
@@ -79,7 +83,8 @@ const testRaceData = {
                         5,       //Smithing
                        10,       //Sneak
                         5,       //Speech
-                        5]       //Two-handed
+                        5,       //Two-handed
+                        1]       //Destiny
     },
     {
      name: "High Elf", 
@@ -105,7 +110,8 @@ const testRaceData = {
                         5,       //Smithing
                         5,       //Sneak
                         5,       //Speech
-                        5]       //Two-handed
+                        5,       //Two-handed
+                        1]       //Destiny
     },
     {
      name: "Imperial", 
@@ -131,7 +137,8 @@ const testRaceData = {
                         5,       //Smithing
                         5,       //Sneak
                        15,       //Speech
-                        5]       //Two-handed
+                        5,       //Two-handed
+                        1]       //Destiny
     },
     {
      name: "Khajiit", 
@@ -157,7 +164,8 @@ const testRaceData = {
                         5,       //Smithing
                        20,       //Sneak
                         5,       //Speech
-                        5]       //Two-handed
+                        5,       //Two-handed
+                        1]       //Destiny
     },
     {
      name: "Nord", 
@@ -183,7 +191,8 @@ const testRaceData = {
                        15,       //Smithing
                         5,       //Sneak
                         5,       //Speech
-                       15]       //Two-handed
+                       15,       //Two-handed
+                        1]       //Destiny
     },
     {
      name: "Orc", 
@@ -209,7 +218,8 @@ const testRaceData = {
                        15,       //Smithing
                         5,       //Sneak
                         5,       //Speech
-                       10]       //Two-handed
+                       10,       //Two-handed
+                        1]       //Destiny
     },
     {
      name: "Redguard", 
@@ -235,7 +245,8 @@ const testRaceData = {
                        10,       //Smithing
                         5,       //Sneak
                         5,       //Speech
-                        5]       //Two-handed
+                        5,       //Two-handed
+                        1]       //Destiny
     },
     {
      name: "Wood Elf", 
@@ -261,7 +272,8 @@ const testRaceData = {
                         5,       //Smithing
                        10,       //Sneak
                         5,       //Speech
-                        5]       //Two-handed
+                        5,       //Two-handed
+                        1]       //Destiny
     }
   ]
 };

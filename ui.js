@@ -62,7 +62,6 @@ function createDerivedAttributesTable() {
     theRow += "0</div></div>";
     theTable.append(theRow);
   }
-  
 }
 
 //Attach all the event handlers to the main UI
@@ -248,7 +247,7 @@ function changePerkList(listNum){
   //Just reset all of the selected perks.
   characterData.spentPerks = 0;
   characterData.perksTaken = [];
-  for(let i = 0; i < curPerkList.perks.length; i++){
+  for(let i = 0; i < 20; i++){
     characterData.perksTaken.push(false);
   }
   
@@ -387,6 +386,21 @@ function updateLevelAndFreePerksDisplay(){
   let freePerks = calcFreePerks();
   theDiv.html(`Level ${characterData.level}, Free Perks: ${freePerks}`);
   if(freePerks < 0){
+    theDiv.removeClass("whiteText");
+    theDiv.addClass("redText");
+  }
+  else{
+    theDiv.removeClass("redText");
+    theDiv.addClass("whiteText");
+  }
+}
+
+function updateClassAndTraitDisplay(){
+  let theDiv = $("#freeClassPointDiv");
+  let freeClass = calcClassPoints();
+  let traitPoints = calcTraitPoints();
+  theDiv.html(`Free Class Points: ${freeClass}, Trait Points: ${traitPoints}`);
+  if(freeClass < 0 || traitPoints < 0){
     theDiv.removeClass("whiteText");
     theDiv.addClass("redText");
   }
@@ -585,7 +599,7 @@ function updateCircleAndLineColors(){
 
 function drawMiniSkillTrees() {
   
-  for(let i = 1; i <= 18; i++){
+  for(let i = 1; i <= 21; i++){
     $(`#skill${i}SVG`).html("")
   }
   
@@ -630,7 +644,7 @@ function drawMiniSkillTrees() {
     }
   }
  
-  for(let i = 1; i <= 18; i++){
+  for(let i = 1; i <= 21; i++){
     $(`#skill${i}Div`).html($(`#skill${i}Div`).html())
   }
   
@@ -656,13 +670,13 @@ function miniPerkHoverEnter(event){
 }
 
 function updateSkillNames() {
-  for(let i = 0; i < 18; i++){
+  for(let i = 0; i < 20; i++){
     $("#skill" + (i+1) + "Name").html(curPerkList.skillNames[i]);
   }
 }
 
 function updateSkillLevelsDisplay(){
-  for(let i = 1; i <= 18; i++){
+  for(let i = 1; i <= 21; i++){
     $("#skill" + i + "Level").html(characterData.skillLevels[i-1]);
   }
   $("#activeSkillLevelInput").val(characterData.skillLevels[activeSkill]);
@@ -739,6 +753,7 @@ function updateCharacterLevelAndResults(){
   updateFreeAttributeChoicesDisplay();
   updateAttributeChoiceInputs();
   updateAttributeText();
+  updateClassAndTraitDisplay();
 }
 
 function updateAttributeChoiceInputs() {
@@ -778,7 +793,7 @@ function updateBuildCodeDisplay(){
   let buildCheck = validateBuild();
   if(buildCheck.valid){
     let code = generateBuildCode();
-    let buildLink = `https://banananaut.github.io/NannerPlanner/?p=${curPreset.id}&b=${code}`;
+    let buildLink = `https://multidyls.github.io/GigaPlanner/?p=${curPreset.id}&b=${code}`;
     $("#buildCodeText").val(buildLink);
   }
   else{

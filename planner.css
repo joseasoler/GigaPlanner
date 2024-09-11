@@ -17,6 +17,12 @@ h1 {
   font-size:20px;
 }
 
+#freeClassPointDiv {
+  text-align:center;
+  font-size:15px;
+  padding:5px;
+}
+
 .redText {
   color:red;
 }
@@ -74,8 +80,7 @@ h1 {
 
 #mainSkillDisplayDiv {
   margin:auto;
-  max-width:1400px;
-  min-width:1200px;
+  max-width:1500px;
   border: 1px solid black;
   display: flex;
   padding: 3px;
@@ -85,8 +90,7 @@ h1 {
 }
 
 #activeSkillDisplaySVG {
-  min-width:500px;
-  width:550px;
+  width:780px;
   height:550px;
   margin:auto;
   display:block;
@@ -99,7 +103,7 @@ h1 {
 #activeSkillDisplayDiv {
   float:left;
   width:40%;
-  min-width:400px;
+  min-width:760px;
   margin:5px;
   border-left: 2px solid black;
   border-right: 2px solid black;
@@ -111,13 +115,13 @@ h1 {
   border-spacing:3px;
   float:left;
   width:25%;
-  min-width:300px;
+  width:240px;
   height:0px;
 }
 
 #rightStatsPanelDiv {
   width:32%;
-  min-width:400px;
+  width:425px;
   padding:3px;
 }
 
@@ -163,9 +167,9 @@ svg > text, .unselectable {
 
 .subsectionTitle{
   text-align:center;
-  font-size:24px;
+  font-size:20px;
   margin-top:5px;
-  margin-bottom:5px;
+  margin-bottom:5px
 }
 
 .subsectionSubtitle{
@@ -211,7 +215,7 @@ svg > text, .unselectable {
 }
 
 #rulesTitle{
-  color:yellow;
+  color:white;
 }
 
 #presetCustomOptionsDiv{
@@ -270,8 +274,23 @@ svg > text, .unselectable {
 }
 
 #derivedAttributeTableDiv{
-  display:flex;
+  display:flex
   justify-content:center;
+  	height: 310px;
+	width: 100%;
+	column-count:2;
+	column-fill: auto;
+}
+
+#classTableDiv{
+  display: table-cell;
+  padding: 5px;
+  height: 20px;
+  border-style:solid;
+  border-width: 2px;
+  border-color:transparent;
+  width: 50%;
+  min-width: 80px;
 }
 
 #derivedAttributeTable{
@@ -284,15 +303,15 @@ svg > text, .unselectable {
 
 .derivedAttributeTableCellLabel{
   display:table-cell;
-  padding:5px 5px 5px 10px;
+  padding:5px 5px 5px 2px;
   font-size:16px;
   text-align:left;
 }
 
 .derivedAttributeTableCellValue{
   display:table-cell;
-  padding:5px 5px 5px 10px;
-  font-size:16px;
+  padding:5px 5px 5px 5px;
+  font-size:14px;
   text-align:right;
 }
 
