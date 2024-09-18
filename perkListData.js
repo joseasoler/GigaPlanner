@@ -26,7 +26,7 @@ skillNames : [
   "Alteration",   // 16
   "Enchanting",   // 17
   "Destiny",   	  // 18
-  "Benefits",	  //19
+  "Benefits",	  // 19
   "Detriments",   // 20
 ],
 perks : [
@@ -1359,6 +1359,488 @@ perks : [
   {name : "Artifact Enchanter", skill : 17, skillReq : 100,
    xPos : 258/4, yPos : 35/4, preReqs : [329], nextPerk: -1,
    description : "With great skill and dedication, you get a chance to enchant an item with extraordinary strength. (Enchant one item with twice the strength, can place three enchantments with 50% strength each)"},
+   
+   
+   //331	
+  {name : "Destiny", skill : 18, skillReq : 1,
+   xPos : 200/4, yPos : 375/4, preReqs : [], nextPerk: -1,
+   description : "Increases carry weight by 25."},  
+   //332	
+  {name : "Focus", skill : 18, skillReq : 5,
+   xPos : 100/4, yPos : 325/4, preReqs : [331], nextPerk: -1,
+   description : "Your Magicka Regeneration is increased by 50%"},
+   //333	
+  {name : "Constitution", skill : 18, skillReq : 5,
+   xPos : 200/4, yPos : 325/4, preReqs : [331], nextPerk: -1,
+   description : "Your Health Regeneration is increased by 50%"},
+   //334	
+  {name : "Endurance", skill : 18, skillReq : 5,
+   xPos : 300/4, yPos : 325/4, preReqs : [331], nextPerk: -1,
+   description : "Your Stamina Regeneration is increased by 50%"},
+   //335
+  {name : "Mage", skill : 18, skillReq : 10,
+   xPos : 100/4, yPos : 275/4, preReqs : [332], nextPerk: -1,
+   description : "Your spells and enchantments cost 10% less Magicka"},
+   //336
+  {name : "Warrior", skill : 18, skillReq : 10,
+   xPos : 200/4, yPos : 275/4, preReqs : [333], nextPerk: -1,
+   description : "You deal 10% more weapon damage"},  
+   //337
+  {name : "Thief", skill : 18, skillReq : 10,
+   xPos : 300/4, yPos : 275/4, preReqs : [334], nextPerk: -1,
+   description : "You are harder to detect"},  
+   //338	
+  {name : "Fortification", skill : 18, skillReq : 15,
+   xPos : 50/4, yPos : 225/4, preReqs : [335], nextPerk: -1,
+   description : "Your Health, Magicka and Stamina are increased by 25"},
+   //339	
+  {name : "Magicka Surge", skill : 18, skillReq : 15,
+   xPos : 100/4, yPos : 200/4, preReqs : [335], nextPerk: -1,
+   description : "Your Magicka Regeneration is increased by 100% when your Magicka falls below 50%"},
+    //340	
+  {name : "Magicka Shell", skill : 18, skillReq : 15,
+   xPos : 150/4, yPos : 225/4, preReqs : [-335,-336], nextPerk: -1,
+   description : "Your magic resistance is increased by 15%"},	
+    //341	
+  {name : "Iron Skin", skill : 18, skillReq : 15,
+   xPos : 200/4, yPos : 200/4, preReqs : [336], nextPerk: -1,
+   description : "Every 10 seconds, taking damage increases your Armor Rating by 150 for 6 seconds"},
+   //342	
+  {name : "Battle Spirit", skill : 18, skillReq : 15,
+   xPos : 250/4, yPos : 225/4, preReqs : [-336,-337], nextPerk: -1,
+   description : "Power attacks increase your attack damage by 20% for 6 seconds"},
+   //343	
+  {name : "Adrenaline", skill : 18, skillReq : 15,
+   xPos : 300/4, yPos : 200/4, preReqs : [337], nextPerk: -1,
+   description : "Your Stamina Regeneration is increased by 100% when your Stamina falls below 50%"},
+  //344	
+  {name : "Swiftness", skill : 18, skillReq : 15,
+   xPos : 350/4, yPos : 225/4, preReqs : [337], nextPerk: -1,
+   description : "Every 10 seconds, taking damage increases your movement speed by 20% for 6 seconds"},   
+   //345	
+  {name : "Agent", skill : 18, skillReq : 20,
+   xPos : 50/4, yPos : 150/4, preReqs : [338], nextPerk: -1,
+   description : "Enemy attacks against you slows them by 25% for 5 seconds"},
+   //346	
+  {name : "Sorcerer", skill : 18, skillReq : 20,
+   xPos : 100/4, yPos : 150/4, preReqs : [339], nextPerk: -1,
+   description : "You take 15% less damage while casting spells"},
+    //347	
+  {name : "Spellsword", skill : 18, skillReq : 20,
+   xPos : 150/4, yPos : 150/4, preReqs : [340], nextPerk: -1,
+   description : "You restore 15 magicka per weapon attack"},
+    //348	
+  {name : "Knight", skill : 18, skillReq : 20,
+   xPos : 200/4, yPos : 150/4, preReqs : [341], nextPerk: -1,
+   description : "You take 15% less damage while power attacking, drawing a bow, or blocking"},
+   //349	
+  {name : "Endurance", skill : 18, skillReq : 20,
+   xPos : 250/4, yPos : 150/4, preReqs : [342], nextPerk: -1,
+   description : "You regenerate stamina 100% faster"},
+   //350	
+  {name : "Scout", skill : 18, skillReq : 20,
+   xPos : 300/4, yPos : 150/4, preReqs : [343], nextPerk: -1,
+   description : "Your power attacks cost 15% less Stamina"},
+  //351	
+  {name : "Spellblade", skill : 18, skillReq : 20,
+   xPos : 350/4, yPos : 150/4, preReqs : [344], nextPerk: -1,
+   description : "Attacks with weapons have a 30% chance to interupt casting enemies"},   
+   //352	
+  {name : "Leadership", skill : 18, skillReq : 25,
+   xPos : 25/4, yPos : 100/4, preReqs : [345], nextPerk: -1,
+   description : "Nearby allies move 25% faster during combat"},
+   //353	
+  {name : "Hard Skin", skill : 18, skillReq : 25,
+   xPos : 50/4, yPos : 75/4, preReqs : [345], nextPerk: -1,
+   description : "Your Armor Rating is increased by 100"},
+   //354	
+  {name : "Healing<br>Presence", skill : 18, skillReq : 25,
+   xPos : 75/4, yPos : 100/4, preReqs : [-345,-346], nextPerk: -1,
+   description : "You heal yourself and nearby allies for 25 Health every 10 seconds"},
+   //355	
+  {name : "Absorbtion", skill : 18, skillReq : 25,
+   xPos : 100/4, yPos : 75/4, preReqs : [346], nextPerk: -1,
+   description : "You have a 15% chance to absorb the Magicka from incoming spells"},
+    //356	
+  {name : "Conjuring<br>Presence", skill : 18, skillReq : 25,
+   xPos : 125/4, yPos : 100/4, preReqs : [-346,-347], nextPerk: -1,
+   description : "Nearby summoned or reanimated allies have 50 increased Health,, 50 increases Armor Rating and reflect 15% physical damage"},
+    //357	
+  {name : "Corrosive<br>Weapon", skill : 18, skillReq : 25,
+   xPos : 150/4, yPos : 75/4, preReqs : [347], nextPerk: -1,
+   description : "Power attacks reduces enemies magic resistance by 15% and Armor Rating by 75 for 10 seconds"},
+    //358	
+  {name : "Leeching<br>Strikes", skill : 18, skillReq : 25,
+   xPos : 175/4, yPos : 100/4, preReqs : [-347,-348], nextPerk: -1,
+   description : "You absorb 15 Health over 3 seconds from enemies attacking you once every 10 seconds for each enemy. While below 25% Health, absorbed Health is doubled"},
+    //359	
+  {name : "Unyielding", skill : 18, skillReq : 25,
+   xPos : 200/4, yPos : 75/4, preReqs : [348], nextPerk: -1,
+   description : "While blocking, your health, stamina and magicka regeneration are increased by 25%"},
+    //360	
+  {name : "Overwhelming<br>Presence", skill : 18, skillReq : 25,
+   xPos : 225/4, yPos : 100/4, preReqs : [-348,-349], nextPerk: -1,
+   description : "Close enemies have 100 reduced Armor Rating"},
+   //361	
+  {name : "Smash", skill : 18, skillReq : 25,
+   xPos : 250/4, yPos : 75/4, preReqs : [349], nextPerk: -1,
+   description : "Power attacks deal 25% more damage"},
+   //362	
+  {name : "Trickster", skill : 18, skillReq : 25,
+   xPos : 275/4, yPos : 100/4, preReqs : [-349,-350], nextPerk: -1,
+   description : "You have a 10% chance to evade enemy weapon attacks"},
+   //363	
+  {name : "Swift Shadow", skill : 18, skillReq : 25,
+   xPos : 300/4, yPos : 75/4, preReqs : [350], nextPerk: -1,
+   description : "You move 20% faster while sneaking"},
+   //364	
+  {name : "Viper's Blade", skill : 18, skillReq : 25,
+   xPos : 325/4, yPos : 100/4, preReqs : [-350,-351], nextPerk: -1,
+   description : "Power attacks reduces enemies poison resistance by 50% for 10 seconds"},
+  //365
+  {name : "Evasion", skill : 18, skillReq : 25,
+   xPos : 350/4, yPos : 75/4, preReqs : [351], nextPerk: -1,
+   description : "You have a 25% chance to evade spells"},  
+  //366
+  {name : "Silent Blade", skill : 18, skillReq : 25,
+   xPos : 375/4, yPos : 100/4, preReqs : [351], nextPerk: -1,
+   description : "Your attacks deal 25 damage to Magicka"},    
+   //367	
+  {name : "Bard", skill : 18, skillReq : 30,
+   xPos : 25/4, yPos : 50/4, preReqs : [352], nextPerk: -1,
+   description : "Nearby allies deal 25% more physical damage and have 25% magic resistance during combat"},
+   //368	
+  {name : "Shaman", skill : 18, skillReq : 30,
+   xPos : 50/4, yPos : 25/4, preReqs : [353], nextPerk: -1,
+   description : "You deal 25% more damage against impaired enemies"},
+   //369	
+  {name : "Templar", skill : 18, skillReq : 30,
+   xPos : 75/4, yPos : 50/4, preReqs : [354], nextPerk: -1,
+   description : "Every 90 seconds, falling below 25% Health, you are immune to any damage for 6 seconds and heal yourself afterwards for 100 Health"},
+   //370	
+  {name : "Archmage", skill : 18, skillReq : 30,
+   xPos : 100/4, yPos : 25/4, preReqs : [355], nextPerk: -1,
+   description : "Your Spells are 25% stronger or last 50% longer"},
+    //371	
+  {name : "Summoner", skill : 18, skillReq : 30,
+   xPos : 125/4, yPos : 50/4, preReqs : [356], nextPerk: -1,
+   description : "You can summon or reanimate one additional minion"},
+    //372	
+  {name : "Battlemage", skill : 18, skillReq : 30,
+   xPos : 150/4, yPos : 25/4, preReqs : [357], nextPerk: -1,
+   description : "Power attacks cost 25% less stamina if you have a spell in your left hand. SPell & enchantment cost 10% less if you have a weapon in your right handv"},
+    //373	
+  {name : "Blood Knight", skill : 18, skillReq : 30,
+   xPos : 175/4, yPos : 50/4, preReqs : [358], nextPerk: -1,
+   description : "While above 50% Health you deal 25% more weapon damage and while below 50% Health, you take 25% less magic damage"},
+    //374	
+  {name : "General", skill : 18, skillReq : 30,
+   xPos : 200/4, yPos : 25/4, preReqs : [359], nextPerk: -1,
+   description : "Your weapon damage and Armor Rating is increased by 25%"},
+    //375	
+  {name : "Monk", skill : 18, skillReq : 30,
+   xPos : 225/4, yPos : 50/4, preReqs : [360], nextPerk: -1,
+   description : "Your attacks deal 50 bleeding damage over 5 seconds"},
+   //376	
+  {name : "Berserker", skill : 18, skillReq : 30,
+   xPos : 250/4, yPos : 25/4, preReqs : [361], nextPerk: -1,
+   description : "You take 25% less damage while power attacking and power attack stamina usage is reduced by 25%"},
+   //377	
+  {name : "Saboteur", skill : 18, skillReq : 30,
+   xPos : 275/4, yPos : 50/4, preReqs : [362], nextPerk: -1,
+   description : "Your attacks have a 15% chance to stagger enemies. You deal 25% more damage against staggered enemies"},
+   //378	
+  {name : "Assassin", skill : 18, skillReq : 30,
+   xPos : 300/4, yPos : 25/4, preReqs : [363], nextPerk: -1,
+   description : "Every 10 seconds, your next attack deals 100% more damage"},
+   //379	
+  {name : "Rogue", skill : 18, skillReq : 30,
+   xPos : 325/4, yPos : 50/4, preReqs : [364], nextPerk: -1,
+   description : "Your attacks deal 50 poison damage over 10 seconds"},
+  //380
+  {name : "Stalker", skill : 18, skillReq : 30,
+   xPos : 350/4, yPos : 25/4, preReqs : [365], nextPerk: -1,
+   description : "Your attacks slows enemies by 50% for 3 seconds"},  
+  //381
+  {name : "Nightblade", skill : 18, skillReq : 30,
+   xPos : 375/4, yPos : 50/4, preReqs : [366], nextPerk: -1,
+   description : "Against enemies that are out of Magicka, your attacks deal 25% more damage and have a 30% chance to dispel magic"},  	
+  //382
+  {name : "Adrenaline Rush", skill : 19, skillReq: -5,
+   xPos : 100/4, yPos : 50/4, preReqs : [], nextPerk: -1,
+   description : "You gain a bonus to damage output and damage resistance when low on health."},
+   //383
+  {name : "Athleticism", skill : 19, skillReq: -4,
+   xPos : 300/4, yPos : 50/4, preReqs : [], nextPerk: -1,
+   description : "You gain a 50% bonus to your stamina regeneration"},
+   //384
+  {name : "Expertise: <br>Animals", skill : 19, skillReq: -2,
+   xPos : 80/4, yPos : 100/4, preReqs : [], nextPerk: -1,
+   description : "You cause 20% additional damage to animals"},
+   //385
+  {name : "Expertise: <br>Daedra", skill : 19, skillReq: -2,
+   xPos : 160/4, yPos : 100/4, preReqs : [], nextPerk: -1,
+   description : "You cause 20% additional damage to daedra"},
+   //386
+  {name : "Expertise: <br>Humanoids", skill : 19, skillReq: -4,
+   xPos : 240/4, yPos : 100/4, preReqs : [], nextPerk: -1,
+   description : "You cause 20% additional damage to humanoids"},
+   //387
+  {name : "Expertise: <br>Undead", skill : 19, skillReq: -3,
+   xPos : 320/4, yPos : 100/4, preReqs : [], nextPerk: -1,
+   description : "You cause 20% additional damage to undead"},
+   //388
+  {name : "High Tolerance:<br>Disease", skill : 19, skillReq: -2,
+   xPos : 60/4, yPos : 150/4, preReqs : [], nextPerk: -1,
+   description : "Provides 20% resistance to disease"},
+   //389
+  {name : "Resistance:<br>Disease", skill : 19, skillReq: -4,
+   xPos : 60/4, yPos : 200/4, preReqs : [], nextPerk: -1,
+   description : "Provides 40% resistance to disease"},
+   //390
+  {name : "High Tolerance:<br>Fire", skill : 19, skillReq: -3,
+   xPos : 120/4, yPos : 150/4, preReqs : [], nextPerk: -1,
+   description : "Provides 20% resistance to fire"},
+   //391
+  {name : "Resistance: <br>Fire", skill : 19, skillReq: -6,
+   xPos : 120/4, yPos : 200/4, preReqs : [], nextPerk: -1,
+   description : "Provides 40% resistance to fire"},
+   //392
+  {name : "High Tolerance: <br>Frost", skill : 19, skillReq: -3,
+   xPos : 180/4, yPos : 150/4, preReqs : [], nextPerk: -1,
+   description : "Provides 20% resistance to frost"},
+   //393
+  {name : "Resistance: <br>Frost", skill : 19, skillReq: -6,
+   xPos : 180/4, yPos : 200/4, preReqs : [], nextPerk: -1,
+   description : "Provides 40% resistance to frost"},
+   //394
+  {name : "High Tolerance: <br>Shock", skill : 19, skillReq: -3,
+   xPos : 240/4, yPos : 150/4, preReqs : [], nextPerk: -1,
+   description : "Provides 20% resistance to shock"},
+   //395
+  {name : "Resistance: <br>Shock", skill : 19, skillReq: -6,
+   xPos : 240/4, yPos : 200/4, preReqs : [], nextPerk: -1,
+   description : "Provides 40% resistance to shock"},
+   //396
+  {name : "High Tolerance: <br>Magic", skill : 19, skillReq: -5,
+   xPos : 300/4, yPos : 150/4, preReqs : [], nextPerk: -1,
+   description : "Provides 20% resistance to magic"},
+   //397
+  {name : "Resistance: <br>Magic", skill : 19, skillReq: -10,
+   xPos : 300/4, yPos : 200/4, preReqs : [], nextPerk: -1,
+   description : "Provides 40% resistance to magic"},
+   //398
+  {name : "High Tolerance: <br>Poison", skill : 19, skillReq: -2,
+   xPos : 360/4, yPos : 150/4, preReqs : [], nextPerk: -1,
+   description : "Provides 20% resistance to poison"},
+   //399
+  {name : "Resistance: <br>Poison", skill : 19, skillReq: -4,
+   xPos : 360/4, yPos : 200/4, preReqs : [], nextPerk: -1,
+   description : "Provides 40% resistance to poison"},
+   //400
+  {name : "Rapid Healing: <br>Darkness", skill : 19, skillReq: -5,
+   xPos : 80/4, yPos : 250/4, preReqs : [], nextPerk: -1,
+   description : "Health regenerates faster at night or indoors"},
+   //401
+  {name : "Rapid Healing: <br>Light", skill : 19, skillReq: -5,
+   xPos : 160/4, yPos : 250/4, preReqs : [], nextPerk: -1,
+   description : "Health regenerates faster at daytime while outside"},
+   //402
+  {name : "Rapid Healing: <br>Water", skill : 19, skillReq: -2,
+   xPos : 240/4, yPos : 250/4, preReqs : [], nextPerk: -1,
+   description : "Health regenerates faster while in water"},
+   //403
+  {name : "Rapid Healing: <br>General", skill : 19, skillReq: -5,
+   xPos : 320/4, yPos : 250/4, preReqs : [], nextPerk: -1,
+   description : "Health regenerates faster (Can't be used with other forms of healing"},
+   //404
+  {name : "Spell Absrb: <br>Darkness", skill : 19, skillReq: -10,
+   xPos : 80/4, yPos : 300/4, preReqs : [], nextPerk: -1,
+   description : "Absorb incoming spells when not at full magicka capacity while in darkness"},
+   //405
+  {name : "Spell Absrb: <br>Light", skill : 19, skillReq: -10,
+   xPos : 160/4, yPos : 300/4, preReqs : [], nextPerk: -1,
+   description : "Absorb incoming spells when not at full magicka capacity while in light"},
+   //406
+  {name : "Spell Absrb: <br>General", skill : 19, skillReq: -15,
+   xPos : 240/4, yPos : 300/4, preReqs : [], nextPerk: -1,
+   description : "Absorb incoming spells when not at full magicka capacity"},
+   //407
+  {name : "Spell Absrb: <br>True", skill : 19, skillReq: -22,
+   xPos : 320/4, yPos : 300/4, preReqs : [], nextPerk: -1,
+   description : "True spell absorbtion"},
+   //408
+  {name : "Wisdom I", skill : 19, skillReq: -2,
+   xPos : 100/4, yPos : 350/4, preReqs : [], nextPerk: -1,
+   description : "Increase magicka regeneration by 50%"},
+   //409
+  {name : "Wisdom II", skill : 19, skillReq: -4,
+   xPos : 200/4, yPos : 350/4, preReqs : [], nextPerk: -1,
+   description : "Increase magicka regeneration by 100%"},
+   //410
+  {name : "Wisdom III", skill : 19, skillReq: -2,
+   xPos : 300/4, yPos : 350/4, preReqs : [], nextPerk: -1,
+   description : "Increase magicka regeneration by 200%"}, 
+   //411
+  {name : "Holy Damage", skill : 20, skillReq: 5,
+   xPos : 100/4, yPos : 25/4, preReqs : [], nextPerk: -1, 
+   description : "Take damage when in holy places"},
+   //412
+  {name : "Light Damage", skill : 20, skillReq: 15,
+   xPos : 200/4, yPos : 25/4, preReqs : [], nextPerk: -1,
+   description : "Take damage when in stong light"},
+   //413
+  {name : "Heliophobic I", skill : 20, skillReq: 3,
+   xPos : 80/4, yPos : 75/4, preReqs : [], nextPerk: -1,
+   description : "You take more magic damage and regenerate less health when ourdoors during the day. (25% taken -25% health regen)"},
+   //414
+  {name : "Heliophobic II", skill : 20, skillReq: 6,
+   xPos : 160/4, yPos : 75/4, preReqs : [], nextPerk: -1,
+   description : "You take more magic damage and regenerate less health when ourdoors during the day. (50% taken -50% health regen)"},
+   //415
+  {name : "Heliophilic I", skill : 20, skillReq: 3,
+   xPos : 240/4, yPos : 75/4, preReqs : [], nextPerk: -1,
+   description : "You take more magic damage and regenerate less health when indoors or at night. (25% taken -25% health regen)"},
+   //416
+  {name : "Heliophilic II", skill : 20, skillReq: 6,
+   xPos : 320/4, yPos : 75/4, preReqs : [], nextPerk: -1,
+   description : "You take more magic damage and regenerate less health when indoors or at night. (50% taken -50% health regen)"},
+   //417
+  {name : "Forbidden: <br>Axe", skill : 20, skillReq: 2,
+   xPos : 60/4, yPos : 125/4, preReqs : [], nextPerk: -1,
+   description : "You do 50% less damage with axes and hafted blades"},
+   //418
+  {name : "Forbidden: <br>Blunt", skill : 20, skillReq: 2,
+   xPos : 120/4, yPos : 125/4, preReqs : [], nextPerk: -1,
+   description : "You do 50% less damage with blunt weapons and quarterstaves"},
+   //419
+  {name : "Forbidden: <br>Dagger", skill : 20, skillReq: 2,
+   xPos : 180/4, yPos : 125/4, preReqs : [], nextPerk: -1,
+   description : "You do 50% less damage with daggers"},
+   //420
+  {name : "Forbidden: <br>Ranged", skill : 20, skillReq: 2,
+   xPos : 240/4, yPos : 125/4, preReqs : [], nextPerk: -1,
+   description : "You do 50% less damage with bows and crossbows"},
+   //421
+  {name : "Forbidden: <br>Blades", skill : 20, skillReq: 2,
+   xPos : 300/4, yPos : 125/4, preReqs : [], nextPerk: -1,
+   description : "You do 50% less damage with swords and spears"},
+   //422
+  {name : "Forbidden: <br>Unarmed", skill : 20, skillReq: 1,
+   xPos : 360/4, yPos : 125/4, preReqs : [], nextPerk: -1,
+   description : "You do 50% less damage while unarmed"},
+   //423
+  {name : "Low Tolerance: <br>Disease", skill : 20, skillReq: 1,
+   xPos : 60/4, yPos : 175/4, preReqs : [], nextPerk: -1,
+   description : "Gain 25% weakness to disease"},
+    //424
+  {name : "Weakness: <br>Disease", skill : 20, skillReq: 2,
+   xPos : 60/4, yPos : 225/4, preReqs : [], nextPerk: -1,
+   description : "Gain 50% weakness to disease"},
+    //425
+  {name : "Low Tolerance: <br>Fire", skill : 20, skillReq: 2,
+   xPos : 120/4, yPos : 175/4, preReqs : [], nextPerk: -1,
+   description : "Gain 25% weakness to fire"},
+    //426
+  {name : "Weakness: <br>Fire", skill : 20, skillReq: 3,
+   xPos : 120/4, yPos : 225/4, preReqs : [], nextPerk: -1,
+   description : "Gain 50% weakness to fire"},
+    //427
+  {name : "Low Tolerance: <br>Frost", skill : 20, skillReq: 2,
+   xPos : 180/4, yPos : 175/4, preReqs : [], nextPerk: -1,
+   description : "Gain 25% weakness to frost"},
+    //428
+  {name : "Weakness: <br>Frost", skill : 20, skillReq: 3,
+   xPos : 180/4, yPos : 225/4, preReqs : [], nextPerk: -1,
+   description : "Gain 50% weakness to frost"},
+    //429
+  {name : "Low Tolerance: <br>Shock", skill : 20, skillReq: 2,
+   xPos : 240/4, yPos : 175/4, preReqs : [], nextPerk: -1,
+   description : "Gain 25% weakness to shock"},
+   //430
+  {name : "Weakness: <br>Shock", skill : 20, skillReq: 3,
+   xPos : 240/4, yPos : 225/4, preReqs : [], nextPerk: -1,
+   description : "Gain 50% weakness to shock"},
+   //431
+  {name : "Low Tolerance: <br>Magic", skill : 20, skillReq: 3,
+   xPos : 300/4, yPos : 175/4, preReqs : [], nextPerk: -1,
+   description : "Gain 25% weakness to magic"},
+    //432
+  {name : "Weakness: <br>Magic", skill : 20, skillReq: 5,
+   xPos : 300/4, yPos : 225/4, preReqs : [], nextPerk: -1,
+   description : "Gain 50% weakness to magic"},
+    //433
+  {name : "Low Tolerance: <br>Poison", skill : 20, skillReq: 1,
+   xPos : 360/4, yPos : 175/4, preReqs : [], nextPerk: -1,
+   description : "Gain 25% weakness to poison"},
+    //434
+  {name : "Weakness: <br>Poison", skill : 20, skillReq: 2,
+   xPos : 360/4, yPos : 225/4, preReqs : [], nextPerk: -1,
+   description : "Gain 50% weakness to poison"},
+   //435
+  {name : "Phobia: <br>Animals", skill : 20, skillReq: 2,
+   xPos : 80/4, yPos : 275/4, preReqs : [], nextPerk: -1,
+   description : "You cause 30% less damage to animals"},
+   //436
+  {name : "Phobia: <br>Daedra", skill : 20, skillReq: 2,
+   xPos : 160/4, yPos : 275/4, preReqs : [], nextPerk: -1,
+   description : "You cause 30% less damage to daedra"},
+   //437
+  {name : "Phobia: <br>Humanoids", skill : 20, skillReq: 5,
+   xPos : 240/4, yPos : 275/4, preReqs : [], nextPerk: -1,
+   description : "You cause 30% less damage to humanoids"},
+   //438
+  {name : "Phobia: <br>Undead", skill : 20, skillReq: 2,
+   xPos : 320/4, yPos : 275/4, preReqs : [], nextPerk: -1,
+   description : "You cause 30% less damage to undead"},
+   //439
+  {name : "Stunted Growth", skill : 20, skillReq: 6,
+   xPos : 300/4, yPos : 25/4, preReqs : [], nextPerk: -1,
+   description : "You regenerate 50% less health, magicka and stamina"},
+   //440
+  {name : "Forbidden : <br>Daedric", skill : 20, skillReq: 1,
+   xPos : 60/4, yPos : 325/4, preReqs : [], nextPerk: -1,
+   description : "Daedric weapons and armor become 50% less effective"},
+   //441
+  {name : "Forbidden : <br>Dragon", skill : 20, skillReq: 1,
+   xPos : 120/4, yPos : 325/4, preReqs : [], nextPerk: -1,
+   description : "Draconic weapons and armor become 50% less effective"},
+   //442
+  {name : "Forbidden : <br>Dwarven", skill : 20, skillReq: 1,
+   xPos : 180/4, yPos : 325/4, preReqs : [], nextPerk: -1,
+   description : "Dwarven weapons and armor become 50% less effective"},
+   //443
+  {name : "Forbidden : <br>Ebony", skill : 20, skillReq: 1,
+   xPos : 240/4, yPos : 325/4, preReqs : [], nextPerk: -1,
+   description : "Ebony weapons and armor become 50% less effective"},
+   //444
+  {name : "Forbidden : <br>Elven", skill : 20, skillReq: 1,
+   xPos : 300/4, yPos : 325/4, preReqs : [], nextPerk: -1,
+   description : "Elven weapons and armor become 50% less effective"},
+   //445
+  {name : "Forbidden : <br>Glass", skill : 20, skillReq: 1,
+   xPos : 360/4, yPos : 325/4, preReqs : [], nextPerk: -1,
+   description : "Glass weapons and armor become 50% less effective"},
+   //446
+  {name : "Forbidden : <br>Iron", skill : 20, skillReq: 1,
+   xPos : 75/4, yPos : 375/4, preReqs : [], nextPerk: -1,
+   description : "Iron weapons and armor become 50% less effective"},
+   //447
+  {name : "Forbidden : <br>Leather", skill : 20, skillReq: 1,
+   xPos : 150/4, yPos : 375/4, preReqs : [], nextPerk: -1,
+   description : "Leather weapons and armor become 50% less effective"},
+   //448
+  {name : "Forbidden : <br>Orcish", skill : 20, skillReq: 1,
+   xPos : 225/4, yPos : 375/4, preReqs : [], nextPerk: -1,
+   description : "Orcish weapons and armor become 50% less effective"},
+   //449
+  {name : "Forbidden : <br>Silver", skill : 20, skillReq: 1,
+   xPos : 300/4, yPos : 375/4, preReqs : [], nextPerk: -1,
+   description : "Silver weapons and armor become 50% less effective"},
+   //450
+  {name : "Forbidden : <br>Steel", skill : 20, skillReq: 1,
+   xPos : 375/4, yPos : 375/4, preReqs : [], nextPerk: -1,
+   description : "Steel weapons and armor become 50% less effective"},
 
 
 

@@ -5,275 +5,293 @@ const testRaceData = {
   races : [
     {
      name: "Argonian", 
-     startingHMS: [105,90,120], 
-     startingCW: 105, speedBonus: 0,
+     startingHMS: [100,100,100], 
+     startingCW: 120, speedBonus: 0,
      hmsBonus: [0,0,0], 
      startingHMSRegen: [0,1.1,1.6], 
-     unarmedDam: 10,
-     startingSkills : [ 5,       //Alchemy
+     unarmedDam: 32,
+     startingSkills : [10,       //Smithing
+                       10,       //Heavy Armor
+                       10,       //Block
+                       10,       //Two-handed
+                       15,       //One-handed
+                       10,       //Marksman
+                       20,       //Evasion
+                       15,       //Sneak
+                       15,       //Wayfarer
+                       10,       //Finesse
+                       10,       //Speech
+                       20,       //Alchemy
+                       10,       //Illusion
+                       10,       //Conjuration
+                       10,       //Destruction
+                       15,       //Restoration
                        10,       //Alteration
-                        5,       //Block
-                        5,       //Conjuration
-                        5,       //Destruction
-                        5,       //Enchanting
-                       15,       //Evasion
-                        5,       //Heavy Armor
-                        5,       //Illusion
-                       15,       //Lockpicking
-                        5,       //Marksman
-                        5,       //One-handed
-                       10,       //Pickpocket
-                       10,       //Restoration
-                        5,       //Smithing
-                       10,       //Sneak
-                        5,       //Speech
-                        5,       //Two-handed
+                       10,       //Enchanting
                         1,       //Destiny
-                        1,       //Positives
-                        1]       //Negatives
+                        0,       //Benefits
+                        0]       //Detriments
     },
     {
      name: "Breton", 
-     startingHMS: [90,120,90], 
-     startingCW: 90, speedBonus: 0,
+     startingHMS: [90,110,100], 
+     startingCW: 110, speedBonus: 0,
      hmsBonus: [0,0,0], 
-     startingHMSRegen: [0,1.15,1.55], 
-     unarmedDam: 5,
-     startingSkills : [10,       //Alchemy
+     startingHMSRegen: [0,1.44,1.60], 
+     unarmedDam: 12,
+     startingSkills : [10,       //Smithing
+                       10,       //Heavy Armor
+                       10,       //Block
+                       10,       //Two-handed
+                       10,       //One-handed
+                       10,       //Marksman
+                       10,       //Evasion
+                       10,       //Sneak
+                       10,       //Wayfarer
+                       10,       //Finesse
+                       15,       //Speech
+                       15,       //Alchemy
+                       15,       //Illusion
+                       25,       //Conjuration
+                       10,       //Destruction
+                       15,       //Restoration
                        10,       //Alteration
-                        5,       //Block
-                       20,       //Conjuration
-                        5,       //Destruction
-                        5,       //Enchanting
-                        5,       //Evasion
-                        5,       //Heavy Armor
-                       10,       //Illusion
-                        5,       //Lockpicking
-                        5,       //Marksman
-                        5,       //One-handed
-                        5,       //Pickpocket
-                       10,       //Restoration
-                        5,       //Smithing
-                        5,       //Sneak
-                       10,       //Speech
-                        5,       //Two-handed
-                        1]       //Destiny
+                       15,       //Enchanting
+                        1,       //Destiny
+                        0,       //Benefits
+                        0]       //Detriments
     },
     {
-     name: "Dark Elf", 
+     name: "Dunmer", 
      startingHMS: [100,100,100], 
-     startingCW: 100, speedBonus: 0,
+     startingCW: 120, speedBonus: 0,
      hmsBonus: [0,0,0], 
      startingHMSRegen: [0,1.1,1.6], 
-     unarmedDam: 5,
-     startingSkills : [10,       //Alchemy
-                        5,       //Alteration
-                        5,       //Block
-                        5,       //Conjuration
-                       15,       //Destruction
-                        5,       //Enchanting
-                       10,       //Evasion
-                        5,       //Heavy Armor
-                       10,       //Illusion
-                        5,       //Lockpicking
-                        5,       //Marksman
-                       15,       //One-handed
-                        5,       //Pickpocket
-                        5,       //Restoration
-                        5,       //Smithing
+     unarmedDam: 13,
+     startingSkills : [10,       //Smithing
+                       10,       //Heavy Armor
+                       10,       //Block
+                       10,       //Two-handed
+                       20,       //One-handed
+                       15,       //Marksman
+                       15,       //Evasion
                        10,       //Sneak
-                        5,       //Speech
-                        5,       //Two-handed
-                        1]       //Destiny
+                       10,       //Wayfarer
+                       10,       //Finesse
+                       10,       //Speech
+                       10,       //Alchemy
+                       15,       //Illusion
+                       15,       //Conjuration
+                       20,       //Destruction
+                       10,       //Restoration
+                       10,       //Alteration
+                       10,       //Enchanting
+                        1,       //Destiny
+                        0,       //Benefits
+                        0]       //Detriments
     },
     {
-     name: "High Elf", 
-     startingHMS: [90,130,80], 
-     startingCW: 95, speedBonus: 0,
-     hmsBonus: [0,50,0], 
-     startingHMSRegen: [0,1.25,1.55], 
-     unarmedDam: 5,
-     startingSkills : [ 5,       //Alchemy
-                       10,       //Alteration
-                        5,       //Block
-                       10,       //Conjuration
-                       15,       //Destruction
-                       10,       //Enchanting
-                        5,       //Evasion
-                        5,       //Heavy Armor
+     name: "Altmer", 
+     startingHMS: [90,120,90], 
+     startingCW: 110, speedBonus: 0,
+     hmsBonus: [0,30,0], 
+     startingHMSRegen: [0,1.99,1.55], 
+     unarmedDam: 12,
+     startingSkills : [10,       //Smithing
+                       10,       //Heavy Armor
+                       10,       //Block
+                       10,       //Two-handed
+                       10,       //One-handed
+                       10,       //Marksman
+                       10,       //Evasion
+                       10,       //Sneak
+                       10,       //Wayfarer
+                       10,       //Finesse
+                       10,       //Speech
+                       10,       //Alchemy
                        15,       //Illusion
-                        5,       //Lockpicking
-                        5,       //Marksman
-                        5,       //One-handed
-                        5,       //Pickpocket
-                       10,       //Restoration
-                        5,       //Smithing
-                        5,       //Sneak
-                        5,       //Speech
-                        5,       //Two-handed
-                        1]       //Destiny
+                       15,       //Conjuration
+                       20,       //Destruction
+                       15,       //Restoration
+                       20,       //Alteration
+                       15,       //Enchanting
+                        1,       //Destiny
+                        0,       //Benefits
+                        0]       //Detriments
     },
     {
      name: "Imperial", 
-     startingHMS: [110,100,110], 
-     startingCW: 110, speedBonus: 0,
-     hmsBonus: [0,0,30], 
-     startingHMSRegen: [0,1.1,1.9], 
-     unarmedDam: 5,
-     startingSkills : [ 5,       //Alchemy
-                        5,       //Alteration
-                       10,       //Block
-                        5,       //Conjuration
-                       10,       //Destruction
-                        5,       //Enchanting
-                        5,       //Evasion
-                       10,       //Heavy Armor
-                        5,       //Illusion
-                        5,       //Lockpicking
-                        5,       //Marksman
-                       10,       //One-handed
-                        5,       //Pickpocket
-                       15,       //Restoration
-                        5,       //Smithing
-                        5,       //Sneak
-                       15,       //Speech
-                        5,       //Two-handed
-                        1]       //Destiny
+     startingHMS: [110,110,100], 
+     startingCW: 120, speedBonus: 0,
+     hmsBonus: [0,0,0], 
+     startingHMSRegen: [0.02,1.21,1.76], 
+     unarmedDam: 13,
+     startingSkills : [10,       //Smithing
+                       15,       //Heavy Armor
+                       15,       //Block
+                       10,       //Two-handed
+                       15,       //One-handed
+                       10,       //Marksman
+                       10,       //Evasion
+                       10,       //Sneak
+                       10,       //Wayfarer
+                       10,       //Finesse
+                       35,       //Speech
+                       10,       //Alchemy
+                       10,       //Illusion
+                       10,       //Conjuration
+                       15,       //Destruction
+                       20,       //Restoration
+                       10,       //Alteration
+                       10,       //Enchanting
+                        1,       //Destiny
+                        0,       //Benefits
+                        0]       //Detriments
     },
     {
      name: "Khajiit", 
      startingHMS: [90,90,120], 
-     startingCW: 100, speedBonus: 15,
+     startingCW: 110, speedBonus: 15,
      hmsBonus: [0,0,0], 
-     startingHMSRegen: [0,1,1.65], 
-     unarmedDam: 40,
-     startingSkills : [10,       //Alchemy
-                        5,       //Alteration
-                        5,       //Block
-                        5,       //Conjuration
-                        5,       //Destruction
-                        5,       //Enchanting
-                        5,       //Evasion
-                        5,       //Heavy Armor
-                        5,       //Illusion
-                       10,       //Lockpicking
+     startingHMSRegen: [0,1.05,2.31], 
+     unarmedDam: 32,
+     startingSkills : [10,       //Smithing
+                       10,       //Heavy Armor
+                       10,       //Block
+                       10,       //Two-handed
+                       15,       //One-handed
                        10,       //Marksman
-                       10,       //One-handed
-                       10,       //Pickpocket
-                        5,       //Restoration
-                        5,       //Smithing
-                       20,       //Sneak
-                        5,       //Speech
-                        5,       //Two-handed
-                        1]       //Destiny
+                       15,       //Evasion
+                       25,       //Sneak
+                       15,       //Wayfarer
+                       15,       //Finesse
+                       10,       //Speech
+                       15,       //Alchemy
+                       10,       //Illusion
+                       10,       //Conjuration
+                       10,       //Destruction
+                       10,       //Restoration
+                       10,       //Alteration
+                       10,       //Enchanting
+                        1,       //Destiny
+                        0,       //Benefits
+                        0]       //Detriments
     },
     {
      name: "Nord", 
-     startingHMS: [120,80,120], 
-     startingCW: 115, speedBonus: 0,
+     startingHMS: [110,80,110], 
+     startingCW: 130, speedBonus: 0,
      hmsBonus: [0,0,0], 
-     startingHMSRegen: [0,1.05,1.65], 
-     unarmedDam: 9,
-     startingSkills : [ 5,       //Alchemy
-                        5,       //Alteration
-                       10,       //Block
-                        5,       //Conjuration
-                        5,       //Destruction
-                        5,       //Enchanting
-                       10,       //Evasion
-                       10,       //Heavy Armor
-                        5,       //Illusion
-                        5,       //Lockpicking
-                        5,       //Marksman
-                       10,       //One-handed
-                        5,       //Pickpocket
-                        5,       //Restoration
-                       15,       //Smithing
-                        5,       //Sneak
-                        5,       //Speech
-                       15,       //Two-handed
-                        1]       //Destiny
+     startingHMSRegen: [0,1,2.07], 
+     unarmedDam: 12,
+     startingSkills : [20,       //Smithing
+                       15,       //Heavy Armor
+                       15,       //Block
+                       20,       //Two-handed
+                       15,       //One-handed
+                       10,       //Marksman
+                       15,       //Evasion
+                       10,       //Sneak
+                       10,       //Wayfarer
+                       10,       //Finesse
+                       10,       //Speech
+                       10,       //Alchemy
+                       10,       //Illusion
+                       10,       //Conjuration
+                       10,       //Destruction
+                       10,       //Restoration
+                       10,       //Alteration
+                       10,       //Enchanting
+                        1,       //Destiny
+                        0,       //Benefits
+                        0]       //Detriments
     },
     {
-     name: "Orc", 
-     startingHMS: [130,60,110], 
-     startingCW: 125, speedBonus: 0,
-     hmsBonus: [0,0,0], 
-     startingHMSRegen: [0,1.0,1.7], 
-     unarmedDam: 10,
-     startingSkills : [ 5,       //Alchemy
-                        5,       //Alteration
-                       10,       //Block
-                        5,       //Conjuration
-                        5,       //Destruction
-                        5,       //Enchanting
+     name: "Orsimer", 
+     startingHMS: [110,80,110], 
+     startingCW: 130, speedBonus: 0,
+     hmsBonus: [30,0,0], 
+     startingHMSRegen: [0,1.0,2.07], 
+     unarmedDam: 14,
+     startingSkills : [20,       //Smithing
+                       20,       //Heavy Armor
+                       15,       //Block
+                       15,       //Two-handed
+                       15,       //One-handed
+                       10,       //Marksman
                        10,       //Evasion
-                       15,       //Heavy Armor
-                        5,       //Illusion
-                        5,       //Lockpicking
-                        5,       //Marksman
-                       10,       //One-handed
-                        5,       //Pickpocket
-                        5,       //Restoration
-                       15,       //Smithing
-                        5,       //Sneak
-                        5,       //Speech
-                       10,       //Two-handed
-                        1]       //Destiny
+                       10,       //Sneak
+                       10,       //Wayfarer
+                       10,       //Finesse
+                       10,       //Speech
+                       10,       //Alchemy
+                       10,       //Illusion
+                       10,       //Conjuration
+                       15,       //Destruction
+                       10,       //Restoration
+                       10,       //Alteration
+                       10,       //Enchanting
+                        1,       //Destiny
+                        0,       //Benefits
+                        0]       //Detriments
     },
     {
      name: "Redguard", 
-     startingHMS: [110,70,120], 
-     startingCW: 105, speedBonus: 0,
-     hmsBonus: [0,0,0], 
-     startingHMSRegen: [0,1.0,1.65], 
-     unarmedDam: 8,
-     startingSkills : [ 5,       //Alchemy
-                       10,       //Alteration
-                       10,       //Block
-                        5,       //Conjuration
+     startingHMS: [100,80,120], 
+     startingCW: 120, speedBonus: 0,
+     hmsBonus: [0,0,30], 
+     startingHMSRegen: [0,1.0,2.31], 
+     unarmedDam: 13,
+     startingSkills : [15,       //Smithing
+                       10,       //Heavy Armor
+                       15,       //Block
+                       15,       //Two-handed
+                       25,       //One-handed
+                       15,       //Marksman
+                       15,       //Evasion
+                       10,       //Sneak
+                       10,       //Wayfarer
+                       10,       //Finesse
+                       10,       //Speech
+                       10,       //Alchemy
+                       10,       //Illusion
+                       10,       //Conjuration
                        10,       //Destruction
-                        5,       //Enchanting
-                        5,       //Evasion
-                        5,       //Heavy Armor
-                        5,       //Illusion
-                        5,       //Lockpicking
-                       10,       //Marksman
-                       20,       //One-handed
-                        5,       //Pickpocket
-                        5,       //Restoration
-                       10,       //Smithing
-                        5,       //Sneak
-                        5,       //Speech
-                        5,       //Two-handed
-                        1]       //Destiny
+                       10,       //Restoration
+                       10,       //Alteration
+                       10,       //Enchanting
+                        1,       //Destiny
+                        0,       //Benefits
+                        0]       //Detriments
     },
     {
-     name: "Wood Elf", 
-     startingHMS: [90,110,120], 
-     startingCW: 85, speedBonus: 0,
+     name: "Bosmer", 
+     startingHMS: [90,100,110], 
+     startingCW: 110, speedBonus: 0,
      hmsBonus: [0,0,0], 
-     startingHMSRegen: [0,1.05,1.65], 
-     unarmedDam: 5,
-     startingSkills : [10,       //Alchemy
-                        5,       //Alteration
-                        5,       //Block
-                        5,       //Conjuration
-                        5,       //Destruction
-                        5,       //Enchanting
-                       10,       //Evasion
-                        5,       //Heavy Armor
-                        5,       //Illusion
-                       10,       //Lockpicking
-                       20,       //Marksman
-                        5,       //One-handed
-                       10,       //Pickpocket
-                        5,       //Restoration
-                        5,       //Smithing
-                       10,       //Sneak
-                        5,       //Speech
-                        5,       //Two-handed
-                        1]       //Destiny
+     startingHMSRegen: [0,1.1,2.07], 
+     unarmedDam: 12,
+     startingSkills : [10,       //Smithing
+                       10,       //Heavy Armor
+                       10,       //Block
+                       10,       //Two-handed
+                       10,       //One-handed
+                       25,       //Marksman
+                       15,       //Evasion
+                       15,       //Sneak
+                       10,       //Wayfarer
+                       15,       //Finesse
+                       10,       //Speech
+                       15,       //Alchemy
+                       10,       //Illusion
+                       10,       //Conjuration
+                       10,       //Destruction
+                       10,       //Restoration
+                       15,       //Alteration
+                       10,       //Enchanting
+                        1,       //Destiny
+                        0,       //Benefits
+                        0]       //Detriments
     }
   ]
 };
