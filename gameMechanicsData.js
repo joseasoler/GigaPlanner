@@ -23,20 +23,12 @@ const testGameMechanicsData = {
                  "Stamina Regen",
                  "Move Speed",
                  "Carry Weight",
-                 "Marksman Damage",
+                 "Ranged Damage",
                  "One-Hand Damage",
                  "Two-Hand Damage",
-                 "Unarmed Damage",
-		 "Health Regen",
-		 "Armor Penetration",
-		 "Dodge",
-		 "Critical Hit",
-		 "Shout Cooldown",
-		 "test1",
-		 "test2",
-		 "test3"],
+                 "Unarmed Damage"],
     isPercent : [true,
-		 true,
+		         true,
                  true,
                  true,
                  true,
@@ -111,19 +103,8 @@ const testGameMechanicsData = {
                       0.5,
                       0.2,
                       0.5,
-                      0],   
-    perk       :      [281,280,279,
-                      10,
-                      15,
-                      1,
-                      5], 
-    perk_bonus :      [10,50,20,
-                      10,
-                      15,
-                      1,
-                      5]                    
+                      0]
   }
 };
-
 addGameMechanicsData(testGameMechanicsData);
 

@@ -1,4 +1,4 @@
-//I'm assuming for now that no mod actually changes the names of these things.
+//To do: add bonuses to derrAts
 const standingStoneNames = [
   "None",
   "Apprentice",

@@ -74,7 +74,7 @@ function initCharacterData(){
     characterData.race = 0;
     characterData.hmsIncreases = [0,0,0];
     characterData.skillLevels = [];
-    for(let i = 0; i < 20; i++){
+    for(let i = 0; i < 21; i++){
       characterData.skillLevels.push(curRaceList.races[0].startingSkills[i]);
     }
     characterData.perksTaken = [];
@@ -103,6 +103,9 @@ function initCharacterData(){
 //TODO: change this to add effects to the character to be used
 //in calculating final attribute values.
 function updateDerivedAttributes(){
+	
+	
+	
   let derAttrData = curGameMechanics.derivedAttributes;
   let baseAttributes = calcBaseAttributes();
     for(let i = 0; i < derAttrData.attribute.length; i++){
@@ -112,17 +115,10 @@ function updateDerivedAttributes(){
 
     let bonus = 0;
 
-   for(let j = 0; j < 10; j++){
-    if(characterHasPerk(derAttrData.perk[i,j])){
-	bonus = (derAttrData.perk_bonus[i,j])};
-
-    if(weightedSum > derAttrData.threshold[i]){
+     if(weightedSum > derAttrData.threshold[i]){
       bonus += derAttrData.prefactor[i] * Math.sqrt(weightedSum - derAttrData.threshold[i]);
       bonus = Math.floor(bonus);
-}
-
-    }
-
+	}	
     bonus = "+" + bonus;
 
     if(derAttrData.isPercent[i]){
@@ -147,7 +143,7 @@ function calcBaseAttributes(){
 function resetSkill(skillNum){
   let removeAll = skillNum == -1;
   if(removeAll){
-    for(let i = 0; i < 20; i++){
+    for(let i = 0; i < 21; i++){
       characterData.skillLevels[i] = 
         curRaceList.races[characterData.race].startingSkills[i];
     }
@@ -177,7 +173,7 @@ function changeRace(newRaceNum,respectOld = true){
   //bring them up to the new level. If a skill is at the staring
   //value for the old race, set it to the starting value for the
   //new race.
-  for(let i = 0; i < 20; i++){
+  for(let i = 0; i < 21; i++){
     if(!respectOld || (characterData.skillLevels[i] < newRace.startingSkills[i] || 
        characterData.skillLevels[i] == oldRace.startingSkills[i])){
       characterData.skillLevels[i] = newRace.startingSkills[i];
@@ -357,7 +353,8 @@ function actuallyTakePerk(perkNum){
 	characterData.perksTaken[perkNum] = true;
 	if ([perkNum] < 228){
   		characterData.spentPerks++;
-  	}else {characterData.spentClassPoints++;
+  	}else if (perkNum < 278){
+		characterData.spentClassPoints++;
   }
  updateDerivedAttributes()
 }
@@ -367,7 +364,8 @@ function actuallyRemovePerk(perkNum){
   characterData.perksTaken[perkNum] = false;
   if ([perkNum] < 228){
   characterData.spentPerks--;
-  	}else {characterData.spentClassPoints--;
+  	}else if (perkNum < 278) {
+		characterData.spentClassPoints--;
 	}
  updateDerivedAttributes()
 }
@@ -503,6 +501,23 @@ let n = (curPerkList.perks[i].skillReq);
 	}
       return answer;
  }
+ 
+//Calculate how many traits slots the character has left.
+function calcFreeTraits(){
+let perks = curPerkList.perks;
+let answer = 0;
+let n = 1;
+for(let i = 278; i < perks.length; i++){
+let thePerk = curPerkList.perks[i];
+let hasPerk = characterHasPerk(i);
+let isFirstInChain = curPerkList.perks[i].prevPerk == -1;
+    if (hasPerk && isFirstInChain){
+   	answer += 1
+	}
+	}
+	answer = 5 - answer
+      return answer;
+ }
 
 //Get what level the player should be based on the skill levels
 function calcLevel(){
@@ -557,7 +572,7 @@ function generateBuildCode(){
   code += String.fromCodePoint(characterData.hmsIncreases[0]);
   code += String.fromCodePoint(characterData.hmsIncreases[1]);
   code += String.fromCodePoint(characterData.hmsIncreases[2]);
-  for(let i = 0; i < 20; i++){
+  for(let i = 0; i < 21; i++){
     code += String.fromCodePoint(characterData.skillLevels[i]);
   }
   code += String.fromCodePoint(characterData.oghmaChoice << 4);
@@ -635,7 +650,7 @@ function buildCodeParserV1(buildCode){
   
   characterData.skillLevels = [];
   
-  for(let i = 0; i < 20; i++){
+  for(let i = 0; i < 21; i++){
     characterData.skillLevels.push(buildCode.charCodeAt(9+i));
   }
   
@@ -646,7 +661,7 @@ function buildCodeParserV1(buildCode){
   
   characterData.perksTaken = [];
   //this method will be kind of inefficient but EHHHHHHH
-  for(let i = 0; i < 20; i++){
+  for(let i = 0; i < 21; i++){
     let index = 31 + Math.floor(i/8);
     let offset = 7 - (i % 8);
     let hasPerk = (buildCode.charCodeAt(index) & (1 << offset)) > 0;

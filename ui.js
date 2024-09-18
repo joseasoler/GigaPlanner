@@ -247,7 +247,7 @@ function changePerkList(listNum){
   //Just reset all of the selected perks.
   characterData.spentPerks = 0;
   characterData.perksTaken = [];
-  for(let i = 0; i < 20; i++){
+  for(let i = 0; i < 21; i++){
     characterData.perksTaken.push(false);
   }
   
@@ -341,8 +341,14 @@ function activeSkillPerkHoverEnter(event){
   
   let skillReq = curPerkList.perks[perkNum].skillReq;
   let descString = curPerkList.perks[perkNum].description;
-  if(skillReq > 0){
+  if(skillReq != 0){
+	  if(perkNum < 228){
     descString += ` (Skill Req: ${skillReq})`
+	  } else if(perkNum < 278){
+		  descString += ` (Level Req: ${skillReq})`
+	  }else if(perkNum < 306){
+		descString += ` (Trait Points: ${skillReq})`
+	  }else descString += ` (Trait Points: +${skillReq})` 
   }
   $("#highlightedPerkDesc").html(descString);
   
@@ -398,9 +404,10 @@ function updateLevelAndFreePerksDisplay(){
 function updateClassAndTraitDisplay(){
   let theDiv = $("#freeClassPointDiv");
   let freeClass = calcClassPoints();
+  let freeTraits = calcFreeTraits()
   let traitPoints = calcTraitPoints();
-  theDiv.html(`Free Class Points: ${freeClass}, Trait Points: ${traitPoints}`);
-  if(freeClass < 0 || traitPoints < 0){
+  theDiv.html(`Free Class Points: ${freeClass} &nbsp;&nbsp;&nbsp;&nbsp; Trait Points: ${traitPoints} &ndash; Free Traits: ${freeTraits}`);
+  if(freeClass < 0 || freeTraits < 0 || (freeTraits <= 0 && traitPoints < 0)){
     theDiv.removeClass("whiteText");
     theDiv.addClass("redText");
   }
@@ -670,7 +677,7 @@ function miniPerkHoverEnter(event){
 }
 
 function updateSkillNames() {
-  for(let i = 0; i < 20; i++){
+  for(let i = 0; i < 21; i++){
     $("#skill" + (i+1) + "Name").html(curPerkList.skillNames[i]);
   }
 }
