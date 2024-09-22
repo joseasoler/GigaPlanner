@@ -32,7 +32,7 @@ $(document).ready(function(){
   
   attachHandlers();
   
-  $("#mainTitle").html("Test Character Planner");
+  $("#mainTitle").html("LoreRim Character Planner");
   $("#mainSkillDisplayDiv").fadeIn(500);
 });
 
@@ -341,14 +341,16 @@ function activeSkillPerkHoverEnter(event){
   
   let skillReq = curPerkList.perks[perkNum].skillReq;
   let descString = curPerkList.perks[perkNum].description;
-  if(skillReq != 0){
-	  if(perkNum < 228){
-    descString += ` (Skill Req: ${skillReq})`
-	  } else if(perkNum < 278){
-		  descString += ` (Level Req: ${skillReq})`
-	  }else if(perkNum < 306){
-		descString += ` (Trait Points: ${skillReq})`
-	  }else descString += ` (Trait Points: +${skillReq})` 
+  let skill = curPerkList.perks[perkNum].skill
+	  if(skill < 18){
+          descString += ` (Skill Req: ${skillReq})`;
+	  }else if(skill < 19){
+		  descString += ` (Level Req: ${skillReq})`;
+	  } else if(skill <20){
+		descString += ` (Trait Points: ${skillReq})`;
+	  } else{
+		  descString += ` (Trait Points: +${skillReq})`;
+	  
   }
   $("#highlightedPerkDesc").html(descString);
   

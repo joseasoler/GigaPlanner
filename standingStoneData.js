@@ -1,17 +1,17 @@
 //To do: add bonuses to derrAts
 const standingStoneNames = [
   "None",
-  "Apprentice",
-  "Atronach",
+  "Warrior",
   "Lady",
   "Lord",
-  "Lover",
-  "Mage",
-  "Ritual",
-  "Serpent",
-  "Shadow",
   "Steed",
+  "Mage",
+  "Apprentice",
+  "Atronach",
+  "Ritual",
   "Thief",
+  "Lover",
+  "Shadow",
   "Tower",
-  "Warrior"
+  "Serpent"
 ];

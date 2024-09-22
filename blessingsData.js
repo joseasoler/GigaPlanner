@@ -1,6 +1,6 @@
-const testBlessingsData = {
+const blessingsData = {
   id : 0,
-  name : "Test",
+  name : "LoreRim v2.2.8",
   
   blessings : [
     "None",
@@ -43,6 +43,10 @@ const testBlessingsData = {
 	"Trinimac",
 	"Xarxes",
 	"Z'en",
+	"&#8212 Dunmer Tribunal &#8212",
+	"Almalexia",
+	"Sotha Sil",
+	"Vivec",
 	"&#8212 Yokudan Pantheon &#8212",
 	"Leki",
 	"Morwha",
@@ -62,12 +66,8 @@ const testBlessingsData = {
 	"The Hist",
 	"The Magna-Ge",
 	"The Old Ways"
-	
-	
-	
-
   ]
 };
 
-addBlessingsData(testBlessingsData);
+addBlessingsData(blessingsData);
 

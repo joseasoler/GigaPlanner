@@ -1,12 +1,12 @@
-const testPresetData = {
+const presetData = {
   id : 0,
-  name : "Test",
+  name : "LoreRim v2.2.8",
   perks : 0,
   races : 0,
   gameMechanics : 0,
   blessings: 0
 }
 
-addPresetData(testPresetData);
+addPresetData(presetData);
 
 

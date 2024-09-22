@@ -29,8 +29,7 @@ var characterData = {
   standingStone : 0,
   blessing : 0,
   earnedClassPoints : 1,
-  spentClassPoints: 0,
-  traitPoints : 0
+  spentClassPoints : 0,
 };
 
 //Returns the preset number given in the URL.
@@ -92,8 +91,6 @@ function initCharacterData(){
     characterData.standingStone = 0;
     characterData.blessing = 0;
     characterData.earnedAttributes = 0;
-    characterData.earnedClassPoints = 1;
-    characterData.spentClassPoints = 0;
   }
   
   return gotFromURL;
@@ -351,9 +348,10 @@ function hasPerkPreReqs(perkNum){
 //Take the perk. Assumes that all the prerequisites are satisfied.
 function actuallyTakePerk(perkNum){
 	characterData.perksTaken[perkNum] = true;
-	if ([perkNum] < 228){
+	let skill = curPerkList.perks[perkNum].skill 
+	if (skill < 18){
   		characterData.spentPerks++;
-  	}else if (perkNum < 278){
+  	}else if (skill < 19){
 		characterData.spentClassPoints++;
   }
  updateDerivedAttributes()
@@ -362,9 +360,10 @@ function actuallyTakePerk(perkNum){
 //Remove the perk. Assumes that the perk has actually been taken.
 function actuallyRemovePerk(perkNum){
   characterData.perksTaken[perkNum] = false;
-  if ([perkNum] < 228){
+  let skill = curPerkList.perks[perkNum].skill 
+  if (skill < 18){
   characterData.spentPerks--;
-  	}else if (perkNum < 278) {
+  	}else if (skill < 19) {
 		characterData.spentClassPoints--;
 	}
  updateDerivedAttributes()
@@ -459,7 +458,7 @@ function addGameMechanicsData(gameData){
   
   gameData.xpTable = [0];
   
-  for(let i = 1; i < 99; i++){
+  for(let i = 1; i < 101; i++){
     gameData.xpTable.push(
        gameData.xpTable[i-1] + gameData.leveling.base + i * gameData.leveling.mult);
   }
@@ -494,44 +493,60 @@ function calcClassPoints(){
 //Calculate how many trait points the character has.
 function calcTraitPoints(){
 let answer = 0;
-for(let i = 278; i < curPerkList.perks.length; i++){
+for(let i = 0; i < curPerkList.perks.length; i++){
 let n = (curPerkList.perks[i].skillReq);
+if (curPerkList.perks[i].skill > 18){
     if (characterHasPerk(i)){
    	answer += n;}
 	}
-      return answer;
+	}return answer;
  }
  
 //Calculate how many traits slots the character has left.
 function calcFreeTraits(){
 let perks = curPerkList.perks;
 let answer = 0;
-let n = 1;
-for(let i = 278; i < perks.length; i++){
+for(let i = 0; i < perks.length; i++){
 let thePerk = curPerkList.perks[i];
 let hasPerk = characterHasPerk(i);
-let isFirstInChain = curPerkList.perks[i].prevPerk == -1;
-    if (hasPerk && isFirstInChain){
+let isFirstInChain = thePerk.preReqs <= 0 ;
+    if (thePerk.skill > 18){
+		if(hasPerk && isFirstInChain){
    	answer += 1
+		}
 	}
-	}
-	answer = 5 - answer
-      return answer;
+}
+answer = 5 - answer
+return answer;
  }
 
 //Get what level the player should be based on the skill levels
 function calcLevel(){
-  
+  let answer = 2
   let totalXP = calcTotalXP();
-  
-  //Don't need to check i=0 because the value there should always be 0
-  for(let i = 1; i < 99; i++){
-    if(totalXP < curGameMechanics.xpTable[i]) return i;
+  let minlevel = 1
+  //check highest skill level for level cap + sub-class level req
+  for (let i = 0; i < 18; i++){
+	  let baseSkill = curRaceList.races[characterData.race].startingSkills[i];
+	  let currentSkill = characterData.skillLevels[i];
+	  let levelReq = currentSkill - 50
+	  if(minlevel < levelReq){
+		  minlevel = levelReq
+	  }
+	  if (minlevel < (currentSkill - baseSkill)/5){
+		  minlevel = (currentSkill - baseSkill)/5
+	  }
+      if (characterData.skillLevels[18] > minlevel){
+	  minlevel = characterData.skillLevels[18]
+	  }
   }
-  // How would we ever get here???
-  return 1;
+  //Don't need to check i=0 because the value there should always be 0
+  for(let i = 1; i < curGameMechanics.xpTable.length; i++){
+    if(totalXP < curGameMechanics.xpTable[i]) return Math.max(minlevel, i);
+  }
+  return 1
 }
-
+  
 //Calculate how much character XP has been earned based on skill levels
 function calcTotalXP(){
 let answer = 0;

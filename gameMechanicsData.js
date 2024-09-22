@@ -1,5 +1,5 @@
-const testGameMechanicsData = {
-  name: "Test",
+const gameMechanicsData = {
+  name: "2.2.8",
   id : 0,
   
   initialPerks: 3,
@@ -106,5 +106,5 @@ const testGameMechanicsData = {
                       0]
   }
 };
-addGameMechanicsData(testGameMechanicsData);
+addGameMechanicsData(gameMechanicsData);
 
