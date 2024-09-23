@@ -28,8 +28,6 @@ var characterData = {
   spentPerks: 0, //The number of perks actually taken
   standingStone : 0,
   blessing : 0,
-  earnedClassPoints : 1,
-  spentClassPoints : 0,
 };
 
 //Returns the preset number given in the URL.
@@ -73,7 +71,7 @@ function initCharacterData(){
     characterData.race = 0;
     characterData.hmsIncreases = [0,0,0];
     characterData.skillLevels = [];
-    for(let i = 0; i < 21; i++){
+    for(let i = 0; i < 18; i++){
       characterData.skillLevels.push(curRaceList.races[0].startingSkills[i]);
     }
     characterData.perksTaken = [];
@@ -351,8 +349,6 @@ function actuallyTakePerk(perkNum){
 	let skill = curPerkList.perks[perkNum].skill 
 	if (skill < 18){
   		characterData.spentPerks++;
-  	}else if (skill < 19){
-		characterData.spentClassPoints++;
   }
  updateDerivedAttributes()
 }
@@ -363,8 +359,6 @@ function actuallyRemovePerk(perkNum){
   let skill = curPerkList.perks[perkNum].skill 
   if (skill < 18){
   characterData.spentPerks--;
-  	}else if (skill < 19) {
-		characterData.spentClassPoints--;
 	}
  updateDerivedAttributes()
 }
@@ -487,7 +481,17 @@ function calcFreePerks(){
 
 //Calculate how many sub-class points the character has left.
 function calcClassPoints(){
- return characterData.earnedClassPoints - characterData.spentClassPoints;
+ let level = characterData.level
+ let earnedClassPoints = 1
+ let spentClassPoints = 0
+ if(level<30){
+	earnedClassPoints = 1 + Math.floor(level/5);
+	}else {earnedClassPoints = 7;}
+for(let i = 331; i < 382; i++){;
+    if (characterHasPerk(i)){
+   	spentClassPoints += 1;}
+}
+ return earnedClassPoints - spentClassPoints
 }
 
 //Calculate how many trait points the character has.
@@ -587,7 +591,7 @@ function generateBuildCode(){
   code += String.fromCodePoint(characterData.hmsIncreases[0]);
   code += String.fromCodePoint(characterData.hmsIncreases[1]);
   code += String.fromCodePoint(characterData.hmsIncreases[2]);
-  for(let i = 0; i < 21; i++){
+  for(let i = 0; i < 18; i++){
     code += String.fromCodePoint(characterData.skillLevels[i]);
   }
   code += String.fromCodePoint(characterData.oghmaChoice << 4);
@@ -665,7 +669,7 @@ function buildCodeParserV1(buildCode){
   
   characterData.skillLevels = [];
   
-  for(let i = 0; i < 21; i++){
+  for(let i = 0; i < 18; i++){
     characterData.skillLevels.push(buildCode.charCodeAt(9+i));
   }
   
@@ -676,7 +680,7 @@ function buildCodeParserV1(buildCode){
   
   characterData.perksTaken = [];
   //this method will be kind of inefficient but EHHHHHHH
-  for(let i = 0; i < 21; i++){
+  for(let i = 0; i < curPerkList.perks.length; i++){
     let index = 31 + Math.floor(i/8);
     let offset = 7 - (i % 8);
     let hasPerk = (buildCode.charCodeAt(index) & (1 << offset)) > 0;
@@ -738,9 +742,6 @@ function calcCharacterLevelAndResults(){
   characterData.level = newLevel;
   characterData.earnedAttributes = newLevel - 1;
   characterData.earnedPerks = curGameMechanics.initialPerks + (newLevel-1);
-   if(newLevel<30){
-	characterData.earnedClassPoints = 1 + Math.floor(newLevel/5);
-   }else {characterData.earnedClassPoints = 7;}
   if(characterData.oghmaChoice > 0){
     characterData.earnedPerks += curGameMechanics.oghmaData.perksGiven;
   }
