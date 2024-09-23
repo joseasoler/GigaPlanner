@@ -538,7 +538,7 @@ function calcLevel(){
 		  minlevel = levelReq
 	  }
 	  if (minlevel < (currentSkill - baseSkill)/5){
-		  minlevel = (currentSkill - baseSkill)/5
+		  minlevel = Math.floor((currentSkill - baseSkill)/5)
 	  }
       if (characterData.skillLevels[18] > minlevel){
 	  minlevel = characterData.skillLevels[18]
