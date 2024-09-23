@@ -1,2 +1,3 @@
 # GigaPlanner
- Character Planner for Requiem
+Character Planner for LoreRim
+forked from https://github.com/Banananaut/NannerPlanner 
