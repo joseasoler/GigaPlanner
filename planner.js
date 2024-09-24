@@ -487,8 +487,8 @@ function calcClassPoints(){
  if(level<30){
 	earnedClassPoints = 1 + Math.floor(level/5);
 	}else {earnedClassPoints = 7;}
-for(let i = 331; i < 382; i++){;
-    if (characterHasPerk(i)){
+for(let i = 0; i < curPerkList.perks.length; i++){;
+    if (characterHasPerk(i) && curPerkList.perks[i].skill == 18){
    	spentClassPoints += 1;}
 }
  return earnedClassPoints - spentClassPoints
@@ -526,7 +526,6 @@ return answer;
 
 //Get what level the player should be based on the skill levels
 function calcLevel(){
-  let answer = 2
   let totalXP = calcTotalXP();
   let minlevel = 1
   //check highest skill level for level cap + sub-class level req
@@ -537,8 +536,8 @@ function calcLevel(){
 	  if(minlevel < levelReq){
 		  minlevel = levelReq
 	  }
-	  if (minlevel < (currentSkill - baseSkill)/5){
-		  minlevel = Math.floor((currentSkill - baseSkill)/5)
+	  if (minlevel <= Math.floor(((currentSkill - baseSkill)/5) + 1)){
+		  minlevel = (Math.ceil((currentSkill - baseSkill)/5)+ 1)
 	  }
       if (characterData.skillLevels[18] > minlevel){
 	  minlevel = characterData.skillLevels[18]
@@ -685,7 +684,7 @@ function buildCodeParserV1(buildCode){
     let offset = 7 - (i % 8);
     let hasPerk = (buildCode.charCodeAt(index) & (1 << offset)) > 0;
     characterData.perksTaken.push(hasPerk);
-    if(hasPerk) characterData.spentPerks++;
+    if(hasPerk && curPerkList.perks[i].skill < 18) characterData.spentPerks++;
   }
   
   return true;

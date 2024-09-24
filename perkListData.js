@@ -11,7 +11,7 @@ skillNames : [
   "Evasion",      // 6
   "Sneak",        // 7
   "Wayfarer",     // 8
-  "finesse",      // 9
+  "Finesse",      // 9
   "Speech",       // 10
   "Alchemy",      // 11
   "Illusion",     // 12
@@ -636,7 +636,7 @@ perks : [
    description : "Your dragon spirit rages inside you as your shouts are 10% stronger and last 10% longer also you are 25% more resistant to diseases and poisons when unarmored."},
    //151
   {name : "Gambler", skill : 9, skillReq : 30,
-   xPos : 300/4, yPos : 275/4, preReqs : [142], nextPerk: 152,
+   xPos : 300/4, yPos : 275/4, preReqs : [141], nextPerk: 152,
    description : "A gambler at heart, you have a 25% chance to do 25% more weapon damage but a 10% chance to do 30% less damage."},
    //152
   {name : "Gambler", skill : 9, skillReq : 30,
@@ -825,7 +825,7 @@ perks : [
    //198
   {name : "Perceptual Illusions", skill : 12, skillReq : 25,
    xPos : 50/4, yPos : 275/4, preReqs : [193], nextPerk: -1,
-   description : "Your knowledge of Illusion has become all-encompassing. You taught yourself a Master level spell and you can cast the most complex spells from this school with less effort while augmenting them beyond mortal limits."},
+   description : "Perceptual illusion effecta such as chameleon, dampen, hallcination, invisibility, muffle, night-eye and sound are more effective and easier to cast. (1.1x magnitude, 1.1x duration, 0.9x spell cost for perceptual spells)"},
    //199
   {name : "Deceptive Image", skill : 12, skillReq : 50,
    xPos : 100/4, yPos : 225/4, preReqs : [198], nextPerk: -1,
@@ -1028,7 +1028,7 @@ perks : [
    description : "You can efficient absorb energy from targets. Absorb spells are more powerful and cost less magicka. (1.1x magnitde, 0.9x cost for absorb spells)"},
    //249
   {name : "Blood Magic", skill : 14, skillReq : 50,
-   xPos : 37.5/4, yPos : 300/4, preReqs : [249], nextPerk: -1,
+   xPos : 37.5/4, yPos : 300/4, preReqs : [248], nextPerk: -1,
    description : "You can absorb even more energy from targets with greater efficiency. (1.2x magnitde, 0.8x cost for absorb spells)"},
    //250
   {name : "Consume Life", skill : 14, skillReq : 75,
@@ -1562,143 +1562,143 @@ perks : [
    description : "Against enemies that are out of Magicka, your attacks deal 25% more damage and have a 30% chance to dispel magic"},  	
   //382
   {name : "Adrenaline Rush", skill : 19, skillReq: -5,
-   xPos : 100/4, yPos : 50/4, preReqs : [], nextPerk: -1,
+   xPos : 100/4, yPos : 25/4, preReqs : [], nextPerk: -1,
    description : "You gain a bonus to damage output and damage resistance when low on health."},
    //383
   {name : "Athleticism", skill : 19, skillReq: -4,
-   xPos : 200/4, yPos : 50/4, preReqs : [], nextPerk: -1,
+   xPos : 200/4, yPos : 25/4, preReqs : [], nextPerk: -1,
    description : "You gain a 50% bonus to your stamina regeneration"},
    //384
   {name : "Expertise: <br>Animals", skill : 19, skillReq: -2,
-   xPos : 80/4, yPos : 100/4, preReqs : [], nextPerk: -1,
+   xPos : 80/4, yPos : 125/4, preReqs : [], nextPerk: -1,
    description : "You cause 20% additional damage to animals"},
    //385
   {name : "Expertise: <br>Daedra", skill : 19, skillReq: -2,
-   xPos : 160/4, yPos : 100/4, preReqs : [], nextPerk: -1,
+   xPos : 160/4, yPos : 125/4, preReqs : [], nextPerk: -1,
    description : "You cause 20% additional damage to daedra"},
    //386
   {name : "Expertise: <br>Humanoids", skill : 19, skillReq: -4,
-   xPos : 240/4, yPos : 100/4, preReqs : [], nextPerk: -1,
+   xPos : 240/4, yPos : 125/4, preReqs : [], nextPerk: -1,
    description : "You cause 20% additional damage to humanoids"},
    //387
   {name : "Expertise: <br>Undead", skill : 19, skillReq: -3,
-   xPos : 320/4, yPos : 100/4, preReqs : [], nextPerk: -1,
+   xPos : 320/4, yPos : 125/4, preReqs : [], nextPerk: -1,
    description : "You cause 20% additional damage to undead"},
    //388
   {name : "High Tolerance:<br>Disease", skill : 19, skillReq: -2,
-   xPos : 60/4, yPos : 150/4, preReqs : [], nextPerk: -1,
+   xPos : 60/4, yPos : 175/4, preReqs : [], nextPerk: -1,
    description : "Provides 20% resistance to disease"},
    //389
   {name : "Resistance:<br>Disease", skill : 19, skillReq: -2,
-   xPos : 120/4, yPos : 150/4, preReqs : [388], nextPerk: -1,
+   xPos : 120/4, yPos : 175/4, preReqs : [388], nextPerk: -1,
    description : "Provides 40% resistance to disease"},
    //390
   {name : "High Tolerance:<br>Fire", skill : 19, skillReq: -3,
-   xPos : 180/4, yPos : 150/4, preReqs : [], nextPerk: -1,
+   xPos : 180/4, yPos : 175/4, preReqs : [], nextPerk: -1,
    description : "Provides 20% resistance to fire"},
    //391
   {name : "Resistance: <br>Fire", skill : 19, skillReq: -3,
-   xPos : 240/4, yPos : 150/4, preReqs : [390], nextPerk: -1,
+   xPos : 240/4, yPos : 175/4, preReqs : [390], nextPerk: -1,
    description : "Provides 40% resistance to fire"},
    //392
   {name : "High Tolerance: <br>Frost", skill : 19, skillReq: -3,
-   xPos : 300/4, yPos : 150/4, preReqs : [], nextPerk: -1,
+   xPos : 300/4, yPos : 175/4, preReqs : [], nextPerk: -1,
    description : "Provides 20% resistance to frost"},
    //393
   {name : "Resistance: <br>Frost", skill : 19, skillReq: -3,
-   xPos : 360/4, yPos : 150/4, preReqs : [392], nextPerk: -1,
+   xPos : 360/4, yPos : 175/4, preReqs : [392], nextPerk: -1,
    description : "Provides 40% resistance to frost"},
    //394
   {name : "High Tolerance: <br>Shock", skill : 19, skillReq: -3,
-   xPos : 60/4, yPos : 200/4, preReqs : [], nextPerk: -1,
+   xPos : 60/4, yPos : 225/4, preReqs : [], nextPerk: -1,
    description : "Provides 20% resistance to shock"},
    //395
   {name : "Resistance: <br>Shock", skill : 19, skillReq: -3,
-   xPos : 120/4, yPos : 200/4, preReqs : [394], nextPerk: -1,
+   xPos : 120/4, yPos : 225/4, preReqs : [394], nextPerk: -1,
    description : "Provides 40% resistance to shock"},
    //396
   {name : "High Tolerance: <br>Magic", skill : 19, skillReq: -5,
-   xPos : 180/4, yPos : 200/4, preReqs : [], nextPerk: -1,
+   xPos : 180/4, yPos : 225/4, preReqs : [], nextPerk: -1,
    description : "Provides 20% resistance to magic"},
    //397
   {name : "Resistance: <br>Magic", skill : 19, skillReq: -5,
-   xPos : 240/4, yPos : 200/4, preReqs : [396], nextPerk: -1,
+   xPos : 240/4, yPos : 225/4, preReqs : [396], nextPerk: -1,
    description : "Provides 40% resistance to magic"},
    //398
   {name : "High Tolerance: <br>Poison", skill : 19, skillReq: -2,
-   xPos : 300/4, yPos : 200/4, preReqs : [], nextPerk: -1,
+   xPos : 300/4, yPos : 225/4, preReqs : [], nextPerk: -1,
    description : "Provides 20% resistance to poison"},
    //399
   {name : "Resistance: <br>Poison", skill : 19, skillReq: -2,
-   xPos : 360/4, yPos : 200/4, preReqs : [398], nextPerk: -1,
+   xPos : 360/4, yPos : 225/4, preReqs : [398], nextPerk: -1,
    description : "Provides 40% resistance to poison"},
    //400
   {name : "Rapid Healing: <br>Darkness", skill : 19, skillReq: -5,
-   xPos : 80/4, yPos : 250/4, preReqs : [], nextPerk: -1,
+   xPos : 80/4, yPos : 275/4, preReqs : [], nextPerk: -1,
    description : "Health regenerates faster at night or indoors"},
    //401
   {name : "Rapid Healing: <br>Light", skill : 19, skillReq: -5,
-   xPos : 160/4, yPos : 250/4, preReqs : [], nextPerk: -1,
+   xPos : 160/4, yPos : 275/4, preReqs : [], nextPerk: -1,
    description : "Health regenerates faster at daytime while outside"},
    //402
   {name : "Rapid Healing: <br>Water", skill : 19, skillReq: -2,
-   xPos : 240/4, yPos : 250/4, preReqs : [], nextPerk: -1,
+   xPos : 240/4, yPos : 275/4, preReqs : [], nextPerk: -1,
    description : "Health regenerates faster while in water"},
    //403
   {name : "Rapid Healing: <br>General", skill : 19, skillReq: -5,
-   xPos : 320/4, yPos : 250/4, preReqs : [], nextPerk: -1,
+   xPos : 320/4, yPos : 275/4, preReqs : [], nextPerk: -1,
    description : "Health regenerates faster (Can't be used with other forms of healing"},
    //404
   {name : "Spell Absrb: <br>Darkness", skill : 19, skillReq: -10,
-   xPos : 80/4, yPos : 300/4, preReqs : [], nextPerk: -1,
+   xPos : 80/4, yPos : 325/4, preReqs : [], nextPerk: -1,
    description : "Absorb incoming spells when not at full magicka capacity while in darkness"},
    //405
   {name : "Spell Absrb: <br>Light", skill : 19, skillReq: -10,
-   xPos : 160/4, yPos : 300/4, preReqs : [], nextPerk: -1,
+   xPos : 160/4, yPos : 325/4, preReqs : [], nextPerk: -1,
    description : "Absorb incoming spells when not at full magicka capacity while in light"},
    //406
   {name : "Spell Absrb: <br>General", skill : 19, skillReq: -15,
-   xPos : 240/4, yPos : 300/4, preReqs : [], nextPerk: -1,
+   xPos : 240/4, yPos : 325/4, preReqs : [], nextPerk: -1,
    description : "Absorb incoming spells when not at full magicka capacity"},
    //407
   {name : "Spell Absrb: <br>True", skill : 19, skillReq: -22,
-   xPos : 320/4, yPos : 300/4, preReqs : [], nextPerk: -1,
+   xPos : 320/4, yPos : 325/4, preReqs : [], nextPerk: -1,
    description : "True spell absorbtion"},
    //408
   {name : "Wisdom I", skill : 19, skillReq: -2,
-   xPos : 300/4, yPos : 50/4, preReqs : [], nextPerk: 409,
+   xPos : 300/4, yPos : 25/4, preReqs : [], nextPerk: 409,
    description : "Increase magicka regeneration by 50%"},
    //409
   {name : "Wisdom II", skill : 19, skillReq: -2,
-   xPos : 300/4, yPos : 50/4, preReqs : [408], nextPerk: 410,
+   xPos : 300/4, yPos : 25/4, preReqs : [408], nextPerk: 410,
    description : "Increase magicka regeneration by 100%"},
    //410
   {name : "Wisdom III", skill : 19, skillReq: -4,
-   xPos : 300/4, yPos : 50/4, preReqs : [409], nextPerk: -1,
+   xPos : 300/4, yPos : 25/4, preReqs : [409], nextPerk: -1,
    description : "Increase magicka regeneration by 200%"}, 
    //411
   {name : "Holy Damage", skill : 20, skillReq: 5,
-   xPos : 75/4, yPos : 25/4, preReqs : [], nextPerk: 412, 
+   xPos : 80/4, yPos : 25/4, preReqs : [], nextPerk: 412, 
    description : "Take damage when in holy places"},
    //412
   {name : "Light Damage", skill : 20, skillReq: 10,
-   xPos : 75/4, yPos : 25/4, preReqs : [411], nextPerk: -1,
+   xPos : 80/4, yPos : 25/4, preReqs : [411], nextPerk: -1,
    description : "Take damage when in stong light"},
    //413
   {name : "Heliophobic", skill : 20, skillReq: 3,
-   xPos : 150/4, yPos : 25/4, preReqs : [], nextPerk: 414,
+   xPos : 160/4, yPos : 25/4, preReqs : [], nextPerk: 414,
    description : "You take more magic damage and regenerate less health when ourdoors during the day. (25% taken -25% health regen)"},
    //414
   {name : "Heliophobic", skill : 20, skillReq: 3,
-   xPos : 150/4, yPos : 25/4, preReqs : [413], nextPerk: -1,
+   xPos : 160/4, yPos : 25/4, preReqs : [413], nextPerk: -1,
    description : "You take more magic damage and regenerate less health when ourdoors during the day. (50% taken -50% health regen)"},
    //415
   {name : "Heliophilic", skill : 20, skillReq: 3,
-   xPos : 225/4, yPos : 25/4, preReqs : [], nextPerk: 416,
+   xPos : 240/4, yPos : 25/4, preReqs : [], nextPerk: 416,
    description : "You take more magic damage and regenerate less health when indoors or at night. (25% taken -25% health regen)"},
    //416
   {name : "Heliophilic", skill : 20, skillReq: 3,
-   xPos : 225/4, yPos : 25/4, preReqs : [415], nextPerk: -1,
+   xPos : 240/4, yPos : 25/4, preReqs : [415], nextPerk: -1,
    description : "You take more magic damage and regenerate less health when indoors or at night. (50% taken -50% health regen)"},
    //417
   {name : "Forbidden: <br>Axe", skill : 20, skillReq: 2,
@@ -1790,7 +1790,7 @@ perks : [
    description : "You cause 30% less damage to undead"},
    //439
   {name : "Stunted Growth", skill : 20, skillReq: 6,
-   xPos : 300/4, yPos : 25/4, preReqs : [], nextPerk: -1,
+   xPos : 320/4, yPos : 25/4, preReqs : [], nextPerk: -1,
    description : "You regenerate 50% less health, magicka and stamina"},
    //440
   {name : "Forbidden : <br>Daedric", skill : 20, skillReq: 1,
@@ -1857,6 +1857,30 @@ perks : [
   {name : "Staff Channeling", skill : 17, skillReq: 0,
    xPos : 300/4, yPos : 325/4, preReqs : [454], nextPerk: -1,
    description : "You can use your staff to empower your own spells and cast them more efficiently.. *Requires Level 20* (While holding a staff, spells are 10% more powerful and cost 20% less magicka to cast)"},
+   //456
+  {name : "Expertise: <br>Axe", skill : 19, skillReq: -4,
+   xPos : 60/4, yPos : 75/4, preReqs : [], nextPerk: -1,
+   description : "You cause 20% more damage with axes and hafted blades"},
+   //457
+  {name : "Expertise: <br>Blunt", skill : 19, skillReq: -4,
+   xPos : 120/4, yPos : 75/4, preReqs : [], nextPerk: -1,
+   description : "You cause 20% more damage with blunt weapons and quarterstaves"},
+   //458
+  {name : "Expertise: <br>Dagger", skill : 19, skillReq: -4,
+   xPos : 180/4, yPos : 75/4, preReqs : [], nextPerk: -1,
+   description : "You cause 20% more damage with daggers"},
+   //459
+  {name : "Expertise: <br>Ranged", skill : 19, skillReq: -4,
+   xPos : 240/4, yPos : 75/4, preReqs : [], nextPerk: -1,
+   description : "You cause 20% more damage with bows and crossbows"},
+   //460
+  {name : "Expertise: <br>Blades", skill : 19, skillReq: -4,
+   xPos : 300/4, yPos : 75/4, preReqs : [], nextPerk: -1,
+   description : "You cause 20% more damage with swords and spears"},
+   //461
+  {name : "Expertise: <br>Unarmed", skill : 19, skillReq: -2,
+   xPos : 360/4, yPos : 75/4, preReqs : [], nextPerk: -1,
+   description : "You cause 20% more damage while unarmed"},
  ]
 };
 
