@@ -359,9 +359,16 @@ function activeSkillPerkHoverEnter(event){
     let nextPerkNum = curPerkList.perks[perkNum].nextPerk;
     let nextPerkReq = curPerkList.perks[nextPerkNum].skillReq;
     let nextPerkDescString = curPerkList.perks[nextPerkNum].description;
+	if (nextPerkReq > 0){
     let nextDescString = `<b>Next rank:</b> ${nextPerkDescString} [Skill Req: ${nextPerkReq}]`;
     
     $("#highlightedNextPerkDesc").html(nextDescString);
+	}
+	if (nextPerkReq <= 0){
+		let nextDescString = `<b>Next rank:</b> ${nextPerkDescString}`;
+    
+    $("#highlightedNextPerkDesc").html(nextDescString);
+  }
   }
   else {
     $("#highlightedNextPerkDesc").empty();

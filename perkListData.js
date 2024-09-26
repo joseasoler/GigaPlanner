@@ -163,7 +163,7 @@ perks : [
    xPos : 190/3, yPos : 160/4, preReqs : [31], nextPerk: 33,
    description : "You can use your shield more offensively, using it as a deadly weapon. (50% more shield bash dmaage, double damage when not wearing heavy armor, 25% less shield bash stamina cost)"},  
     //33
-  {name : "Shield Strike", skill : 2, skillReq : 25,
+  {name : "Shield Strike", skill : 2, skillReq : 50,
    xPos : 190/3, yPos : 160/4, preReqs : [32], nextPerk: -1,
    description : "You can use your shield more offensively, using it as a deadly weapon. (100% more shield bash dmaage, double damage when not wearing heavy armor, 50% less shield bash stamina cost)"},  
    //34
@@ -243,11 +243,11 @@ perks : [
    xPos : 325/4, yPos : 262/4, preReqs : [39], nextPerk: 53,
    description : "You've learned some techniques to crush armor with warhammers. (+15% armor penetration, 5% critical hit chance)"},
    //53
-  {name : "Warhammer<br>Focus", skill : 3, skillReq : 25,
+  {name : "Warhammer<br>Focus", skill : 3, skillReq : 50,
    xPos : 325/4, yPos : 262/4, preReqs : [52], nextPerk: 54,
    description : "You've learned some techniques to crush armor with warhammers. (+30% armor penetration, 10% critical hit chance)"},
    //54
-  {name : "Warhammer<br>Focus", skill : 3, skillReq : 25,
+  {name : "Warhammer<br>Focus", skill : 3, skillReq : 75,
    xPos : 325/4, yPos : 262/4, preReqs : [53], nextPerk: -1,
    description : "You've learned some techniques to crush armor with warhammers. (+45% armor penetration, 15% critical hit chance)"}, 
    //55
@@ -1301,7 +1301,7 @@ perks : [
    //317
   {name : "Willpower", skill : 16, skillReq : 0,
    xPos : 250/3, yPos : 350/4, preReqs : [316], nextPerk: -1,
-   description : "Your strong willpower provides resistance to harmful magic and more stamina. (15% magic resistance when magic resistance perk is not taken, +30 stamina) [Requires Level 20]"},
+   description : "Your strong willpower provides resistance to harmful magic and more stamina. (15% magic resistance when magic resistance perk is not taken, +30 stamina) [Requires Level 30]"},
    //318
   {name : "Enchanter's Insight", skill : 17, skillReq : 0,
    xPos : 183/4, yPos : 342/4, preReqs : [], nextPerk: 319,
@@ -1312,15 +1312,15 @@ perks : [
    description : "Your advanced knowledge of arcane energy allows you to improve all your enchantments even more. (New enchantments are 50% stronger, craft novice level staves and scrolls)"},
    //320
   {name : "Arcane Artificery", skill : 17, skillReq : 25,
-   xPos : 200/4, yPos : 248/4, preReqs : [318], nextPerk: 321,
+   xPos : 285/4, yPos : 265/4, preReqs : [318], nextPerk: 321,
    description : "Your understanding of enchanbtments allow you to use them more effectively and efficiently. (Staves and scrolls are 10% more powerful, enchantment cost 10% less charge)"},
    //321
-  {name : "Arcane Artificery", skill : 17, skillReq : 25,
-   xPos : 200/4, yPos : 248/4, preReqs : [320], nextPerk: 322,
+  {name : "Arcane Artificery", skill : 17, skillReq : 50,
+   xPos : 285/4, yPos : 265/4, preReqs : [320], nextPerk: 322,
    description : "Your understanding of enchanbtments allow you to use them more effectively and efficiently. (Staves and scrolls are 20% more powerful, enchantment cost 20% less charge)"},
    //322
-  {name : "Arcane Artificery", skill : 17, skillReq : 25,
-   xPos : 200/4, yPos : 248/4, preReqs : [321], nextPerk: -1,
+  {name : "Arcane Artificery", skill : 17, skillReq : 75,
+   xPos : 285/4, yPos : 265/4, preReqs : [321], nextPerk: -1,
    description : "Your understanding of enchanbtments allow you to use them more effectively and efficiently. (Staves and scrolls are 30% more powerful, enchantment cost 30% less charge)"},
    //323
   {name : "Soul Gem Mastery", skill : 17, skillReq : 25,
