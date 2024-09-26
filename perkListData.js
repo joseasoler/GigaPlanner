@@ -628,7 +628,7 @@ perks : [
    description : "You have elevated your body. You gain 200 armor rating when not wearing armor and gain 20% armor penetration and 20 unarmed damage when unarmored."},
    //149
   {name : "Sound Mind", skill : 9, skillReq : 60,
-   xPos : 100/4, yPos : 200/4, preReqs : [148], nextPerk: -1,
+   xPos : 100/4, yPos : 200/4, preReqs : [147], nextPerk: -1,
    description : "You've focused your inner thoughts, gaining 10% resistance to magic and 50% greater health, stamina and magicka regen when unarmored."},
    //150
   {name : "Sound Spirit", skill : 9, skillReq : 80,
@@ -653,11 +653,11 @@ perks : [
    //155
   {name : "Haggling", skill : 10, skillReq : 0,
    xPos : 118/4, yPos : 335/4, preReqs : [], nextPerk: -1,
-   description : "You've learned how to deal with Skyrim's greedy merchants. Prices are better and scale with your speech level."},
+   description : "You've learned how to deal with Skyrim's greedy merchants. Prices are better and scale 1% per speech level."},
    //156
   {name : "Merchant", skill : 10, skillReq : 50,
    xPos : 98/4, yPos : 271/4, preReqs : [155], nextPerk: -1,
-   description : "Your trading skills are good enough to sell almost anything to any merchant willing to trade with you, and you can invest some of your gold with a shopkeeper to increase his available gold permanently."},
+   description : "You can invest gold to permanently increase the amount of gold that merchants have, merchants will buy any non-stolen item, sell price is increased by 15%"},
    //157
   {name : "Fencing", skill : 10, skillReq : 100,
    xPos : 141/4, yPos : 216/4, preReqs : [156], nextPerk: -1,
@@ -665,15 +665,15 @@ perks : [
    //158
   {name : "Silver Tongue", skill : 10, skillReq : 25,
    xPos : 48/4, yPos : 333/4, preReqs : [155], nextPerk: -1,
-   description : "You've spent quite some time improving your rhetorical skills and are now able to greatly influence any conversation and to fascinate the opposite gender. You also get better offers at respective vendors."},
+   description : "You've spent quite some time improving your rhetorical skills, intimidation is much more likely to succeed and you gain 10% better prices from the opposite gender."},
    //159
   {name : "Leadership", skill : 10, skillReq : 75,
    xPos : 118/4, yPos : 174/4, preReqs : [158], nextPerk: -1,
-   description : "Your rhetorical skill makes you the perfect leader. By inspiring all those who fight by your side, you encourage your followers to always push their abilities to their very limits."},
+   description : "Your rhetorical skill makes you the perfect leader. By inspiring all those who fight by your side, followers gain 20% damage, -15% spell cost, +75% block, +100 magicka and stamina, 50 carry weight."},
    //160
   {name : "Masquerade", skill : 10, skillReq : 50,
    xPos : 102/4, yPos : 93/4, preReqs : [158], nextPerk: 161,
-   description : "You've become proficient at acting, and with the right equipment you can now disguise yourself, although sometimes people can still tell that you are not truly one of them."},
+   description : "You've become proficient at acting, and with the right equipment you can now disguise yourself as a Forsworn, Imperial, Stormclock, Necromancer, Thalmor or Warlock to (usually) avoid detection."},
    //161
   {name : "Masquerade", skill : 10, skillReq : 100,
    xPos : 102/4, yPos : 93/4, preReqs : [160], nextPerk: -1,
@@ -697,27 +697,27 @@ perks : [
    //166
   {name : "Lore of the Thu'um", skill : 10, skillReq : 0,
    xPos : 340/4, yPos : 338/4, preReqs : [], nextPerk: -1,
-   description : "You've been studying the lore and ancient script of dragons and the Thu'um. Thus, you can shout more often."},
+   description : "You've been studying the lore and ancient script of dragons and the Thu'um. Thus, your shout cooldown is reduced by 10%."},
    //167
   {name : "Destructive Urge", skill : 10, skillReq : 0,
    xPos : 250/4, yPos : 320/4, preReqs : [166], nextPerk: -1,
-   description : "The horrors that the Thu'um can inflict are etched into your mind just as you have seen them etched into stone. Your Thu'um will wreak even greater havoc among your unfortunate foes."},
+   description : "The horrors that the Thu'um can inflict are etched into your mind just as you have seen them etched into stone. Your shouts have 15% greater magnitude."},
    //168
   {name : "Indomitable<br>Force", skill : 10, skillReq : 0,
    xPos : 265/4, yPos : 251/4, preReqs : [166], nextPerk: -1,
-   description : "You know what it means to be called Ysmir, Dragon of the North. As you have withstood the test of Thu'um, so you will withstand the Thu'um of others."},
+   description : "You know what it means to be called Ysmir, Dragon of the North. Enemy shout effects are reduced by 50%."},
    //169
   {name : "Spiritual<br>Equilibrium", skill : 10, skillReq : 0,
    xPos : 273/4, yPos : 160/4, preReqs : [166], nextPerk: -1,
-   description : "You have been guided in meditating on the Thu'um. Now your shouts linger, lasting longer than they did before."},
+   description : "You have been guided in meditating on the Thu'um. Now your shouts linger, lasting 15% longer than they did before."},
    //170
   {name : "The Way of<br>the Voice", skill : 10, skillReq : 0,
    xPos : 296/4, yPos : 96/4, preReqs : [166], nextPerk: -1,
-   description : "You've meditated thoroughly, and acquired vast insights into the Way of the Voice. Thus, you can call upon the power of your Thu'um rapidly once each day."},
+   description : "You've meditated thoroughly, and acquired vast insights into the Way of the Voice. Gain a daily power that lets you use your shouts more rapidly."},
    //171
   {name : "Tongue's<br>Insight", skill : 10, skillReq : 0,
    xPos : 349/4, yPos : 71/4, preReqs : [166], nextPerk: -1,
-   description : "You've spent time meditating on the Way of the Voice, unearthing more knowledge and gaining valuable insights. Thus, you can harness the might of yet another word of power."},
+   description : "You've spent time meditating on the Way of the Voice, unearthing more knowledge. Grants a dragon soul at the cost of a perk point."},
    //172
   {name : "Shout Focus", skill : 10, skillReq : 0,
    xPos : 184/4, yPos : 335/4, preReqs : [], nextPerk: 173,
@@ -1092,11 +1092,11 @@ perks : [
    description : "Your mastery of frost element grants you resistance to frost and increase efficiency for frost spells. (+25% frost resistance, 1.05x magnitude, 0.9x cost for frost spells)"},
    //265
   {name : "Electromancy", skill : 14, skillReq : 25,
-   xPos : 200/4, yPos : 275/4, preReqs : [238], nextPerk: 266,
+   xPos : 200/4, yPos : 260/4, preReqs : [238], nextPerk: 266,
    description : "You can now energize your lightning spells more effectively, causing them to deal more damage. (1.1x magnitude, 0.9x cost for shock spells)"},
    //266
   {name : "Electromancy", skill : 14, skillReq : 50,
-   xPos : 200/4, yPos : 275/4, preReqs : [265], nextPerk: -1,
+   xPos : 200/4, yPos : 260/4, preReqs : [265], nextPerk: -1,
    description : "Compared to your lightning spells, the worst tempests would look like a mild summer breeze. (1.2x magnitude, 0.8x cost for shock spells)"},
    //267
   {name : "Electrostatic<br>Discharge", skill : 14, skillReq : 75,
@@ -1211,11 +1211,11 @@ perks : [
    xPos : 200/3, yPos : 50/4, preReqs : [293], nextPerk: -1,
    description : "Your knowledge of Alteration has become all-encompassing. You taught yourself a Master level spell and you can cast the most complex spells from this school with less effort while augmenting them beyond mortal limits."},
    //295
-  {name : "Transmutation", skill : 16, skillReq : 0,
+  {name : "Transmutation", skill : 16, skillReq : 25,
    xPos : 225/3, yPos : 300/4, preReqs : [290], nextPerk: -1,
    description : "Transmutation, size-shifting, shape-shifting spells are stronger and more efficient. (1.1x magnitude, 1.1x duration, 0.9x cost for transmutation spells)"},
    //296
-  {name : "Transmutational Mending", skill : 16, skillReq : 0,
+  {name : "Transmutational Mending", skill : 16, skillReq : 75,
    xPos : 250/3, yPos : 250/4, preReqs : [295], nextPerk: -1,
    description : "Health is increased and regenerates while transmutation spell is active. (+50 health and +1/s health regeneration while transmutation spell is active)"},
    //297
@@ -1839,15 +1839,15 @@ perks : [
    
    //451
   {name : "Arcane Assassin", skill : 7, skillReq: 25,
-   xPos : 200/4, yPos : 200/4, preReqs : [119], nextPerk:452,
+   xPos : 240/4, yPos : 200/4, preReqs : [119], nextPerk:452,
    description : "You can supress the noise cast by your spells and deliver stronger effect to unwary targets. (Spells and enchantments are silent when cast out of combat, spells are 10% more powerful on targets while undetected)"},
    //452
   {name : "Arcane Assassin", skill : 7, skillReq: 50,
-   xPos : 200/4, yPos : 200/4, preReqs : [451], nextPerk: 453,
+   xPos : 240/4, yPos : 200/4, preReqs : [451], nextPerk: 453,
    description : "You can supress the noise cast by your spells and deliver stronger effect to unwary targets. (Spells and enchantments are silent when cast out of combat, spells are 30% more powerful on targets while undetected)"},
    //453
   {name : "Arcane Assassin", skill : 7, skillReq: 75,
-   xPos : 200/4, yPos : 200/4, preReqs : [452], nextPerk: -1,
+   xPos : 240/4, yPos : 200/4, preReqs : [452], nextPerk: -1,
    description : "You can supress the noise cast by your spells and deliver stronger effect to unwary targets. (Spells and enchantments are silent when cast out of combat, spells are 50% more powerful on targets while undetected)"},
   //454
   {name : "Staff Channeling", skill : 17, skillReq: 0,
@@ -1881,6 +1881,14 @@ perks : [
   {name : "Expertise: <br>Unarmed", skill : 19, skillReq: -2,
    xPos : 360/4, yPos : 75/4, preReqs : [], nextPerk: -1,
    description : "You cause 20% more damage while unarmed"},
+   //462
+  {name : "Athletics", skill : 6, skillReq: 25,
+   xPos : 185/4, yPos : 148/4, preReqs : [111], nextPerk: 463,
+   description : "You are more agile and can recover from exhaustion fast. (+5% movement speed and +25% stamina regeneration when not wearing heavy armor)"},
+   //463
+  {name : "Athletics", skill : 6, skillReq: 50,
+   xPos : 185/4, yPos : 148/4, preReqs : [462], nextPerk: -1,
+   description : "You are more agile and can recover from exhaustion fast. (+10% movement speed and +50% stamina regeneration when not wearing heavy armor)"},
  ]
 };
 

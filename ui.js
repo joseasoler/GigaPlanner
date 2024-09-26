@@ -359,7 +359,7 @@ function activeSkillPerkHoverEnter(event){
     let nextPerkNum = curPerkList.perks[perkNum].nextPerk;
     let nextPerkReq = curPerkList.perks[nextPerkNum].skillReq;
     let nextPerkDescString = curPerkList.perks[nextPerkNum].description;
-    let nextDescString = `<b>Next rank:</b> ${nextPerkDescString} (Skill Req: ${nextPerkReq})`;
+    let nextDescString = `<b>Next rank:</b> ${nextPerkDescString} [Skill Req: ${nextPerkReq}]`;
     
     $("#highlightedNextPerkDesc").html(nextDescString);
   }
