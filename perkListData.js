@@ -129,7 +129,7 @@ perks : [
       //24
   {name : "Mounted Combat", skill : 1, skillReq : 0,
    xPos : 366/4.5, yPos : 406/4.5, preReqs : [], nextPerk: -1,
-   description : "You can deal more damage with melee weapons while mounted. *Requires Level 10* (1.5x melee sttack damage while on horseback)"},
+   description : "You can deal more damage with melee weapons while mounted. (1.5x melee sttack damage while on horseback)[Requires Level 10]"},
    //25
   {name : "Improved Blocking", skill : 2, skillReq : 0,
    xPos : 150/3, yPos : 323/4, preReqs : [], nextPerk: -1,
@@ -461,11 +461,11 @@ perks : [
    //107
   {name : "Hunter", skill : 5, skillReq : 0,
    xPos : 114/4, yPos : 360/4, preReqs : [], nextPerk: 108,
-   description : "You are more adapted to the wildlife, and better understand its inhabitants. *Requires Level 10* (Do 20% more damage to animals and take 10% less damage from animals, +10% poison and disease resistance)"},
+   description : "You are more adapted to the wildlife, and better understand its inhabitants. (Do 20% more damage to animals and take 10% less damage from animals, +10% poison and disease resistance) [Requires Level 10]"},
    //108
   {name : "Hunter", skill : 5, skillReq : 0,
    xPos : 114/4, yPos : 360/4, preReqs : [107], nextPerk: -1,
-   description : "You are more adapted to the wildlife, and better understand its inhabitants. *Requires Level 20* (Do 40% more damage to animals and take 20% less damage from animals, +20% poison and disease resistance)"},
+   description : "You are more adapted to the wildlife, and better understand its inhabitants. (Do 40% more damage to animals and take 20% less damage from animals, +20% poison and disease resistance) [Requires Level 20]"},
    //109
   {name : "Agility", skill : 6, skillReq : 0,
    xPos : 219/4, yPos : 345/4, preReqs : [], nextPerk: -1,
@@ -721,15 +721,15 @@ perks : [
    //172
   {name : "Shout Focus", skill : 10, skillReq : 0,
    xPos : 184/4, yPos : 335/4, preReqs : [], nextPerk: 173,
-   description : "You meditate on the Thu'um for deeper understanding of the Words of Power, making them more powerful. *Requires Level 10* (Shouts are 5% more powerful, shout cooldown is reduced by 10%)"},
+   description : "You meditate on the Thu'um for deeper understanding of the Words of Power, making them more powerful. (Shouts are 5% more powerful, shout cooldown is reduced by 10%) [Requires Level 10]"},
    //173
   {name : "Shout Focus", skill : 10, skillReq : 0,
    xPos : 184/4, yPos : 335/4, preReqs : [172], nextPerk: 174,
-   description : "You meditate on the Thu'um for deeper understanding of the Words of Power, making them more powerful. *Requires Level 20* (Shouts are 10% more powerful, shout cooldown is reduced by 20%)"},
+   description : "You meditate on the Thu'um for deeper understanding of the Words of Power, making them more powerful. (Shouts are 10% more powerful, shout cooldown is reduced by 20%) [Requires Level 20]"},
    //174
   {name : "Shout Focus", skill : 10, skillReq : 0,
    xPos : 184/4, yPos : 335/4, preReqs : [173], nextPerk: -1,
-   description : "You meditate on the Thu'um for deeper understanding of the Words of Power, making them more powerful. *Requires Level 30* (Shouts are 15% more powerful, shout cooldown is reduced by 30%)"},
+   description : "You meditate on the Thu'um for deeper understanding of the Words of Power, making them more powerful. (Shouts are 15% more powerful, shout cooldown is reduced by 30%) [Requires Level 30]"},
    //175
   {name : "Alchemical Lore", skill : 11, skillReq: 0,
    xPos : 30.7, yPos : 86.25, preReqs : [], nextPerk: 176,
@@ -785,23 +785,23 @@ perks : [
    //188
   {name : "Drunken Combat", skill : 11, skillReq: 0,
    xPos : 30/3, yPos : 300/4, preReqs : [], nextPerk: 189,
-   description : "Alcohol pumps you up, boosting your strength and stamina *Requires Level 10* (Immune to negative effects of alcohol, regenerate 1 stamina per second and do 10% more damage with melee attacks while tipsy)"},
+   description : "Alcohol pumps you up, boosting your strength and stamina. (Immune to negative effects of alcohol, regenerate 1 stamina per second and do 10% more damage with melee attacks while tipsy) [Requires Level 10]"},
    //189
   {name : "Drunken Combat", skill : 11, skillReq: 0,
    xPos : 30/3, yPos : 300/4, preReqs : [188], nextPerk: -1,
-   description : "Alcohol pumps you up, boosting your strength and stamina *Requires Level 20* (Immune to negative effects of alcohol, regenerate 2 stamina per second and do 20% more damage with melee attacks while tipsy)"},
+   description : "Alcohol pumps you up, boosting your strength and stamina. (Immune to negative effects of alcohol, regenerate 2 stamina per second and do 20% more damage with melee attacks while tipsy) [Requires Level 20]"},
    //190
   {name : "Gormet", skill : 11, skillReq: 0,
    xPos : 30/3, yPos : 250/4, preReqs : [], nextPerk: -1,
-   description : "You keep a healthy diet, maximizing the nutrition of foods. *Requires Level 10* (Food effects are 50% stronger and longer lasting)"},
+   description : "You keep a healthy diet, maximizing the nutrition of foods. (Food effects are 50% stronger and longer lasting [Requires Level 10]"},
    //191
   {name : "Herbalist", skill : 11, skillReq: 0,
    xPos : 30/3, yPos : 200/4, preReqs : [], nextPerk: 192,
-   description : "You can directly consume alchemical ingredients to draw their effects. *Requires Level 10* (2x magnitude for ingredients consumed)"},
+   description : "You can directly consume alchemical ingredients to draw their effects. (2x magnitude for ingredients consumed) [Requires Level 10]"},
    //192
   {name : "Herbalist", skill : 11, skillReq: 0,
    xPos : 30/3, yPos : 200/4, preReqs : [191], nextPerk: -1,
-   description : "You can directly consume alchemical ingredients to draw their effects. *Requires Level 20* (5x magnitude for ingredients consumed)"},
+   description : "You can directly consume alchemical ingredients to draw their effects. (5x magnitude for ingredients consumed) [Requires Level 20]"},
    //193
   {name : "Novice Illusion", skill : 12, skillReq : 0,
    xPos : 200/4, yPos : 350/4, preReqs : [], nextPerk: -1,
@@ -849,7 +849,7 @@ perks : [
    //204
   {name : "Shadow Shaping", skill : 12, skillReq : 50,
    xPos : 100/4, yPos : 125/4, preReqs : [195], nextPerk: -1,
-   description : "Shadow magic effects such as canctuary, shadow drain, shadow step, shadow stride and shadow summon are more effective and easier to cast. (1.1x magnitude, 1.1x duration, 0.9x cost for shadow spells)"},
+   description : "Shadow magic effects such as sanctuary, shadow drain, shadow step, shadow stride and shadow summon are more effective and easier to cast. (1.1x magnitude, 1.1x duration, 0.9x cost for shadow spells)"},
    //205
   {name : "Shadows of Conflict", skill : 12, skillReq : 75,
    xPos : 150/4, yPos : 100/4, preReqs : [204], nextPerk: -1,
@@ -1281,27 +1281,27 @@ perks : [
    //312
   {name : "Unskilled Spellcasting", skill : 16, skillReq : 0,
    xPos : 50/3, yPos : 350/4, preReqs : [311], nextPerk: 313,
-   description : "You can cast simple spells without mastering them but with less potency. *Requires Level 10* (Spells up to Apprentice level cost 50% less magicka to cast without mastery perks, +0.5% spell power for each skill level)"},
+   description : "You can cast simple spells without mastering them but with less potency. (Spells up to Apprentice level cost 50% less magicka to cast without mastery perks, +0.5% spell power for each skill level) [Requires Level 10]"},
    //313
   {name : "Unskilled Spellcasting", skill : 16, skillReq : 0,
    xPos : 50/3, yPos : 350/4, preReqs : [312], nextPerk: -1,
-   description : "You can cast simple spells without mastering them but with less potency. *Requires Level 20* (Spells up to Adept level cost 50% less magicka to cast without mastery perks, +1% spell power for each skill level)"},
+   description : "You can cast simple spells without mastering them but with less potency. 9Spells up to Adept level cost 50% less magicka to cast without mastery perks, +1% spell power for each skill level) [Requires Level 20]"},
    //314
   {name : "Metamagic", skill : 16, skillReq : 0,
    xPos : 200/3, yPos : 350/4, preReqs : [], nextPerk: -1,
-   description : "You can empower your spells in cost for more magicka to cast them. (Requires Level 10* (Apply one of the three bonuses with 50% more magicka cost: 20% higher magnitude, 20% longer duration, 3x longer spell range)"},
+   description : "You can empower your spells in cost for more magicka to cast them. (Apply one of the three bonuses with 50% more magicka cost: 20% higher magnitude, 20% longer duration, 3x longer spell range) [Requires Level 10]"},
    //315
   {name : "Willpower", skill : 16, skillReq : 0,
    xPos : 250/3, yPos : 350/4, preReqs : [], nextPerk: 316,
-   description : "Your strong willpower provides resistance to harmful magic and more stamina. *Requires Level 10* (+5% magic resistance when magic resistance perk is not taken, +10 stamina)"},
+   description : "Your strong willpower provides resistance to harmful magic and more stamina. (+5% magic resistance when magic resistance perk is not taken, +10 stamina) [Requires Level 10]"},
    //316
   {name : "Willpower", skill : 16, skillReq : 0,
    xPos : 250/3, yPos : 350/4, preReqs : [315], nextPerk: 317,
-   description : "Your strong willpower provides resistance to harmful magic and more stamina. *Requires Level 20* (+10% magic resistance when magic resistance perk is not taken, +20 stamina)"},
+   description : "Your strong willpower provides resistance to harmful magic and more stamina. (+10% magic resistance when magic resistance perk is not taken, +20 stamina) [Requires Level 20]"},
    //317
   {name : "Willpower", skill : 16, skillReq : 0,
    xPos : 250/3, yPos : 350/4, preReqs : [316], nextPerk: -1,
-   description : "Your strong willpower provides resistance to harmful magic and more stamina. *Requires Level 30* (+15% magic resistance when magic resistance perk is not taken, +30 stamina)"},
+   description : "Your strong willpower provides resistance to harmful magic and more stamina. (15% magic resistance when magic resistance perk is not taken, +30 stamina) [Requires Level 20]"},
    //318
   {name : "Enchanter's Insight", skill : 17, skillReq : 0,
    xPos : 183/4, yPos : 342/4, preReqs : [], nextPerk: 319,
@@ -1852,11 +1852,11 @@ perks : [
   //454
   {name : "Staff Channeling", skill : 17, skillReq: 0,
    xPos : 300/4, yPos : 325/4, preReqs : [], nextPerk: 455,
-   description : "You can use your staff to empower your own spells and cast them more efficiently.. *Requires Level 10* (While holding a staff, spells are 5% more powerful and cost 10% less magicka to cast)"},
+   description : "You can use your staff to empower your own spells and cast them more efficiently. (While holding a staff, spells are 5% more powerful and cost 10% less magicka to cast) [Requires Level 10]"},
    //455
   {name : "Staff Channeling", skill : 17, skillReq: 0,
    xPos : 300/4, yPos : 325/4, preReqs : [454], nextPerk: -1,
-   description : "You can use your staff to empower your own spells and cast them more efficiently.. *Requires Level 20* (While holding a staff, spells are 10% more powerful and cost 20% less magicka to cast)"},
+   description : "You can use your staff to empower your own spells and cast them more efficiently. (While holding a staff, spells are 10% more powerful and cost 20% less magicka to cast) [Requires Level 20]"},
    //456
   {name : "Expertise: <br>Axe", skill : 19, skillReq: -4,
    xPos : 60/4, yPos : 75/4, preReqs : [], nextPerk: -1,

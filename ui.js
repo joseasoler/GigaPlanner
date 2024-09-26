@@ -342,15 +342,16 @@ function activeSkillPerkHoverEnter(event){
   let skillReq = curPerkList.perks[perkNum].skillReq;
   let descString = curPerkList.perks[perkNum].description;
   let skill = curPerkList.perks[perkNum].skill
-	  if(skill < 18){
-          descString += ` (Skill Req: ${skillReq})`;
+	if(skillReq !== 0){
+		if(skill < 18){
+          descString += ` [Skill Req: ${skillReq}]`;
 	  }else if(skill < 19){
-		  descString += ` (Level Req: ${skillReq})`;
+		  descString += ` [Level Req: ${skillReq}]`;
 	  } else if(skill <20){
-		descString += ` (Trait Points: ${skillReq})`;
+		descString += ` [Trait Points: ${skillReq}]`;
 	  } else{
-		  descString += ` (Trait Points: +${skillReq})`;
-	  
+		  descString += ` [Trait Points: +${skillReq}]`;
+	  }
   }
   $("#highlightedPerkDesc").html(descString);
   

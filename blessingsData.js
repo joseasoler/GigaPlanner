@@ -60,6 +60,7 @@ const blessingsData = {
 	"Baan Dar",
 	"Ebonarm",
 	"Mannimarco",
+	"Sithis",
 	"Shor",
 	"St. Alessia",
 	"The All-Maker",
