@@ -564,7 +564,7 @@ for(let i = 0; i < 18; i++){
 	} else if (currentSkill <= 75) {
 		n = 75 + (currentSkill - 50) * 3 - baseSkill; 
 	} else if (currentSkill <= 100) {
-		n = 150 + (currentSkill - 75) * 4 - baseSkill;
+		n = 150 + (currentSkill - 75) * 6 - baseSkill;
 	}
     answer += (n);
   }
