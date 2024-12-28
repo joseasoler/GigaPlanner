@@ -20,17 +20,26 @@
   <div id="mainSkillDisplayDiv" style="display:none;">
     <div id="rightStatsPanelDiv">
       <div id="raceAndStatsDiv" class="statsSubsectionDiv">
-        <div class="subsectionSubtitle">Build Choices (v2.2.8)</div>
-        <div class="selectInputWithLabel" id="raceSelectInputDiv">Race
-          <select id="raceSelect">
+        <div class="subsectionSubtitle">Build Choices (v3.0.4)</div>
+        <div class="selectInputWithLabel" id="raceSelectInputDiv" data-list="curRaceList">Race
+          <select id="raceSelect" class="selectInputWithLabelselect" data-list="curRaceList";
+			onfocus='$(this).removeClass("selectInputWithLabelselect"); $(this).addClass("selectInputWithLabelselected"); this.size=10'
+			onblur='$(this).removeClass("selectInputWithLabelselected"); $(this).addClass("selectInputWithLabelselect"); this.size=1;' 
+			onchange='this.size=1; this.blur();'>   
           </select>
         </div>
-        <div class="selectInputWithLabel" id="stoneSelectInputDiv">Standing Stone
-          <select id="stoneSelect">
+		<div class="selectInputWithLabel" id="stoneSelectInputDiv" data-list="standingStoneData">Standing Stone
+          <select id="stoneSelect" class="selectInputWithLabelselect" data-list="standingStoneData";
+			onfocus='$(this).removeClass("selectInputWithLabelselect"); $(this).addClass("selectInputWithLabelselected"); this.size=14;'
+			onblur='$(this).removeClass("selectInputWithLabelselected"); $(this).addClass("selectInputWithLabelselect"); this.size=1;' 
+		onchange='this.size=1; this.blur();'>   
           </select>
         </div>
-        <div class="selectInputWithLabel" id="blessingSelectInputDiv">Blessing
-          <select id="blessingSelect">
+        <div class="selectInputWithLabel" id="blessingSelectInputDiv" data-list="curBlessingList">Blessing
+          <select id="blessingSelect" class="selectInputWithLabelselect" data-list="curBlessingList";
+			onfocus='$(this).removeClass("selectInputWithLabelselect"); $(this).addClass("selectInputWithLabelselected"); this.size=14;'
+			onblur='$(this).removeClass("selectInputWithLabelselected"); $(this).addClass("selectInputWithLabelselect"); this.size=1;' 
+		onchange='this.size=1; this.blur();'>   
           </select>
         </div>
       </div>
@@ -78,10 +87,6 @@
         <div class="miniSkillTreeDiv" id="skill20Div" data-skillnum="19">
           <div class="miniSkillTreeName" id="skill20Name"></div>
           <svg class="miniSkillTreeSVG" id="skill20SVG"></svg>
-        </div>
-		        <div class="miniSkillTreeDiv" id="skill21Div" data-skillnum="20">
-          <div class="miniSkillTreeName" id="skill21Name"></div>
-          <svg class="miniSkillTreeSVG" id="skill21SVG"></svg>
         </div>
  </div>
 </div>
@@ -266,5 +271,93 @@
     <div id="highlightedPerkDesc"></div>
     <div id="highlightedNextPerkDesc"></div>
   </div>
+
+<div id="description" class="description-box">Description Box
+</div>
+
+<script>
+
+$(document).ready(function(event) {
+    $('select').on('mouseover', 'option', function(e) {
+	if (this.parentElement.id == "raceSelect"){
+        var choiceDesc = "<b>" + curRaceList[this.value].name + "</b>"
+							+ "<br><i><small>" +  curRaceList[this.value].desc + "</i></small><br>"
+						+ "<br> <u>Base Stats</u>" 
+							+ "<br> Health: " + curRaceList[this.value].startingHMS[0]
+							+ "<br> Magicka: " + curRaceList[this.value].startingHMS[1]
+							+ "<br> Stamina: " + curRaceList[this.value].startingHMS[2]
+							+ "<br> Health Regeneration: " + curRaceList[this.value].startingHMSRegen[0] +"%"
+							+ "<br> Magicka Regeneration: " + curRaceList[this.value].startingHMSRegen[1] +"%"
+							+ "<br> Stamina Regeneration: " + curRaceList[this.value].startingHMSRegen[2] +"%"
+							+ "<br> Carry Weight: " + curRaceList[this.value].startingCW
+							+ "<br> Unarmed Damage: " + curRaceList[this.value].unarmedDam
+							+ "<br>"
+						+ "<br> <u>Starting skills</u>" 
+							+ "<br> Smithing: " + curRaceList[this.value].startingSkills[0] 
+							+ "<br> Heavy Armor: " + curRaceList[this.value].startingSkills[1] 
+							+ "<br> Block: " + curRaceList[this.value].startingSkills[2]
+							+ "<br> Two-Handed: " + curRaceList[this.value].startingSkills[3]
+							+ "<br> One-Handed: " + curRaceList[this.value].startingSkills[4]
+							+ "<br> Marksman: " + curRaceList[this.value].startingSkills[5]
+							+ "<br> Evasion: " + curRaceList[this.value].startingSkills[6]
+							+ "<br> Sneak: " + curRaceList[this.value].startingSkills[7]
+							+ "<br> Wayfarer: " + curRaceList[this.value].startingSkills[8]
+							+ "<br> Finesse: " + curRaceList[this.value].startingSkills[9]
+							+ "<br> Speech: " + curRaceList[this.value].startingSkills[10]
+							+ "<br> Alchemy: " + curRaceList[this.value].startingSkills[11]
+							+ "<br> Illusion: " + curRaceList[this.value].startingSkills[12]
+							+ "<br> Conjuration: " + curRaceList[this.value].startingSkills[13]
+							+ "<br> Destruction: " + curRaceList[this.value].startingSkills[14]
+							+ "<br> Restoration: " + curRaceList[this.value].startingSkills[15]
+							+ "<br> Alteration: " + curRaceList[this.value].startingSkills[16]
+							+ "<br> Enchanting: " + curRaceList[this.value].startingSkills[17]
+							+ "<br>"
+						+ "<br> <u>Bonuses</u>"
+							+ "<br>" + curRaceList[this.value].bonus
+						
+							};
+	if (this.parentElement.id == "stoneSelect"){
+		var choiceDesc = "<b>" + standingStoneData[this.value].name + "</b><br>" 
+						+ "<i>" + standingStoneData[this.value].group +"</i><br>"
+						+ "<br>" + standingStoneData[this.value].description
+						+ "<br>"
+						+ "<br>" + standingStoneData[this.value].bonus
+		
+		
+		};
+	if (this.parentElement.id == "blessingSelect"){
+		var choiceDesc = "<b>" + curBlessingList[this.value].name + "</b><br>" 
+							+"<i>" + curBlessingList[this.value].tenents + "</i><br>"
+						+ "<br> Races: " + curBlessingList[this.value].racep
+						+ "<br> Starting Races: " + curBlessingList[this.value].starting + "<br>"
+						+ "<br> <u>Blessings</u>"
+							+ "<br> Shrine: " + curBlessingList[this.value].shrine + "<br>"
+							+ "<br> Follower: " + curBlessingList[this.value].follower + "<br>"
+							+ "<br> Devotee: " + curBlessingList[this.value].devotee + "<br>"
+
+};
+  let clientRect = this.parentElement.getBoundingClientRect();
+        $("#description").html(choiceDesc);
+        $("#description").css({left : `${clientRect.left+225}px`, top : `${clientRect.top+0}px`, display: "block"});
+    });
+});
+
+
+$(document).ready(function(event) {
+    $('select').on('click', 'option', function(e) {
+		$("#description").empty();
+        $("#description").css({display: "none"});
+    });
+});
+
+$(document).on('click', function(event) {
+        if (!$(event.target).closest('.dropdown').length) {
+			$("#description").empty();
+            $('.description-box').hide();
+        }
+    });
+	
+</script>
+
 </body>
 </html>

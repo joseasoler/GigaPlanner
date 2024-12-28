@@ -72,7 +72,7 @@ function initCharacterData(){
     characterData.hmsIncreases = [0,0,0];
     characterData.skillLevels = [];
     for(let i = 0; i < 18; i++){
-      characterData.skillLevels.push(curRaceList.races[0].startingSkills[i]);
+      characterData.skillLevels.push(raceListData[0].startingSkills[i]);
     }
     characterData.perksTaken = [];
     for(let i = 0; i < curPerkList.perks.length; i++){
@@ -109,16 +109,16 @@ function updateDerivedAttributes(){
     weightedSum += baseAttributes[2] * derAttrData.weight_stamina[i];
 
     let bonus = 0;
-
      if(weightedSum > derAttrData.threshold[i]){
       bonus += derAttrData.prefactor[i] * Math.sqrt(weightedSum - derAttrData.threshold[i]);
       bonus = Math.floor(bonus);
-	}	
+	}
+	
     bonus = "+" + bonus;
 
     if(derAttrData.isPercent[i]){
      bonus += "%";
-    }
+    };
     $(`#derivedAttributeValue${i}`).html(bonus);
   }
 }
@@ -127,7 +127,7 @@ function updateDerivedAttributes(){
 function calcBaseAttributes(){
   let theAnswer = [0,0,0];
   for(let i = 0; i < 3; i++){
-    theAnswer[i] = curRaceList.races[characterData.race].startingHMS[i];
+    theAnswer[i] = curRaceList[characterData.race].startingHMS[i];
     theAnswer[i] += curGameMechanics.leveling.hmsGiven[i] * characterData.hmsIncreases[i];
   }
   return theAnswer;
@@ -140,11 +140,11 @@ function resetSkill(skillNum){
   if(removeAll){
     for(let i = 0; i < 21; i++){
       characterData.skillLevels[i] = 
-        curRaceList.races[characterData.race].startingSkills[i];
+        curRaceList[characterData.race].startingSkills[i];
     }
   }
   characterData.skillLevels[skillNum] = 
-    curRaceList.races[characterData.race].startingSkills[skillNum];
+    curRaceList[characterData.race].startingSkills[skillNum];
     
   for(let i = 0; i < curPerkList.perks.length; i++){
     if( (removeAll || curPerkList.perks[i].skill == skillNum) 
@@ -160,8 +160,8 @@ function resetSkill(skillNum){
 //just take into account the starting skills of the new race.
 function changeRace(newRaceNum,respectOld = true){
   let oldRaceNum = characterData.race;
-  let oldRace = curRaceList.races[oldRaceNum];
-  let newRace = curRaceList.races[newRaceNum];
+  let oldRace = curRaceList[oldRaceNum];
+  let newRace = curRaceList[newRaceNum];
   
   //Adjust skills based for the new race.
   //If skills are below the staring value for the new race,
@@ -520,7 +520,7 @@ let isFirstInChain = thePerk.preReqs <= 0 ;
 		}
 	}
 }
-answer = 5 - answer
+answer = 2 - answer
 return answer;
  }
 
@@ -530,7 +530,7 @@ function calcLevel(){
   let minlevel = 1
   //check highest skill level for level cap + sub-class level req
   for (let i = 0; i < 18; i++){
-	  let baseSkill = curRaceList.races[characterData.race].startingSkills[i];
+	  let baseSkill = raceListData[characterData.race].startingSkills[i];
 	  let currentSkill = characterData.skillLevels[i];
 	  let levelReq = currentSkill - 50
 	  if(minlevel < levelReq){
@@ -554,7 +554,7 @@ function calcLevel(){
 function calcTotalXP(){
 let answer = 0;
 for(let i = 0; i < 18; i++){
-	let baseSkill = curRaceList.races[characterData.race].startingSkills[i];
+	let baseSkill = raceListData[characterData.race].startingSkills[i];
 	let currentSkill = characterData.skillLevels[i];
 	
 	if (currentSkill <= 25) {
@@ -579,13 +579,15 @@ function calcFreeAttributeChoices(){
 
 //Generate just the build code part of the build sharing URL,
 //i.e. b=?
+
+//kind of butchered the code build by changing the way the races/blessings worked. String.fromCodePoint(0) in place so previous saved links should still work
 function generateBuildCode(){
   let version = 2;
   let code = String.fromCodePoint(version);
   code += String.fromCodePoint(curPerkList.id);
-  code += String.fromCodePoint(curRaceList.id);
+  code += String.fromCodePoint(0);
   code += String.fromCodePoint(curGameMechanics.id);
-  code += String.fromCodePoint(curBlessingList.id);
+  code += String.fromCodePoint(0);
   code += String.fromCodePoint(characterData.level);
   code += String.fromCodePoint(characterData.hmsIncreases[0]);
   code += String.fromCodePoint(characterData.hmsIncreases[1]);
@@ -745,3 +747,4 @@ function calcCharacterLevelAndResults(){
     characterData.earnedPerks += curGameMechanics.oghmaData.perksGiven;
   }
 }
+

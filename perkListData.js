@@ -1,5 +1,5 @@
 const perkData = {
-name : "LoreRim v2.2.8",
+name : "LoreRim v3.0.4",
 id: 0,
 skillNames : [
   "Smithing",     // 0
@@ -21,67 +21,66 @@ skillNames : [
   "Alteration",   // 16
   "Enchanting",   // 17
   "Destiny",   	  // 18
-  "Benefits",	  // 19
-  "Detriments",   // 20
+  "Traits",	  	  // 19
 ],
 perks : [
   /*
     {name : "", skill : 0, skillReq : 0,
-      xPos : 0, yPos : 0, preReqs : [], nextPerk: -1,
-      description : ""},
+    xPos : 0, yPos : 0, preReqs : [], nextPerk: -1,
+    description : ""},
   */
 	//0
-   {name : "Craftsmanship", skill : 0, skillReq : 0,
-   xPos : 230/5, yPos : 310/3.5, preReqs : [], nextPerk: -1,
-   description : "You've acquired the basics of craftsmanship and know how to properly use all kinds of tools. Thus, you are able to craft and improve a wide variety of common goods."},
+   {name : "Craftsmanship", skill : 0, skillReq : 40,
+   xPos : 250/5, yPos : 220/3.5, preReqs : [418], nextPerk: -1,
+   description : "You've acquired the basics of craftsmanship and know how to properly use all kinds of tools. You've also learned the material property of every weapon and thus they offer an extra effect."}, 
    //1
   {name : "Advanced<br>Blacksmithing", skill : 0, skillReq : 50,
-   xPos : 234/5, yPos : 203/3.5, preReqs : [0], nextPerk: -1,
+   xPos : 250/5, yPos : 300/3.5, preReqs : [-419,-418], nextPerk: -1,
    description : "You've gained quite some finesse, allowing you to craft plate armor and fine jewelry. You have also found a way to melt and crush certain gems into alchemically usable dust."},
    //2
   {name : "Arcane<br>Craftsmanship", skill : 0, skillReq : 50,
-   xPos : 181/5, yPos : 160/3.5, preReqs : [1], nextPerk: -1,
-   description : "After reading a tome about the ancient secrets of explosive dwemer bolts, you've learned the necessary techniques to craft bolts and arrows that will explode with elemental fury upon impact."},
+   xPos : 150/5, yPos : 300/3.5, preReqs : [1], nextPerk: -1,
+   description : "After studying the ancient secrets of explosive dwemer bolts, you've learned the necessary techniques to craft bolts and arrows that will explode with elemental fury upon impact."},
    //3
   {name : "Legendary<br>Blacksmithing", skill : 0, skillReq : 100,
-   xPos : 299/5, yPos : 160/3.5, preReqs : [1], nextPerk: -1,
+   xPos : 350/5, yPos : 300/3.5, preReqs : [1], nextPerk: -1,
    description : "You make steel sing songs on the anvil. Your hammer is no longer a mere tool, but a loom that weaves the fabric of myths. You can even improve the divine artifacts of Aedra and Daedra."},
    //4
   {name : "Advanced<br>Light Armors", skill : 0, skillReq : 25,
-   xPos : 115/5, yPos : 220/3.5, preReqs : [0], nextPerk: -1,
-   description : "You learned the art of crafting and improving scale and other light materials. (Requires either An 'Introduction to Scale Armors' or Level 40 Smithing)"},
+   xPos : 100/5, yPos : 200/3.5, preReqs : [0], nextPerk: -1,
+   description : "You've been able to learn more advanced techniques, allowing you to craft an efficiently improve scale armor."},
    //5
   {name : "Elven Smithing", skill : 0, skillReq : 50,
-   xPos : 48/5, yPos : 150/3.5, preReqs : [4], nextPerk: -1,
-   description : "You learned the Elven ways of forging items with Moonstone. (Requires either 'About Elven Craftsmanship' or Level 65 Smithing)"},
+   xPos : 100/5, yPos : 150/3.5, preReqs : [4], nextPerk: -1,
+   description : "You've gained enough finesse to create and improve Elven armor and weapons by studying the Elven craftsmanship carefully."},
    //6
   {name : "Glass Smithing", skill : 0, skillReq : 75,
-   xPos : 70/5, yPos : 66/3.5, preReqs : [5], nextPerk: -1,
+   xPos : 50/5, yPos : 50/3.5, preReqs : [-5,-8], nextPerk: -1,
    description : "Crafting and improving Glass equipment is not for the unskilled, but having studied intensely, you aren't one of them any more."},
    //7
   {name : "Dwarven<br>Smithing", skill : 0, skillReq : 25,
-   xPos : 347/5, yPos : 227/3.5, preReqs : [0], nextPerk: -1,
-   description : "You learned to breakdown and reforge Dwarven materials. (Requires either 'The Art of Dwarven Blacksmithing' or Level 40 Smithing)"},
+   xPos : 400/5, yPos : 200/3.5, preReqs : [0], nextPerk: -1,
+   description : "You've studies some long-lost schematics of dawrven equipment and aqquired the secret knowledge of how to create and improve them efficiently."},
    //8
   {name : "Orcish<br>Smithing", skill : 0, skillReq : 50,
-   xPos : 400/5, yPos : 172/3.5, preReqs : [7], nextPerk: -1,
-   description : "You've learned to forge mighty Orichalcum weapons and armor. (Requires either 'The Almanac of Orcish Blacksmithing' or Level 65 Smithing)"},
+   xPos : 400/5, yPos : 150/3.5, preReqs : [7], nextPerk: -1,
+   description : "Orcish equipment is hard to craft, but you've got what it takes. Especially the schematics! You can craft and improve it easily and most efficiently."},
    //9
   {name : "Ebony Smithing", skill : 0, skillReq : 75,
-   xPos : 390/5, yPos : 68/3.5, preReqs : [8], nextPerk: -1,
+   xPos : 450/5, yPos : 50/3.5, preReqs : [-8,-5], nextPerk: -1,
    description : "Ebony weapons and armor - some even fail at heating the metal. But not you. Now that you've studied the related schematics, you can craft and improve ebony equipment with ease."},
    //10
   {name : "Daedric Smithing", skill : 0, skillReq : 100,
-   xPos : 440/5, yPos : 35/3.5, preReqs : [9], nextPerk: -1,
-   description : "The creation of Daedric weapons and armor is a secret few mortals know - still, somehow you managed to acquire this knowledge..."},
+   xPos : 250/5, yPos : 65/3.5, preReqs : [-9,-6], nextPerk: -1,
+   description : "You have learned the secrets of creating daedric weapons and armor. (Requires Daedric Craftmanship book)"},
    //11
   {name : "Draconic Blacksmithing", skill : 0, skillReq : 100,
-   xPos : 251/5, yPos : 15/3.5, preReqs : [-9,-6], nextPerk: -1,
-   description : "The scales and bones of dragons are probably the hardest material to work with, but you've mastered even this art since you studied that old compendium."},
+   xPos : 250/5, yPos : 25/3.5, preReqs : [-9,-6], nextPerk: -1,
+   description : "You have learned how to forge weapons and armor out of the bones and scales of dragons. (Requires the Compendium of Draconic Armor book)"},
    //12
   {name : "Conditioning", skill : 1, skillReq : 0,
    xPos : 249/4.5, yPos : 406/4.5, preReqs : [], nextPerk: -1,
-   description : "You've accustomed yourself to using heavy armor, without getting tired just by wearing it. (No stamina drains for wearing heavy armor, unique bonus when wearing high-quality materials, -35% armor weight penalty)"},
+   description : "You've accustomed yourself to using heavy armor. (No stamina drains for wearing heavy armor, unique bonus when wearing high-quality materials, -35% armor weight penalty)"},
    //13
   {name : "Relentless Onslaught", skill : 1, skillReq : 20,
    xPos : 249/4.5, yPos : 311/4.5, preReqs : [12], nextPerk: -1,
@@ -126,14 +125,14 @@ perks : [
   {name : "Juggernaut", skill : 1, skillReq : 100,
    xPos : 366/4.5, yPos : 36/4.5, preReqs : [22], nextPerk: -1,
    description : "You've reached perfection in the skill of wearing heavy armor and are now significantly more maneuverable in it. (15% less armor weight, 10% more armor rating, 50% less pose damage when wearing all heavy armor: head, chest, hands, feet)"},
-      //24
+   //24
   {name : "Mounted Combat", skill : 1, skillReq : 0,
    xPos : 366/4.5, yPos : 406/4.5, preReqs : [], nextPerk: -1,
    description : "You can deal more damage with melee weapons while mounted. (1.5x melee attack damage while on horseback)[Requires Level 10]"},
    //25
   {name : "Improved Blocking", skill : 2, skillReq : 0,
    xPos : 150/3, yPos : 323/4, preReqs : [], nextPerk: -1,
-   description : "You strengthened your shield arm and trained to parry blows a little. (Block 25% more damage with weapons and shields, take 25% less elemental damage when blocking with a shield)"},
+   description : "You strengthened your shield arm and trained to parry blows a little. (Block 25% more damage with weapons and shields, take 25% less elemental damage when blocking with a shield and 10% less with a weapon)"},
    //26
   {name : "Experienced Blocking", skill : 2, skillReq : 20,
    xPos : 150/3, yPos : 192/4, preReqs : [25], nextPerk: -1,
@@ -157,7 +156,7 @@ perks : [
    //31
   {name : "Powerful Bashes", skill : 2, skillReq : 25,
    xPos : 250/3, yPos : 239/4, preReqs : [25], nextPerk: -1,
-   description : "By gathering your strength for a short while, you can perform a much more powerful bash. (Able to do a power bash with weapons and shields)"},
+   description : "By gathering your strength for a short while, you can perform a much more powerful bash. Also, your perfect block window is doubled from 0.1s to 0.2s."},
     //32
   {name : "Shield Strike", skill : 2, skillReq : 25,
    xPos : 190/3, yPos : 160/4, preReqs : [31], nextPerk: 33,
@@ -169,7 +168,7 @@ perks : [
    //34
   {name : "Overpowering Bashes", skill : 2, skillReq : 50,
    xPos : 250/3, yPos : 175/4, preReqs : [31], nextPerk: -1,
-   description : "When you put all of your power into your shield bashes, you will often overpower your foes. (Power bashing with a shield can knock down)"},
+   description : "Power bashing with a shield can knock down foes. (+50% stagger when performing a perfect block on an enemy with a shield or weapon)"},
    //35
   {name : "Disarming Bash", skill : 2, skillReq : 75,
    xPos : 225/3, yPos : 75/4, preReqs : [34], nextPerk: -1,
@@ -233,7 +232,7 @@ perks : [
    //50
   {name : "Longblade &<br>Pike Focus", skill : 3, skillReq : 75,
    xPos : 250/4, yPos : 262/4, preReqs : [49], nextPerk: -1,
-   description : "You've become a master of using greatswords and pikes. (Attacks reduce targets melee damage by 10% for 10 seconds, +10% critical hit chance)"}, 
+   description : "You've become a master of using greatswords and pikes. (Attacks reduce targets melee damage by 20% for 10 seconds, +30% critical hit chance)"}, 
    //51
   {name : "Reversal", skill : 3, skillReq : 50,
    xPos : 250/4, yPos : 212/4, preReqs : [48], nextPerk: -1,
@@ -421,11 +420,11 @@ perks : [
    //97
   {name : "Rapid Reload", skill : 5, skillReq : 50,
    xPos : 90/4, yPos : 119/4, preReqs : [95], nextPerk: -1,
-   description : "Your have familiarized yourself with the mechanics of your crossbow. (+50% reload speed with crossbows)"},
+   description : "Your have familiarized yourself with the mechanics of your crossbow. (+50% reload speed with heavy crossbows, +100% with light crossbows)"},
    //98
   {name : "Quick Shot", skill : 5, skillReq : 50,
    xPos : 175/4, yPos : 124/4, preReqs : [95], nextPerk: -1,
-   description : "You have learned to draw and fire in one single movement. (+50% draw speed with bows)"},
+   description : "You have learned to draw and fire in one single movement. (+50% draw speed with heavy bows, +100% with light bows)"},
    //99
   {name : "Power Shot", skill : 5, skillReq : 75,
    xPos : 100/4, yPos : 78/4, preReqs : [95], nextPerk: -1,
@@ -477,7 +476,7 @@ perks : [
    //111
   {name : "Light Armor Training", skill : 6, skillReq : 25,
    xPos : 192/4, yPos : 240/4, preReqs : [109], nextPerk: -1,
-   description : "Up to 12% more power attack and ranged weapon damage when wearing no heavy armor. 20% more armor rating when wearing a low-tier light chest piece (fur, hide, leather, etc) and no heavy armor."},
+   description : "Up to 12% more power attack and ranged weapon damage when wearing no heavy armor. 25% more armor rating when wearing a low-tier light chest piece (fur, hide, leather, etc) and no heavy armor."},
    //112
   {name : "Dexterity", skill : 6, skillReq : 50,
    xPos : 128/4, yPos : 148/4, preReqs : [111], nextPerk: -1,
@@ -496,7 +495,7 @@ perks : [
    description : "You have learned to flank your enemies with ease. (25% bonus damage when attacking from behind)"},
    //116
   {name : "Combat Reflexes", skill : 6, skillReq : 75,
-   xPos : 237/4, yPos : 80/4, preReqs : [111,115], nextPerk: -1,
+   xPos : 237/4, yPos : 80/4, preReqs : [115], nextPerk: -1,
    description : "You've gained the ability to act faster in combat, though doing so will quickly exhaust you. (Lesser power: Slow time by 50% for 30 seconds, drains 5 stamina per second)"},
    //117
   {name : "Meteoric Reflexes", skill : 6, skillReq : 100,
@@ -565,170 +564,170 @@ perks : [
    //133
   {name : "Leader", skill : 8, skillReq : 25,
    xPos : 100/4, yPos : 280/4, preReqs : [128], nextPerk: -1,
-   description : "Gain 10% magic resistance and 100 armor rating when fighting with allies. Cannot be taken with Lone Wolf."},
+   description : "Nearby allies, but not the player, gain 150 armor rating and 15% magical resistance."},
    //134
   {name : "Captain", skill : 8, skillReq : 40,
    xPos : 100/4, yPos : 220/4, preReqs : [133], nextPerk: -1,
-   description : "Regenerate health, stamina and magicka 30% faster when you are fighting with allies."},
+   description : "Allies, but not the player, regenerate health, stamina and magicka 50% faster."},
    //135
   {name : "Commander", skill : 8, skillReq : 60,
    xPos : 100/4, yPos : 160/4, preReqs : [134], nextPerk: -1,
-   description : "Move 10% faster when you are fighting with allies."},
+   description : "Nearby allies, but not the player, gain 10% resist to fire, frost and shock."},
    //136
-  {name : "Legion", skill : 8, skillReq : 90,
+  {name : "Legion", skill : 8, skillReq : 100,
    xPos : 100/4, yPos : 100/4, preReqs : [135], nextPerk: -1,
    description : "Deal 10% more damage when you are fighting with allies."},
    //137
   {name : "Lone Wolf", skill : 8, skillReq : 25,
-   xPos : 300/4, yPos : 280/4, preReqs : [128], nextPerk: -1,
-   description : "Gain 15% magic resistance and 150 armor rating when fighting alone. Cannot be taken with Leader."},
+   xPos : 275/4, yPos : 280/4, preReqs : [128], nextPerk: -1,
+   description : "Gain 15% magic resistance and 150 armor rating when fighting alone."},
    //138
   {name : "Solo", skill : 8, skillReq : 40,
-   xPos : 300/4, yPos : 220/4, preReqs : [137], nextPerk: -1,
-   description : "Regenerate health, stamina and magicka 45% faster when you are fighting alone."},
+   xPos : 275/4, yPos : 220/4, preReqs : [137], nextPerk: -1,
+   description : "Regenerate health, stamina and magicka 50% faster when you are fighting alone."},
    //139
   {name : "Maverick", skill : 8, skillReq : 60,
-   xPos : 300/4, yPos : 160/4, preReqs : [138], nextPerk: -1,
-   description : "Move 15% faster when you are fighting alone."},
+   xPos : 275/4, yPos : 160/4, preReqs : [138], nextPerk: -1,
+   description : "You resist 10% fire, frost and shock damage when fighting alone."},
    //140
   {name : "One Man Legion", skill : 8, skillReq : 100,
-   xPos : 300/4, yPos : 100/4, preReqs : [139], nextPerk: -1,
-   description : "Deal 15% more damage when you are fighting alone."},
+   xPos : 275/4, yPos : 100/4, preReqs : [139], nextPerk: -1,
+   description : "Deal 10% more damage when you are fighting alone."},
    //141
   {name : "Nimble Fingers", skill : 9, skillReq : 0,
-   xPos : 200/4, yPos : 350/4, preReqs : [], nextPerk: 142,
+   xPos : 150/4, yPos : 50/4, preReqs : [], nextPerk: 142,
    description : "You've spent some time improving your sleight of hand, which gives you substantial chances when pickpocketing"},
    //142
   {name : "Nimble Fingers", skill : 9, skillReq : 20,
-   xPos : 200/4, yPos : 350/4, preReqs : [141], nextPerk: -1,
+   xPos : 150/4, yPos : 50/4, preReqs : [141], nextPerk: -1,
    description : "Your fingers have become very nimble, and besides other advantages they allow you to pickpocket even better and to apply poisons on your victims. Why fight if a vial of deadly venom can also do the trick?"},
    //143
   {name : "Cutpurse", skill : 9, skillReq : 30,
-   xPos : 200/4, yPos : 275/4, preReqs : [141], nextPerk: -1,
+   xPos : 275/4, yPos : 100/4, preReqs : [141], nextPerk: -1,
    description : "pickpocketing gold, keys, gems and jewelry is 50% easier. Pickpocketing sleeping people is much easier."},
    //144
   {name : "Poisoner", skill : 9, skillReq : 50,
-   xPos : 200/4, yPos : 200/4, preReqs : [143], nextPerk: -1,
+   xPos : 275/4, yPos : 175/4, preReqs : [143], nextPerk: -1,
    description : "Poisons placed in target's pockets are 50% stronger when the target is not detecting you."},
    //145
   {name : "Misdirection", skill : 9, skillReq : 70,
-   xPos : 200/4, yPos : 125/4, preReqs : [144], nextPerk: -1,
+   xPos : 275/4, yPos : 250/4, preReqs : [144], nextPerk: -1,
    description : "Can pickpocket equipped weapons, arrows and staves."},
    //146
   {name : "Perfected Art", skill : 9, skillReq : 100,
-   xPos : 200/4, yPos : 50/4, preReqs : [145], nextPerk: -1,
+   xPos : 275/4, yPos : 325/4, preReqs : [145], nextPerk: -1,
    description : "Your legendary skill means you almost never get caught. Poisons placed in pockets are 50% stronger on already poisoned targets."},
    //147
   {name : "Sound Body", skill : 9, skillReq : 30,
-   xPos : 100/4, yPos : 275/4, preReqs : [141], nextPerk: 148,
-   description : "You have elevated your body. You gain 100 armor rating when not wearing armor and gain 10% armor penetration and 10 unarmed damage when unarmored."},
+   xPos : 150/4, yPos : 150/4, preReqs : [-141,-154], nextPerk: 148,
+   description : "You have unburdened your body. You gain 100 armor rating when not wearing armor and gain 10% armor penetration and 10 unarmed damage when unarmored."},
    //148
   {name : "Sound Body", skill : 9, skillReq : 30,
-   xPos : 100/4, yPos : 275/4, preReqs : [147], nextPerk: -1,
-   description : "You have elevated your body. You gain 200 armor rating when not wearing armor and gain 20% armor penetration and 20 unarmed damage when unarmored."},
+   xPos : 150/4, yPos : 150/4, preReqs : [147], nextPerk: -1,
+   description : "You have unburdened your body. You gain 200 armor rating when not wearing armor and gain 20% armor penetration and 20 unarmed damage when unarmored."},
    //149
   {name : "Sound Mind", skill : 9, skillReq : 60,
-   xPos : 100/4, yPos : 200/4, preReqs : [148], nextPerk: -1,
-   description : "You've focused your inner thoughts, gaining 10% resistance to magic and 50% greater health, stamina and magicka regen when unarmored."},
+   xPos : 150/4, yPos : 250/4, preReqs : [148], nextPerk: -1,
+   description : "You have unburdened your inner thoughts, gaining 10% resistance to magic and 50% greater health, stamina and magicka regen when unarmored."},
    //150
   {name : "Sound Spirit", skill : 9, skillReq : 80,
-   xPos : 100/4, yPos : 125/4, preReqs : [149], nextPerk: -1,
-   description : "Your dragon spirit rages inside you as your shouts are 10% stronger and last 10% longer also you are 25% more resistant to diseases and poisons when unarmored."},
+   xPos : 150/4, yPos : 350/4, preReqs : [149], nextPerk: -1,
+   description : "You have unburedened your spirit and now shouts are 10% stronger and last 10% longer also you are 25% more resistant to diseases and poisons when unarmored."},
    //151
-  {name : "Gambler", skill : 9, skillReq : 30,
-   xPos : 300/4, yPos : 275/4, preReqs : [141], nextPerk: 152,
-   description : "A gambler at heart, you have a 25% chance to do 25% more weapon damage but a 10% chance to do 30% less damage."},
+  {name : "Outlaw", skill : 9, skillReq : 20,
+   xPos : 75/4, yPos : 100/4, preReqs : [141], nextPerk: -1,
+   description : "You've been in and out of jail, where most people wither away you've used the time to reflect and train. (Gain 5 health, magicka and stamina per time jailed, up to 5 times)"},
    //152
-  {name : "Gambler", skill : 9, skillReq : 30,
-   xPos : 300/4, yPos : 275/4, preReqs : [151], nextPerk: -1,
-   description : "Doubling the stakes, you have a 50% chance to do 50% more weapon damage but a 20% chance to do 60% less damage."},
+  {name : "Thief", skill : 9, skillReq : 50,
+   xPos : 75/4, yPos : 175/4, preReqs : [151], nextPerk: -1,
+   description : "Gain carry weight, light armor rating and sneak ability per pocket picked. (10 carry weight, 2% light armor rating and 3% per sneak ability per 20 pockets picked, maxing out at 100)"},
    //153
-  {name : "Critical Hit, Critical Failure", skill : 9, skillReq : 50,
-   xPos : 300/4, yPos : 200/4, preReqs : [151], nextPerk: -1,
-   description : "You have a 50% greater chance to critically hit targets but 20% chance that your critical hit does no extra damage."},
+  {name : "Lucky 7", skill : 9, skillReq : 77,
+   xPos : 75/4, yPos : 250/4, preReqs : [152], nextPerk: -1,
+   description : "You gain elemental resist based on how much gold you are currently carrying. (Up to 21% fire/frost/shock resist = 3% per 5k gold maxed at 35k)"},
    //154
-  {name : "Lucky", skill : 9, skillReq : 77,
-   xPos : 300/4, yPos : 125/4, preReqs : [153], nextPerk: -1,
-   description : "Sometimes, things just seem to go your way. (Small chance to get random bonuses to various actions)"},
+  {name : "Trapper", skill : 9, skillReq : 0,
+   xPos : 275/4, yPos : 50/4, preReqs : [], nextPerk: -1,
+   description : "You can now pickup and deploy Bear Traps, and craft then yourself at the forge. Bear traps deal extra damage based on your Finesse skill."},
    //155
   {name : "Haggling", skill : 10, skillReq : 0,
-   xPos : 118/4, yPos : 335/4, preReqs : [], nextPerk: -1,
-   description : "You've learned how to deal with Skyrim's greedy merchants. Prices are better and scale with your speech level."},
+   xPos : 200/4, yPos : 350/4, preReqs : [], nextPerk: -1,
+   description : "You've learned how to deal with Skyrim's greedy merchants. Prices are 1% better per speech level."},
    //156
   {name : "Merchant", skill : 10, skillReq : 50,
-   xPos : 98/4, yPos : 271/4, preReqs : [155], nextPerk: -1,
-   description : "Your trading skills are good enough to sell almost anything to any merchant willing to trade with you, and you can invest some of your gold with a shopkeeper to increase his available gold permanently."},
+   xPos : 175/4, yPos : 275/4, preReqs : [155], nextPerk: -1,
+   description : "You can invest gold to permanently increase the amount of gold that merchants have. Merchants will buy and non-stolen item, sell prices are increased by 15%."},
    //157
   {name : "Fencing", skill : 10, skillReq : 100,
-   xPos : 141/4, yPos : 216/4, preReqs : [156], nextPerk: -1,
+   xPos : 200/4, yPos : 200/4, preReqs : [156], nextPerk: -1,
    description : "You've become so persuasive that you could make almost anyone believe that your goods are of a legal origin."},
    //158
   {name : "Silver Tongue", skill : 10, skillReq : 25,
-   xPos : 48/4, yPos : 333/4, preReqs : [155], nextPerk: -1,
-   description : "You've spent quite some time improving your rhetorical skills and are now able to greatly influence any conversation and to fascinate the opposite gender. You also get better offers at respective vendors."},
+   xPos : 150/4, yPos : 350/4, preReqs : [155], nextPerk: -1,
+   description : "You've spent quite some time improving your rhetorical skills. Intimidation is much more likely to succeed and you gain 10% better prices from the opposite gender."},
    //159
   {name : "Leadership", skill : 10, skillReq : 75,
-   xPos : 118/4, yPos : 174/4, preReqs : [158], nextPerk: -1,
-   description : "Your rhetorical skill makes you the perfect leader. By inspiring all those who fight by your side, you encourage your followers to always push their abilities to their very limits."},
+   xPos : 175/4, yPos : 175/4, preReqs : [158], nextPerk: -1,
+   description : "Your rhetorical skill makes you the perfect leader. By inspiring all those who fight by your side, followers gain 20% damage, -15% spell cost, +75% block, +100 magicka and stamina and 50 carry weight."},
    //160
   {name : "Masquerade", skill : 10, skillReq : 50,
-   xPos : 102/4, yPos : 93/4, preReqs : [158], nextPerk: 161,
-   description : "You've become proficient at acting, and with the right equipment you can now disguise yourself, although sometimes people can still tell that you are not truly one of them."},
+   xPos : 150/4, yPos : 100/4, preReqs : [158], nextPerk: 161,
+   description : "You've become proficient at acting, and with the right equipment you can now disguise yourself as a Forsworn, Imperial, Stormcloak, Necromancer, Thalmor or Warlock to (usually) avoid detection."},
    //161
   {name : "Masquerade", skill : 10, skillReq : 100,
-   xPos : 102/4, yPos : 93/4, preReqs : [160], nextPerk: -1,
+   xPos : 150/4, yPos : 100/4, preReqs : [160], nextPerk: -1,
    description : "There is no role you cannot play, and your acting is so believable that there is almost no way for others to see through your disguises."},
    //162
   {name : "War Cry", skill : 10, skillReq : 50,
-   xPos : 38/4, yPos : 194/4, preReqs : [158], nextPerk: -1,
+   xPos : 125/4, yPos : 150/4, preReqs : [158], nextPerk: -1,
    description : "Overwhelm your enemies with a roaring shout, striking fear into their hearts and sending weaker enemies fleeing. (Living enemies up to level 30 do 20% less damage, enemies up to level 20 flee from combat for one minute)"},
    //163
   {name : "Commander", skill : 10, skillReq : 25,
-   xPos : 161/4, yPos : 266/4, preReqs : [155], nextPerk: 164,
+   xPos : 225/4, yPos : 250/4, preReqs : [155], nextPerk: 164,
    description : "Your knowledge in combat tactics allow you to effectively lead your allies in combat. (Improve nearby allies' skills by 10%, increase magicka, stamina and their regeneration by 50%, increase unarmed damage by 5)"},
    //164
   {name : "Commander", skill : 10, skillReq : 50,
-   xPos : 161/4, yPos : 266/4, preReqs : [163], nextPerk: 165,
+   xPos : 225/4, yPos : 250/4, preReqs : [163], nextPerk: 165,
    description : "Your knowledge in combat tactics allow you to effectively lead your allies in combat. (Improve nearby allies' skills by 20%, increase magicka, stamina and their regeneration by 100%, increase unarmed damage by 10)"},
    //165
   {name : "Commander", skill : 10, skillReq : 75,
-   xPos : 161/4, yPos : 266/4, preReqs : [164], nextPerk: -1,
+   xPos : 225/4, yPos : 250/4, preReqs : [164], nextPerk: -1,
    description : "Your knowledge in combat tactics allow you to effectively lead your allies in combat. (Improve nearby allies' skills by 30%, increase magicka, stamina and their regeneration by 150%, increase unarmed damage by 15)"},
    //166
   {name : "Lore of the Thu'um", skill : 10, skillReq : 0,
-   xPos : 340/4, yPos : 338/4, preReqs : [], nextPerk: -1,
-   description : "You've been studying the lore and ancient script of dragons and the Thu'um. Thus, you can shout more often."},
+   xPos : 350/4, yPos : 350/4, preReqs : [], nextPerk: -1,
+   description : "You've been studying the lore and ancient script of dragons and the Thu'um. Thus, your shout cooldown is reduced by 10%."},
    //167
   {name : "Destructive Urge", skill : 10, skillReq : 0,
-   xPos : 250/4, yPos : 320/4, preReqs : [166], nextPerk: -1,
-   description : "The horrors that the Thu'um can inflict are etched into your mind just as you have seen them etched into stone. Your Thu'um will wreak even greater havoc among your unfortunate foes."},
+   xPos : 275/4, yPos : 350/4, preReqs : [166], nextPerk: -1,
+   description : "The horrors that the Thu'um can inflict are etched into your mind just as you have seen them etched into stone. Your shouts have 15% greater magnitude."},
    //168
   {name : "Indomitable<br>Force", skill : 10, skillReq : 0,
-   xPos : 265/4, yPos : 251/4, preReqs : [166], nextPerk: -1,
-   description : "You know what it means to be called Ysmir, Dragon of the North. As you have withstood the test of Thu'um, so you will withstand the Thu'um of others."},
+   xPos : 275/4, yPos : 300/4, preReqs : [166], nextPerk: -1,
+   description : "You know what it means to be called Ysmir, Dragon of the North. Enemy shout effects are reduced by 50%."},
    //169
   {name : "Spiritual<br>Equilibrium", skill : 10, skillReq : 0,
-   xPos : 273/4, yPos : 160/4, preReqs : [166], nextPerk: -1,
-   description : "You have been guided in meditating on the Thu'um. Now your shouts linger, lasting longer than they did before."},
+   xPos : 300/4, yPos : 225/4, preReqs : [166], nextPerk: -1,
+   description : "You have been guided in meditating on the Thu'um. Now your shouts linger, lasting longer 15% than they did before."},
    //170
   {name : "The Way of<br>the Voice", skill : 10, skillReq : 0,
-   xPos : 296/4, yPos : 96/4, preReqs : [166], nextPerk: -1,
-   description : "You've meditated thoroughly, and acquired vast insights into the Way of the Voice. Thus, you can call upon the power of your Thu'um rapidly once each day."},
+   xPos : 325/4, yPos : 150/4, preReqs : [166], nextPerk: -1,
+   description : "You've meditated thoroughly, and acquired vast insights into the Way of the Voice. Gain a daily power that lets you use your shouts more rapidly."},
    //171
   {name : "Tongue's<br>Insight", skill : 10, skillReq : 0,
-   xPos : 349/4, yPos : 71/4, preReqs : [166], nextPerk: -1,
-   description : "You've spent time meditating on the Way of the Voice, unearthing more knowledge and gaining valuable insights. Thus, you can harness the might of yet another word of power."},
+   xPos : 350/4, yPos : 100/4, preReqs : [166], nextPerk: -1,
+   description : "You've spent time meditating on the Way of the Voice, unearthing more knowledge. Grants a dragon soul at the cost of a perk point."},
    //172
   {name : "Shout Focus", skill : 10, skillReq : 0,
-   xPos : 184/4, yPos : 335/4, preReqs : [], nextPerk: 173,
+   xPos : 225/4, yPos : 315/4, preReqs : [], nextPerk: 173,
    description : "You meditate on the Thu'um for deeper understanding of the Words of Power, making them more powerful. (Shouts are 5% more powerful, shout cooldown is reduced by 10%) [Requires Level 10]"},
    //173
   {name : "Shout Focus", skill : 10, skillReq : 0,
-   xPos : 184/4, yPos : 335/4, preReqs : [172], nextPerk: 174,
+   xPos : 225/4, yPos : 315/4, preReqs : [172], nextPerk: 174,
    description : "You meditate on the Thu'um for deeper understanding of the Words of Power, making them more powerful. (Shouts are 10% more powerful, shout cooldown is reduced by 20%) [Requires Level 20]"},
    //174
   {name : "Shout Focus", skill : 10, skillReq : 0,
-   xPos : 184/4, yPos : 335/4, preReqs : [173], nextPerk: -1,
+   xPos : 225/4, yPos : 315/4, preReqs : [173], nextPerk: -1,
    description : "You meditate on the Thu'um for deeper understanding of the Words of Power, making them more powerful. (Shouts are 15% more powerful, shout cooldown is reduced by 30%) [Requires Level 30]"},
    //175
   {name : "Alchemical Lore", skill : 11, skillReq: 0,
@@ -785,11 +784,11 @@ perks : [
    //188
   {name : "Drunken Combat", skill : 11, skillReq: 0,
    xPos : 30/3, yPos : 300/4, preReqs : [], nextPerk: 189,
-   description : "Alcohol pumps you up, boosting your strength and stamina. (Immune to negative effects of alcohol, regenerate 1 stamina per second and do 10% more damage with melee attacks while tipsy) [Requires Level 10]"},
+   description : "Alcohol pumps you up, boosting your strength and stamina. (Removes alhocol blur, regenerates 2 stamina per second and do 10% more damage with melee attacks while tipsy) [Requires Level 10]"},
    //189
   {name : "Drunken Combat", skill : 11, skillReq: 0,
    xPos : 30/3, yPos : 300/4, preReqs : [188], nextPerk: -1,
-   description : "Alcohol pumps you up, boosting your strength and stamina. (Immune to negative effects of alcohol, regenerate 2 stamina per second and do 20% more damage with melee attacks while tipsy) [Requires Level 20]"},
+   description : "Alcohol pumps you up, boosting your strength and stamina. (Removes alcohol blur, regenerates 3 stamina per second and do 20% more damage with melee attacks while drunk) [Requires Level 20]"},
    //190
   {name : "Gourmet", skill : 11, skillReq: 0,
    xPos : 30/3, yPos : 250/4, preReqs : [], nextPerk: -1,
@@ -845,7 +844,7 @@ perks : [
    //203
   {name : "Domination", skill : 12, skillReq : 50,
    xPos : 325/4, yPos : 175/4, preReqs : [201], nextPerk: -1,
-   description : "Emotional illusion spells are improved with additional effects. (Improved effect for emotional spells)v"},
+   description : "Emotional illusion spells are improved with additional effects. (Improved effect for emotional spells)"},
    //204
   {name : "Shadow Shaping", skill : 12, skillReq : 50,
    xPos : 100/4, yPos : 125/4, preReqs : [195], nextPerk: -1,
@@ -1136,23 +1135,23 @@ perks : [
    description : "Dual casting a restoration spell overcharges the effect into an even more powerful version."},
    //276
   {name : "Focused Mind", skill : 15, skillReq : 25,
-   xPos : 300/4, yPos : 225/4, preReqs : [271], nextPerk: -1,
+   xPos : 262.5/4, yPos : 182.5/4, preReqs : [271], nextPerk: -1,
    description : "You've learned to focus your mind. Thus, you can keep your concentration even in stressful situations and regenerate your magicka faster. (+50% magicka regeneration)"},
    //277
   {name : "Power of Life", skill : 15, skillReq : 50,
-   xPos : 300/4, yPos : 150/4, preReqs : [276], nextPerk: -1,
+   xPos : 262.5/4, yPos : 100/4, preReqs : [276], nextPerk: -1,
    description : "Your studies of healing magic now grant you the power of making yourself almost invulnerable for a short duration once a day."},
    //278
   {name : "Essence of Life", skill : 15, skillReq : 75,
-   xPos : 325/4, yPos : 75/4, preReqs : [277], nextPerk: -1,
+   xPos : 300/4, yPos : 75/4, preReqs : [277], nextPerk: -1,
    description : "Your understanding of healing and how magic and life are intertwined allows you to call upon your newfound power more often."},
    //279
   {name : "Improved<br>Protection", skill : 15, skillReq : 25,
-   xPos : 262.5/4, yPos : 182.5/4, preReqs : [271], nextPerk: -1,
+   xPos : 300/4, yPos : 225/4, preReqs : [270], nextPerk: -1,
    description : "Ward, fortify and resist spells are stronger and more efficient. (1.1x magnitude, 1.1x duration, 0.9x cost for protection spells)"},
    //280
   {name : "Improved<br>Wards", skill : 15, skillReq : 75,
-   xPos : 262.5/4, yPos : 100/4, preReqs : [279], nextPerk: -1,
+   xPos : 325/4, yPos : 150/4, preReqs : [279], nextPerk: -1,
    description : "Your arcane wards now absorb magicka from incoming spells and have slightly improved efficiency. (25% ward spell absorption, 0.9x ward spell cost)"},
    //281
   {name : "Ward Mastery", skill : 15, skillReq : 50,
@@ -1312,15 +1311,15 @@ perks : [
    description : "Your advanced knowledge of arcane energy allows you to improve all your enchantments even more. (New enchantments are 50% stronger, craft novice level staves and scrolls)"},
    //320
   {name : "Arcane Artificery", skill : 17, skillReq : 25,
-   xPos : 200/4, yPos : 248/4, preReqs : [318], nextPerk: 321,
+   xPos : 300/4, yPos : 275/4, preReqs : [318], nextPerk: 321,
    description : "Your understanding of enchantments allow you to use them more effectively and efficiently. (Staves and scrolls are 10% more powerful, enchantment cost 10% less charge)"},
    //321
   {name : "Arcane Artificery", skill : 17, skillReq : 25,
-   xPos : 200/4, yPos : 248/4, preReqs : [320], nextPerk: 322,
+   xPos : 300/4, yPos : 275/4, preReqs : [320], nextPerk: 322,
    description : "Your understanding of enchantments allow you to use them more effectively and efficiently. (Staves and scrolls are 20% more powerful, enchantment cost 20% less charge)"},
    //322
   {name : "Arcane Artificery", skill : 17, skillReq : 25,
-   xPos : 200/4, yPos : 248/4, preReqs : [321], nextPerk: -1,
+   xPos : 300/4, yPos : 275/4, preReqs : [321], nextPerk: -1,
    description : "Your understanding of enchantments allow you to use them more effectively and efficiently. (Staves and scrolls are 30% more powerful, enchantment cost 30% less charge)"},
    //323
   {name : "Soul Gem Mastery", skill : 17, skillReq : 25,
@@ -1355,6 +1354,7 @@ perks : [
    xPos : 225/4, yPos : 30/4, preReqs : [329], nextPerk: -1,
    description : "With great skill and dedication, you get a chance to enchant an item with extraordinary strength. (Enchant one item with twice the strength, can place three enchantments with 50% strength each)"},
    
+   //sub-class
    
    //331	
   {name : "Destiny", skill : 18, skillReq : 1,
@@ -1375,27 +1375,27 @@ perks : [
    //335
   {name : "Mage", skill : 18, skillReq : 10,
    xPos : 100/4, yPos : 275/4, preReqs : [332], nextPerk: -1,
-   description : "Your spells and enchantments cost 10% less Magicka"},
+   description : "Your spells and enchantments cost 5% less Magicka"},
    //336
   {name : "Warrior", skill : 18, skillReq : 10,
    xPos : 200/4, yPos : 275/4, preReqs : [333], nextPerk: -1,
-   description : "You deal 10% more weapon damage"},  
+   description : "You deal 5% more weapon damage"},  
    //337
   {name : "Thief", skill : 18, skillReq : 10,
    xPos : 300/4, yPos : 275/4, preReqs : [334], nextPerk: -1,
-   description : "You are harder to detect"},  
+   description : "You are 10% harder to detect"},  
    //338	
   {name : "Fortification", skill : 18, skillReq : 15,
    xPos : 50/4, yPos : 225/4, preReqs : [335], nextPerk: -1,
-   description : "Your Health, Magicka and Stamina are increased by 25"},
+   description : "Your Health, Magicka and Stamina are increased by 10"},
    //339	
   {name : "Magicka Surge", skill : 18, skillReq : 15,
    xPos : 100/4, yPos : 200/4, preReqs : [335], nextPerk: -1,
-   description : "Your Magicka Regeneration is increased by 100% when your Magicka falls below 50%"},
+   description : "Your Magicka Regeneration is increased by 400% when your Magicka falls below 25%"},
     //340	
   {name : "Magicka Shell", skill : 18, skillReq : 15,
    xPos : 150/4, yPos : 225/4, preReqs : [-335,-336], nextPerk: -1,
-   description : "Your magic resistance is increased by 15%"},	
+   description : "Your magic resistance is increased by 10%"},	
     //341	
   {name : "Iron Skin", skill : 18, skillReq : 15,
    xPos : 200/4, yPos : 200/4, preReqs : [336], nextPerk: -1,
@@ -1403,11 +1403,11 @@ perks : [
    //342	
   {name : "Battle Spirit", skill : 18, skillReq : 15,
    xPos : 250/4, yPos : 225/4, preReqs : [-336,-337], nextPerk: -1,
-   description : "Power attacks increase your attack damage by 20% for 6 seconds"},
+   description : "Power attacks increase your attack damage by 10% for 6 seconds"},
    //343	
   {name : "Adrenaline", skill : 18, skillReq : 15,
    xPos : 300/4, yPos : 200/4, preReqs : [337], nextPerk: -1,
-   description : "Your Stamina Regeneration is increased by 100% when your Stamina falls below 50%"},
+   description : "Your Stamina Regeneration is increased by 200% when your Stamina falls below 25%"},
   //344	
   {name : "Swiftness", skill : 18, skillReq : 15,
    xPos : 350/4, yPos : 225/4, preReqs : [337], nextPerk: -1,
@@ -1419,7 +1419,7 @@ perks : [
    //346	
   {name : "Sorcerer", skill : 18, skillReq : 20,
    xPos : 100/4, yPos : 150/4, preReqs : [339], nextPerk: -1,
-   description : "You take 15% less damage while casting spells"},
+   description : "You take 10% less damage while casting spells"},
     //347	
   {name : "Spellsword", skill : 18, skillReq : 20,
    xPos : 150/4, yPos : 150/4, preReqs : [340], nextPerk: -1,
@@ -1427,7 +1427,7 @@ perks : [
     //348	
   {name : "Knight", skill : 18, skillReq : 20,
    xPos : 200/4, yPos : 150/4, preReqs : [341], nextPerk: -1,
-   description : "You take 15% less damage while power attacking, drawing a bow, or blocking"},
+   description : "You take 10% less damage while power attacking, drawing a bow, or blocking"},
    //349	
   {name : "Endurance", skill : 18, skillReq : 20,
    xPos : 250/4, yPos : 150/4, preReqs : [342], nextPerk: -1,
@@ -1435,7 +1435,7 @@ perks : [
    //350	
   {name : "Scout", skill : 18, skillReq : 20,
    xPos : 300/4, yPos : 150/4, preReqs : [343], nextPerk: -1,
-   description : "Your power attacks cost 15% less Stamina"},
+   description : "Your power attacks cost 10% less Stamina"},
   //351	
   {name : "Spellblade", skill : 18, skillReq : 20,
    xPos : 350/4, yPos : 150/4, preReqs : [344], nextPerk: -1,
@@ -1443,7 +1443,7 @@ perks : [
    //352	
   {name : "Leadership", skill : 18, skillReq : 25,
    xPos : 25/4, yPos : 100/4, preReqs : [345], nextPerk: -1,
-   description : "Nearby allies move 25% faster during combat"},
+   description : "Nearby allies move 15% faster during combat"},
    //353	
   {name : "Hard Skin", skill : 18, skillReq : 25,
    xPos : 50/4, yPos : 75/4, preReqs : [345], nextPerk: -1,
@@ -1451,11 +1451,11 @@ perks : [
    //354	
   {name : "Healing<br>Presence", skill : 18, skillReq : 25,
    xPos : 75/4, yPos : 100/4, preReqs : [-345,-346], nextPerk: -1,
-   description : "You heal yourself and nearby allies for 25 Health every 10 seconds"},
+   description : "You heal yourself and nearby allies for 10 Health every 10 seconds"},
    //355	
   {name : "Absorption", skill : 18, skillReq : 25,
    xPos : 100/4, yPos : 75/4, preReqs : [346], nextPerk: -1,
-   description : "You have a 15% chance to absorb the Magicka from incoming spells"},
+   description : "You have a 10% chance to absorb the Magicka from incoming spells"},
     //356	
   {name : "Conjuring<br>Presence", skill : 18, skillReq : 25,
    xPos : 125/4, yPos : 100/4, preReqs : [-346,-347], nextPerk: -1,
@@ -1479,7 +1479,7 @@ perks : [
    //361	
   {name : "Smash", skill : 18, skillReq : 25,
    xPos : 250/4, yPos : 75/4, preReqs : [349], nextPerk: -1,
-   description : "Power attacks deal 25% more damage"},
+   description : "Power attacks deal 10% more damage"},
    //362	
   {name : "Trickster", skill : 18, skillReq : 25,
    xPos : 275/4, yPos : 100/4, preReqs : [-349,-350], nextPerk: -1,
@@ -1495,7 +1495,7 @@ perks : [
   //365
   {name : "Evasion", skill : 18, skillReq : 25,
    xPos : 350/4, yPos : 75/4, preReqs : [351], nextPerk: -1,
-   description : "You have a 25% chance to evade spells"},  
+   description : "You have a 15% chance to evade spells"},  
   //366
   {name : "Silent Blade", skill : 18, skillReq : 25,
    xPos : 375/4, yPos : 100/4, preReqs : [351], nextPerk: -1,
@@ -1503,19 +1503,19 @@ perks : [
    //367	
   {name : "Bard", skill : 18, skillReq : 30,
    xPos : 25/4, yPos : 50/4, preReqs : [352], nextPerk: -1,
-   description : "Nearby allies deal 25% more physical damage and have 25% magic resistance during combat"},
+   description : "Nearby allies deal 15% more physical damage and have 15% magic resistance during combat"},
    //368	
   {name : "Shaman", skill : 18, skillReq : 30,
    xPos : 50/4, yPos : 25/4, preReqs : [353], nextPerk: -1,
-   description : "You deal 25% more damage against impaired enemies"},
+   description : "You deal 20% more damage against impaired enemies"},
    //369	
   {name : "Templar", skill : 18, skillReq : 30,
    xPos : 75/4, yPos : 50/4, preReqs : [354], nextPerk: -1,
-   description : "Every 90 seconds, falling below 25% Health, you are immune to any damage for 6 seconds and heal yourself afterwards for 100 Health"},
+   description : "Every 90 seconds, falling below 10% Health, you are immune to any damage for 6 seconds and heal yourself afterwards for 100 Health"},
    //370	
   {name : "Archmage", skill : 18, skillReq : 30,
    xPos : 100/4, yPos : 25/4, preReqs : [355], nextPerk: -1,
-   description : "Your Spells are 25% stronger or last 50% longer"},
+   description : "Your Spells are 15% stronger or last 30% longer"},
     //371	
   {name : "Summoner", skill : 18, skillReq : 30,
    xPos : 125/4, yPos : 50/4, preReqs : [356], nextPerk: -1,
@@ -1527,11 +1527,11 @@ perks : [
     //373	
   {name : "Blood Knight", skill : 18, skillReq : 30,
    xPos : 175/4, yPos : 50/4, preReqs : [358], nextPerk: -1,
-   description : "While above 50% Health you deal 25% more weapon damage and while below 50% Health, you take 25% less magic damage"},
+   description : "While above 50% Health you deal 10% more weapon damage and while below 50% Health, you take 25% less magic damage"},
     //374	
   {name : "General", skill : 18, skillReq : 30,
    xPos : 200/4, yPos : 25/4, preReqs : [359], nextPerk: -1,
-   description : "Your weapon damage and Armor Rating is increased by 25%"},
+   description : "Your weapon damage and Armor Rating is increased by 10%"},
     //375	
   {name : "Monk", skill : 18, skillReq : 30,
    xPos : 225/4, yPos : 50/4, preReqs : [360], nextPerk: -1,
@@ -1539,7 +1539,7 @@ perks : [
    //376	
   {name : "Berserker", skill : 18, skillReq : 30,
    xPos : 250/4, yPos : 25/4, preReqs : [361], nextPerk: -1,
-   description : "You take 25% less damage while power attacking and power attack stamina usage is reduced by 25%"},
+   description : "You take 25% less damage while power attacking and power attack stamina usage is reduced by 20%"},
    //377	
   {name : "Saboteur", skill : 18, skillReq : 30,
    xPos : 275/4, yPos : 50/4, preReqs : [362], nextPerk: -1,
@@ -1559,337 +1559,239 @@ perks : [
   //381
   {name : "Nightblade", skill : 18, skillReq : 30,
    xPos : 375/4, yPos : 50/4, preReqs : [366], nextPerk: -1,
-   description : "Against enemies that are out of Magicka, your attacks deal 25% more damage and have a 30% chance to dispel magic"},  	
-  //382
-  {name : "Adrenaline Rush", skill : 19, skillReq: -5,
-   xPos : 100/4, yPos : 25/4, preReqs : [], nextPerk: -1,
-   description : "You gain a bonus to damage output and damage resistance when low on health."},
-   //383
-  {name : "Athleticism", skill : 19, skillReq: -4,
-   xPos : 200/4, yPos : 25/4, preReqs : [], nextPerk: -1,
-   description : "You gain a 50% bonus to your stamina regeneration"},
-   //384
-  {name : "Expertise: <br>Animals", skill : 19, skillReq: -2,
-   xPos : 80/4, yPos : 125/4, preReqs : [], nextPerk: -1,
-   description : "You cause 20% additional damage to animals"},
-   //385
-  {name : "Expertise: <br>Daedra", skill : 19, skillReq: -2,
-   xPos : 160/4, yPos : 125/4, preReqs : [], nextPerk: -1,
-   description : "You cause 20% additional damage to daedra"},
-   //386
-  {name : "Expertise: <br>Humanoids", skill : 19, skillReq: -4,
-   xPos : 240/4, yPos : 125/4, preReqs : [], nextPerk: -1,
-   description : "You cause 20% additional damage to humanoids"},
-   //387
-  {name : "Expertise: <br>Undead", skill : 19, skillReq: -3,
-   xPos : 320/4, yPos : 125/4, preReqs : [], nextPerk: -1,
-   description : "You cause 20% additional damage to undead"},
-   //388
-  {name : "High Tolerance:<br>Disease", skill : 19, skillReq: -2,
-   xPos : 60/4, yPos : 175/4, preReqs : [], nextPerk: -1,
-   description : "Provides 20% resistance to disease"},
-   //389
-  {name : "Resistance:<br>Disease", skill : 19, skillReq: -2,
-   xPos : 120/4, yPos : 175/4, preReqs : [388], nextPerk: -1,
-   description : "Provides 40% resistance to disease"},
-   //390
-  {name : "High Tolerance:<br>Fire", skill : 19, skillReq: -3,
-   xPos : 180/4, yPos : 175/4, preReqs : [], nextPerk: -1,
-   description : "Provides 20% resistance to fire"},
-   //391
-  {name : "Resistance: <br>Fire", skill : 19, skillReq: -3,
-   xPos : 240/4, yPos : 175/4, preReqs : [390], nextPerk: -1,
-   description : "Provides 40% resistance to fire"},
-   //392
-  {name : "High Tolerance: <br>Frost", skill : 19, skillReq: -3,
-   xPos : 300/4, yPos : 175/4, preReqs : [], nextPerk: -1,
-   description : "Provides 20% resistance to frost"},
-   //393
-  {name : "Resistance: <br>Frost", skill : 19, skillReq: -3,
-   xPos : 360/4, yPos : 175/4, preReqs : [392], nextPerk: -1,
-   description : "Provides 40% resistance to frost"},
-   //394
-  {name : "High Tolerance: <br>Shock", skill : 19, skillReq: -3,
-   xPos : 60/4, yPos : 225/4, preReqs : [], nextPerk: -1,
-   description : "Provides 20% resistance to shock"},
-   //395
-  {name : "Resistance: <br>Shock", skill : 19, skillReq: -3,
-   xPos : 120/4, yPos : 225/4, preReqs : [394], nextPerk: -1,
-   description : "Provides 40% resistance to shock"},
-   //396
-  {name : "High Tolerance: <br>Magic", skill : 19, skillReq: -5,
-   xPos : 180/4, yPos : 225/4, preReqs : [], nextPerk: -1,
-   description : "Provides 20% resistance to magic"},
-   //397
-  {name : "Resistance: <br>Magic", skill : 19, skillReq: -5,
-   xPos : 240/4, yPos : 225/4, preReqs : [396], nextPerk: -1,
-   description : "Provides 40% resistance to magic"},
-   //398
-  {name : "High Tolerance: <br>Poison", skill : 19, skillReq: -2,
-   xPos : 300/4, yPos : 225/4, preReqs : [], nextPerk: -1,
-   description : "Provides 20% resistance to poison"},
-   //399
-  {name : "Resistance: <br>Poison", skill : 19, skillReq: -2,
-   xPos : 360/4, yPos : 225/4, preReqs : [398], nextPerk: -1,
-   description : "Provides 40% resistance to poison"},
-   //400
-  {name : "Rapid Healing: <br>Darkness", skill : 19, skillReq: -5,
-   xPos : 80/4, yPos : 275/4, preReqs : [], nextPerk: -1,
-   description : "Health regenerates faster at night or indoors"},
-   //401
-  {name : "Rapid Healing: <br>Light", skill : 19, skillReq: -5,
-   xPos : 160/4, yPos : 275/4, preReqs : [], nextPerk: -1,
-   description : "Health regenerates faster at daytime while outside"},
-   //402
-  {name : "Rapid Healing: <br>Water", skill : 19, skillReq: -2,
-   xPos : 240/4, yPos : 275/4, preReqs : [], nextPerk: -1,
-   description : "Health regenerates faster while in water"},
-   //403
-  {name : "Rapid Healing: <br>General", skill : 19, skillReq: -5,
-   xPos : 320/4, yPos : 275/4, preReqs : [], nextPerk: -1,
-   description : "Health regenerates faster (Can't be used with other forms of healing"},
-   //404
-  {name : "Spell Absorb: <br>Darkness", skill : 19, skillReq: -10,
-   xPos : 80/4, yPos : 325/4, preReqs : [], nextPerk: -1,
-   description : "Absorb incoming spells when not at full magicka capacity while in darkness"},
-   //405
-  {name : "Spell Absorb: <br>Light", skill : 19, skillReq: -10,
-   xPos : 160/4, yPos : 325/4, preReqs : [], nextPerk: -1,
-   description : "Absorb incoming spells when not at full magicka capacity while in light"},
-   //406
-  {name : "Spell Absorb: <br>General", skill : 19, skillReq: -15,
-   xPos : 240/4, yPos : 325/4, preReqs : [], nextPerk: -1,
-   description : "Absorb incoming spells when not at full magicka capacity"},
-   //407
-  {name : "Spell Absorb: <br>True", skill : 19, skillReq: -22,
-   xPos : 320/4, yPos : 325/4, preReqs : [], nextPerk: -1,
-   description : "True spell absorption"},
-   //408
-  {name : "Wisdom I", skill : 19, skillReq: -2,
-   xPos : 300/4, yPos : 25/4, preReqs : [], nextPerk: 409,
-   description : "Increase magicka regeneration by 50%"},
-   //409
-  {name : "Wisdom II", skill : 19, skillReq: -2,
-   xPos : 300/4, yPos : 25/4, preReqs : [408], nextPerk: 410,
-   description : "Increase magicka regeneration by 100%"},
-   //410
-  {name : "Wisdom III", skill : 19, skillReq: -4,
-   xPos : 300/4, yPos : 25/4, preReqs : [409], nextPerk: -1,
-   description : "Increase magicka regeneration by 200%"}, 
-   //411
-  {name : "Holy Damage", skill : 20, skillReq: 5,
-   xPos : 80/4, yPos : 25/4, preReqs : [], nextPerk: 412, 
-   description : "Take damage when in holy places"},
-   //412
-  {name : "Light Damage", skill : 20, skillReq: 10,
-   xPos : 80/4, yPos : 25/4, preReqs : [411], nextPerk: -1,
-   description : "Take damage when in strong light"},
-   //413
-  {name : "Heliophobic", skill : 20, skillReq: 3,
-   xPos : 160/4, yPos : 25/4, preReqs : [], nextPerk: 414,
-   description : "You take more magic damage and regenerate less health when outdoors during the day. (25% taken -25% health regen)"},
-   //414
-  {name : "Heliophobic", skill : 20, skillReq: 3,
-   xPos : 160/4, yPos : 25/4, preReqs : [413], nextPerk: -1,
-   description : "You take more magic damage and regenerate less health when outdoors during the day. (50% taken -50% health regen)"},
-   //415
-  {name : "Heliophilic", skill : 20, skillReq: 3,
-   xPos : 240/4, yPos : 25/4, preReqs : [], nextPerk: 416,
-   description : "You take more magic damage and regenerate less health when indoors or at night. (25% taken -25% health regen)"},
-   //416
-  {name : "Heliophilic", skill : 20, skillReq: 3,
-   xPos : 240/4, yPos : 25/4, preReqs : [415], nextPerk: -1,
-   description : "You take more magic damage and regenerate less health when indoors or at night. (50% taken -50% health regen)"},
-   //417
-  {name : "Forbidden: <br>Axe", skill : 20, skillReq: 2,
-   xPos : 60/4, yPos : 75/4, preReqs : [], nextPerk: -1,
-   description : "You do 50% less damage with axes and hafted blades"},
-   //418
-  {name : "Forbidden: <br>Blunt", skill : 20, skillReq: 2,
-   xPos : 120/4, yPos : 75/4, preReqs : [], nextPerk: -1,
-   description : "You do 50% less damage with blunt weapons and quarterstaves"},
-   //419
-  {name : "Forbidden: <br>Dagger", skill : 20, skillReq: 2,
-   xPos : 180/4, yPos : 75/4, preReqs : [], nextPerk: -1,
-   description : "You do 50% less damage with daggers"},
-   //420
-  {name : "Forbidden: <br>Ranged", skill : 20, skillReq: 2,
-   xPos : 240/4, yPos : 75/4, preReqs : [], nextPerk: -1,
-   description : "You do 50% less damage with bows and crossbows"},
-   //421
-  {name : "Forbidden: <br>Blades", skill : 20, skillReq: 2,
-   xPos : 300/4, yPos : 75/4, preReqs : [], nextPerk: -1,
-   description : "You do 50% less damage with swords and spears"},
-   //422
-  {name : "Forbidden: <br>Unarmed", skill : 20, skillReq: 1,
-   xPos : 360/4, yPos : 75/4, preReqs : [], nextPerk: -1,
-   description : "You do 50% less damage while unarmed"},
-   //423
-  {name : "Low Tolerance: <br>Disease", skill : 20, skillReq: 1,
-   xPos : 60/4, yPos : 175/4, preReqs : [], nextPerk: -1,
-   description : "Gain 25% weakness to disease"},
-    //424
-  {name : "Weakness: <br>Disease", skill : 20, skillReq: 1,
-   xPos : 120/4, yPos : 175/4, preReqs : [423], nextPerk: -1,
-   description : "Gain 50% weakness to disease"},
-    //425
-  {name : "Low Tolerance: <br>Fire", skill : 20, skillReq: 2,
-   xPos : 180/4, yPos : 175/4, preReqs : [], nextPerk: -1,
-   description : "Gain 25% weakness to fire"},
-    //426
-  {name : "Weakness: <br>Fire", skill : 20, skillReq: 1,
-   xPos : 240/4, yPos : 175/4, preReqs : [425], nextPerk: -1,
-   description : "Gain 50% weakness to fire"},
-    //427
-  {name : "Low Tolerance: <br>Frost", skill : 20, skillReq: 2,
-   xPos : 300/4, yPos : 175/4, preReqs : [], nextPerk: -1,
-   description : "Gain 25% weakness to frost"},
-    //428
-  {name : "Weakness: <br>Frost", skill : 20, skillReq: 1,
-   xPos : 360/4, yPos : 175/4, preReqs : [427], nextPerk: -1,
-   description : "Gain 50% weakness to frost"},
-    //429
-  {name : "Low Tolerance: <br>Shock", skill : 20, skillReq: 2,
-   xPos : 60/4, yPos : 225/4, preReqs : [], nextPerk: -1,
-   description : "Gain 25% weakness to shock"},
-   //430
-  {name : "Weakness: <br>Shock", skill : 20, skillReq: 1,
-   xPos : 120/4, yPos : 225/4, preReqs : [429], nextPerk: -1,
-   description : "Gain 50% weakness to shock"},
-   //431
-  {name : "Low Tolerance: <br>Magic", skill : 20, skillReq: 3,
-   xPos : 180/4, yPos : 225/4, preReqs : [], nextPerk: -1,
-   description : "Gain 25% weakness to magic"},
-    //432
-  {name : "Weakness: <br>Magic", skill : 20, skillReq: 2,
-   xPos : 240/4, yPos : 225/4, preReqs : [431], nextPerk: -1,
-   description : "Gain 50% weakness to magic"},
-    //433
-  {name : "Low Tolerance: <br>Poison", skill : 20, skillReq: 1,
-   xPos : 300/4, yPos : 225/4, preReqs : [], nextPerk: -1,
-   description : "Gain 25% weakness to poison"},
-    //434
-  {name : "Weakness: <br>Poison", skill : 20, skillReq: 1,
-   xPos : 360/4, yPos : 225/4, preReqs : [433], nextPerk: -1,
-   description : "Gain 50% weakness to poison"},
-   //435
-  {name : "Phobia: <br>Animals", skill : 20, skillReq: 2,
-   xPos : 80/4, yPos : 125/4, preReqs : [], nextPerk: -1,
-   description : "You cause 30% less damage to animals"},
-   //436
-  {name : "Phobia: <br>Daedra", skill : 20, skillReq: 2,
-   xPos : 160/4, yPos : 125/4, preReqs : [], nextPerk: -1,
-   description : "You cause 30% less damage to daedra"},
-   //437
-  {name : "Phobia: <br>Humanoids", skill : 20, skillReq: 5,
-   xPos : 240/4, yPos : 125/4, preReqs : [], nextPerk: -1,
-   description : "You cause 30% less damage to humanoids"},
-   //438
-  {name : "Phobia: <br>Undead", skill : 20, skillReq: 2,
-   xPos : 320/4, yPos : 125/4, preReqs : [], nextPerk: -1,
-   description : "You cause 30% less damage to undead"},
-   //439
-  {name : "Stunted Growth", skill : 20, skillReq: 6,
-   xPos : 320/4, yPos : 25/4, preReqs : [], nextPerk: -1,
-   description : "You regenerate 50% less health, magicka and stamina"},
-   //440
-  {name : "Forbidden : <br>Daedric", skill : 20, skillReq: 1,
-   xPos : 70/4, yPos : 275/4, preReqs : [], nextPerk: -1,
-   description : "Daedric weapons and armor become 50% less effective"},
-   //441
-  {name : "Forbidden : <br>Dragon", skill : 20, skillReq: 1,
-   xPos : 140/4, yPos : 275/4, preReqs : [], nextPerk: -1,
-   description : "Draconic weapons and armor become 50% less effective"},
-   //442
-  {name : "Forbidden : <br>Dwarven", skill : 20, skillReq: 1,
-   xPos : 210/4, yPos : 275/4, preReqs : [], nextPerk: -1,
-   description : "Dwarven weapons and armor become 50% less effective"},
-   //443
-  {name : "Forbidden : <br>Ebony", skill : 20, skillReq: 1,
-   xPos : 280/4, yPos : 275/4, preReqs : [], nextPerk: -1,
-   description : "Ebony weapons and armor become 50% less effective"},
-   //444
-  {name : "Forbidden : <br>Elven", skill : 20, skillReq: 1,
-   xPos : 350/4, yPos : 275/4, preReqs : [], nextPerk: -1,
-   description : "Elven weapons and armor become 50% less effective"},
-   //445
-  {name : "Forbidden : <br>Glass", skill : 20, skillReq: 1,
-   xPos : 60/4, yPos : 325/4, preReqs : [], nextPerk: -1,
-   description : "Glass weapons and armor become 50% less effective"},
-   //446
-  {name : "Forbidden : <br>Iron", skill : 20, skillReq: 1,
-   xPos : 120/4, yPos : 325/4, preReqs : [], nextPerk: -1,
-   description : "Iron weapons and armor become 50% less effective"},
-   //447
-  {name : "Forbidden : <br>Leather", skill : 20, skillReq: 1,
-   xPos : 180/4, yPos : 325/4, preReqs : [], nextPerk: -1,
-   description : "Leather weapons and armor become 50% less effective"},
-   //448
-  {name : "Forbidden : <br>Orcish", skill : 20, skillReq: 1,
-   xPos : 240/4, yPos : 325/4, preReqs : [], nextPerk: -1,
-   description : "Orcish weapons and armor become 50% less effective"},
-   //449
-  {name : "Forbidden : <br>Silver", skill : 20, skillReq: 1,
-   xPos : 300/4, yPos : 325/4, preReqs : [], nextPerk: -1,
-   description : "Silver weapons and armor become 50% less effective"},
-   //450
-  {name : "Forbidden : <br>Steel", skill : 20, skillReq: 1,
-   xPos : 360/4, yPos : 325/4, preReqs : [], nextPerk: -1,
-   description : "Steel weapons and armor become 50% less effective"},
+   description : "Against enemies that are out of Magicka, your attacks deal 20% more damage and have a 30% chance to dispel magic"},  	
    
-   //451
-  {name : "Arcane Assassin", skill : 7, skillReq: 25,
-   xPos : 200/4, yPos : 200/4, preReqs : [119], nextPerk:452,
-   description : "You can suppress the noise cast by your spells and deliver stronger effect to unwary targets. (Spells and enchantments are silent when cast out of combat, spells are 10% more powerful on targets while undetected)"},
-   //452
-  {name : "Arcane Assassin", skill : 7, skillReq: 50,
-   xPos : 200/4, yPos : 200/4, preReqs : [451], nextPerk: 453,
-   description : "You can suppress the noise cast by your spells and deliver stronger effect to unwary targets. (Spells and enchantments are silent when cast out of combat, spells are 30% more powerful on targets while undetected)"},
-   //453
-  {name : "Arcane Assassin", skill : 7, skillReq: 75,
-   xPos : 200/4, yPos : 200/4, preReqs : [452], nextPerk: -1,
-   description : "You can suppress the noise cast by your spells and deliver stronger effect to unwary targets. (Spells and enchantments are silent when cast out of combat, spells are 50% more powerful on targets while undetected)"},
-  //454
-  {name : "Staff Channeling", skill : 17, skillReq: 0,
-   xPos : 300/4, yPos : 325/4, preReqs : [], nextPerk: 455,
-   description : "You can use your staff to empower your own spells and cast them more efficiently. (While holding a staff, spells are 5% more powerful and cost 10% less magicka to cast) [Requires Level 10]"},
-   //455
-  {name : "Staff Channeling", skill : 17, skillReq: 0,
-   xPos : 300/4, yPos : 325/4, preReqs : [454], nextPerk: -1,
-   description : "You can use your staff to empower your own spells and cast them more efficiently. (While holding a staff, spells are 10% more powerful and cost 20% less magicka to cast) [Requires Level 20]"},
-   //456
-  {name : "Expertise: <br>Axe", skill : 19, skillReq: -4,
-   xPos : 60/4, yPos : 75/4, preReqs : [], nextPerk: -1,
-   description : "You cause 20% more damage with axes and hafted blades"},
-   //457
-  {name : "Expertise: <br>Blunt", skill : 19, skillReq: -4,
-   xPos : 120/4, yPos : 75/4, preReqs : [], nextPerk: -1,
-   description : "You cause 20% more damage with blunt weapons and quarterstaves"},
-   //458
-  {name : "Expertise: <br>Dagger", skill : 19, skillReq: -4,
-   xPos : 180/4, yPos : 75/4, preReqs : [], nextPerk: -1,
-   description : "You cause 20% more damage with daggers"},
-   //459
-  {name : "Expertise: <br>Ranged", skill : 19, skillReq: -4,
+   //traits
+   
+  //382
+  {name : "Addict", skill : 19, skillReq: 0,
+   xPos : 80/4, yPos : 25/4, preReqs : [], nextPerk: -1,
+   description : "You've developed some bad habits. Skooma and alcohol benefits last 2x as long and you can craft skooma at cooking pot. When not under the effects of alcohol or skooma, you have a 25% chance to get staggered when hit."},
+   //383
+  {name : "Adrenaline Rush", skill : 19, skillReq: 0,
+   xPos : 160/4, yPos : 25/4, preReqs : [], nextPerk: -1,
+   description : "You possess a natural flight response. When at less than 20% health, you move 20% faster and regenerate 0.5 stamina per second but also deal 20% less damage when below this threshold."},
+   //384
+  {name : "Au Naturel", skill : 19, skillReq: 0,
+   xPos : 240/4, yPos : 25/4, preReqs : [], nextPerk: -1,
+   description : "Flaunt what the divines gave you! Start with +100 more health, magicka and stamina. For each piece of armor or clothes you wear, you lose 30 (up to -120 lost at 4 pieces)."},
+   //385
+  {name : "Bad Natured", skill : 19, skillReq: 0,
+   xPos : 320/4, yPos : 25/4, preReqs : [], nextPerk: -1,
+   description : "Yiu were born into wickedness. Your attacks while sneaking deals 20% more and you're better at pickpocketing. However, your non-sneak attacks do 20% less and wearing a divine amulet will hurt you."},
+   //386
+  {name : "Bane of the Wicked", skill : 19, skillReq: 0,
+   xPos : 80/4, yPos : 75/4, preReqs : [], nextPerk: -1,
+   description : "You are an enemy to all things abhorrent. Deal 20% more damage to undead, daedra and werewolves. However, do 10% less damage to other beings."},
+   //387
+  {name : "Bulwark", skill : 19, skillReq: 0,
+   xPos : 160/4, yPos : 75/4, preReqs : [], nextPerk: -1,
+   description : "When walking or standing still, you gain 200 armor rating and 20 magical resistance. You drain 1 additional stamina per second while sprinting and 0.25 when running."},
+   //388
+  {name : "Defiler", skill : 19, skillReq: 0,
    xPos : 240/4, yPos : 75/4, preReqs : [], nextPerk: -1,
-   description : "You cause 20% more damage with bows and crossbows"},
-   //460
-  {name : "Expertise: <br>Blades", skill : 19, skillReq: -4,
-   xPos : 300/4, yPos : 75/4, preReqs : [], nextPerk: -1,
-   description : "You cause 20% more damage with swords and spears"},
-   //461
-  {name : "Expertise: <br>Unarmed", skill : 19, skillReq: -2,
-   xPos : 360/4, yPos : 75/4, preReqs : [], nextPerk: -1,
-   description : "You cause 20% more damage while unarmed"},
-   //462
-  {name : "Athletics", skill : 6, skillReq: 25,
-   xPos : 185/4, yPos : 148/4, preReqs : [111], nextPerk: 463,
-   description : "You are more agile and can recover from exhaustion fast. (+5% movement speed and +25% stamina regeneration when not wearing heavy armor)"},
-   //463
-  {name : "Athletics", skill : 6, skillReq: 50,
-   xPos : 185/4, yPos : 148/4, preReqs : [462], nextPerk: -1,
-   description : "You are more agile and can recover from exhaustion fast. (+10% movement speed and +50% stamina regeneration when not wearing heavy armor)"},
- ]
+   description : "The only use you have for the living is to ressurect them in death. Deal 20% more damage to playable races. HOwever, do 10% less damage to other beings."},
+   //389
+  {name : "Disciplined", skill : 19, skillReq: 0,
+   xPos : 320/4, yPos : 75/4, preReqs : [], nextPerk: -1,
+   description : "Shoot to kill. Bows and crossbows deal 20% more damage. However, they draw/reload 25% slower."},
+   //390
+  {name : "Dovah Tinvaak", skill : 19, skillReq: 0,
+   xPos : 80/4, yPos : 125/4, preReqs : [], nextPerk: -1,
+   description : "You are fluent in Dragon speech and as such can shout 30% more often, at 30% reduced effectiveness."},
+   //391
+  {name : "Elemental Conduit", skill : 19, skillReq: 0,
+   xPos : 160/4, yPos : 125/4, preReqs : [], nextPerk: -1,
+   description : "Fire spells are more powerrful in sunny weather but lose potency in the rain. Shock Spells are enhanced during rain but are less effective in snowy conditions. Frost spells excel in snowy weather but weaken under sunny skies."},
+   //392
+  {name : "Fast Shot", skill : 19, skillReq: 0,
+   xPos : 240/4, yPos : 125/4, preReqs : [], nextPerk: -1,
+   description : "You'd rather shoot fast then shoot hard. Bows draw 30% faster, crossbows reload 30% faster. However, bows and crossbows deal 30% less damage."},
+   //393
+  {name : "Focused", skill : 19, skillReq: 0,
+   xPos : 320/4, yPos : 125/4, preReqs : [], nextPerk: -1,
+   description : "When in danger, you think before acting. When at less than 20% health, you regenerate 0.5 magicka per second and absorb 10% of incoming spells. However you take 10% more damage when below this threshold."},
+   //394
+  {name : "Gambler", skill : 19, skillReq: 0,
+   xPos : 80/4, yPos : 175/4, preReqs : [], nextPerk: -1,
+   description : "You go all in or nothing. Gain 50% chance to critial hit. However, overall weapon damage is reduced by 25%."},
+   //395
+  {name : "Giantkin", skill : 19, skillReq: 0,
+   xPos : 160/4, yPos : 175/4, preReqs : [], nextPerk: -1,
+   description : "Descended from mighty giants; you gain +20% magic resistance and damage with blunt weapons, however you cannot read books or spell tomes, or use scrolls."},
+   //396
+  {name : "Glutton", skill : 19, skillReq: 0,
+   xPos : 240/4, yPos : 175/4, preReqs : [], nextPerk: -1,
+   description : "You LOVE food but hate medicine. Food benefits are 25% stronger but potions have only 50% their efficiency."},
+   //397
+  {name : "Good Natured", skill : 19, skillReq: 0,
+   xPos : 320/4, yPos : 175/4, preReqs : [], nextPerk: -1,
+   description : "You have a good heart. Deal 20% less damage with weapons and Destruction spells. However, while wearing an amulet of the divines beneficial spells and potions last 20% longer and you take 20% less damage."},
+   //398
+  {name : "Hoarder", skill : 19, skillReq: 0,
+   xPos : 80/4, yPos : 225/4, preReqs : [], nextPerk: -1,
+   description : "You love carrying stuff around, even if it's junk. Gain +100 carry weight. Selling prices are 50% worse."},
+   //399
+  {name : "Jack of All Spells", skill : 19, skillReq: 0,
+   xPos : 160/4, yPos : 225/4, preReqs : [], nextPerk: -1,
+   description : "But master of none. Apprentice and Adept spells are 20% stronger or longer lasting, expert and master spells are 20% weaker or shorter."},
+   //400
+  {name : "Nosferatu", skill : 19, skillReq: 0,
+   xPos : 240/4, yPos : 225/4, preReqs : [], nextPerk: -1,
+   description : "You're an ugly spirit and live in the sewers. -50 speech, no health, magicka or stamina regen outdoors. Eating skeever meat gives you a 10% speed boost and restores 5 health, magicka and stamina per second for 30 seconds."},
+   //401
+  {name : "King of Worms", skill : 19, skillReq: 0,
+   xPos : 320/4, yPos : 225/4, preReqs : [], nextPerk: -1,
+   description : "You've gained hidden insights into necromantic arts. You can have 1 additional summon or undead thrall. However, the duration of summon and ressurecting spells is reduced by 50%."},
+   //402
+  {name : "Light Foot", skill : 19, skillReq: 0,
+   xPos : 80/4, yPos : 275/4, preReqs : [], nextPerk: -1,
+   description : "You've never felt comfortable in footwear. When not wearing boots/shoes, your movement is muffled, you move 5% faster and suffer half fall damage. When wearing boots/shoes you move 10% slower."},
+   //403
+  {name : "Marathon Runner", skill : 19, skillReq: 0,
+   xPos : 160/4, yPos : 275/4, preReqs : [], nextPerk: -1,
+   description : "You regenerate 5 stamina per second while sprinting. However, you will not be able to gain any stamina while running or standing still."},
+   //404
+  {name : "Old Fashioned", skill : 19, skillReq: 0,
+   xPos : 240/4, yPos : 275/4, preReqs : [], nextPerk: -1,
+   description : "If it ain't broke, don't fix it. Weapons and armor made of iron, wood, fur or hide are 25% stronger. Othewrwise they are 10% weaker."},
+   //405
+  {name : "Pacifist", skill : 19, skillReq: 0,
+   xPos : 320/4, yPos : 275/4, preReqs : [], nextPerk: -1,
+   description : "When your arms are lowered you restore 1 magicka and stamina per second. However , raising your hands in combat will have the opposite effect."},
+   //406
+  {name : "Rage", skill : 19, skillReq: 0,
+   xPos : 80/4, yPos : 325/4, preReqs : [], nextPerk: -1,
+   description : "You posses a natural flight response. When at less than 20% health, you deal 20% more damage and take 20% less damage. However, you mose 20% slower when below this theshold."},
+   //407
+  {name : "Skilled", skill : 19, skillReq: 0,
+   xPos : 160/4, yPos : 325/4, preReqs : [], nextPerk: -1,
+   description : "Reading skill books grants an extra skill point and trainers cost 50% less, however every 5 levels you don't gain a perk point."},
+   //408
+  {name : "Soul Reaver", skill : 19, skillReq: 0,
+   xPos : 240/4, yPos : 325/4, preReqs : [], nextPerk: -1,
+   description : "You've calimed countless souls for your gain. Weapon and armor enchantments are 10% stronger and use 10% less charge. Armor rating and weapon damage is reduced by 10%."},
+   //409
+  {name : "Swimmer", skill : 19, skillReq: 0,
+   xPos : 320/4, yPos : 325/4, preReqs : [], nextPerk: -1,
+   description : "You prefer life on the water. In water, you swim 20% faster, can breathe underwater and regenerate health, stamina and magicka by a flat 0.25 per second. On land you suffer 50% less health, stamina and magicka regeneration."},
+   //410
+  {name : "Unbound Hands", skill : 19, skillReq: 0,
+   xPos : 80/4, yPos : 375/4, preReqs : [], nextPerk: -1,
+   description : "Handwear constricts you. Spells are 10% stronger and unarmed attacks do +10 more damage when not wearing gloves/gauntlets. However, they suffer opposite effect when wearing gloves/gauntlets."},
+   //411
+  {name : "Way of the Voice", skill : 19, skillReq: 0,
+   xPos : 160/4, yPos : 375/4, preReqs : [], nextPerk: -1,
+   description : "You follow the pacifist creed of the Greybeards, and as such your hostile shouts are 30% less effective, but using non-hostile shouts has 20% chance to reset the shout cooldown."},
+   //412
+  {name : "Witcher", skill : 19, skillReq: 0,
+   xPos : 240/4, yPos : 375/4, preReqs : [], nextPerk: -1,
+   description : "Potions and posions you make are 20% stronger, but you can only have up to three potion effects at the same time."},
+   
+   //missed things in 2.8
+   
+   //413
+  {name : "Arcane Assassin", skill : 7, skillReq: 25,
+   xPos : 200/4, yPos : 200/4, preReqs : [119], nextPerk: 414,
+   description : "You can suppress the noise cast by your spells and deliver stronger effect to unwary targets. (Spells and enchantments are silent when cast out of combat, spells are 10% more powerful on targets while undetected)"},
+   //414
+  {name : "Arcane Assassin", skill : 7, skillReq: 50,
+   xPos : 200/4, yPos : 200/4, preReqs : [413], nextPerk: 415,
+   description : "You can suppress the noise cast by your spells and deliver stronger effect to unwary targets. (Spells and enchantments are silent when cast out of combat, spells are 30% more powerful on targets while undetected)"},
+   //415
+  {name : "Arcane Assassin", skill : 7, skillReq: 75,
+   xPos : 200/4, yPos : 200/4, preReqs : [414], nextPerk: -1,
+   description : "You can suppress the noise cast by your spells and deliver stronger effect to unwary targets. (Spells and enchantments are silent when cast out of combat, spells are 50% more powerful on targets while undetected)"},
+  //416
+  {name : "Staff Channeling", skill : 17, skillReq: 30,
+   xPos : 325/4, yPos : 225/4, preReqs : [320], nextPerk: 417,
+   description : "You can use your staff to empower your own spells and cast them more efficiently. (While holding a staff, spells are 5% more powerful and cost 10% less magicka to cast)"},
+  //417
+  {name : "Staff Channeling", skill : 17, skillReq: 60,
+   xPos : 325/4, yPos : 225/4, preReqs : [416], nextPerk: -1,
+   description : "You can use your staff to empower your own spells and cast them more efficiently. (While holding a staff, spells are 10% more powerful and cost 20% less magicka to cast)"},
+   
+   
+ // new stuff added in 3.0 in skill # order not perk #
+ 
+ 
+  //418
+{name : "Craftsmanship", skill : 0, skillReq : 0,
+   xPos : 250/5, yPos : 220/3.5, preReqs : [], nextPerk: 0,
+   description : "You've acquired the basics of craftsmanship and know how to properly use all kinds of tools. You now also understand the secondary material properties of Iron and Steel weapons."},
+  //419
+    {name : "Tailoring & Polishing", skill : 0, skillReq : 0,
+    xPos : 180/5, yPos : 375/5, preReqs : [], nextPerk: -1,
+    description : "You've spent some time learning to tailor and polish gems, you are able to craft a variety of clothing items. Also each article of worn clothing provides additional warmth and you can polish rough gems."},   
+  //420
+    {name : "Shivering Isles Smithing", skill : 0, skillReq : 100,
+    xPos : 250/5, yPos : 200/5, preReqs : [-6,-9], nextPerk: -1,
+    description : "On your travels you have discovered the secrets to unleash the power of the mystical amber of madness ore of the shivering isles. Few could hope to achieve such a feat without losing their mind..."},
+  //421
+  {name : "Sharp Throw", skill : 5, skillReq : 50,
+   xPos : 140/4, yPos : 94/4, preReqs : [95], nextPerk: -1,
+   description : "You can throw knifes more precisely. (50% more damage with throwing knives)"},
+   //422
+  {name : "Hunter", skill : 8, skillReq : 20,
+   xPos : 325/4, yPos : 300/4, preReqs : [128], nextPerk: 423,
+   description : "You've spent significant time hunting in the wilderness and can deal more damage to most animals. (Deal 10% more damage to all animals)"},
+   //423
+  {name : "Hunter", skill : 8, skillReq : 40,
+   xPos : 325/4, yPos : 300/4, preReqs : [422], nextPerk: -1,
+   description : "You've spent significant time hunting in the wilderness and can deal more damage to most animals. (Deal 20% more damage to all animals)"}, 
+   //424
+  {name : "Survival Instincts", skill : 8, skillReq : 40,
+   xPos : 325/4, yPos : 200/4, preReqs : [422], nextPerk: -1,
+   description : "While others would ignore the threats of the elements, you understand the danger. (Move 10% faster and regenerate stamina 50% faster when outdoors and out of combat)"},  
+   //425
+  {name : "Taming", skill : 8, skillReq : 60,
+   xPos : 325/4, yPos : 100/4, preReqs : [424], nextPerk: -1,
+   description : "You have mastered the outdoors and all of Skyrim's fauna. Gain a power to tame nearby animals under 10% health. (Bosmer also get 4x the duration of their racial power)"},
+   //426
+  {name : "Pocket Sand", skill : 9, skillReq : 25,
+   xPos : 350/4, yPos : 100/4, preReqs : [154], nextPerk: -1,
+   description : "You're quick thinking and even quicker with your hands. Can now create pocket sand at a forge and use it to imapair enemies."},
+   //427
+  {name : "Quick Sand", skill : 9, skillReq : 50,
+   xPos : 350/4, yPos : 150/4, preReqs : [426], nextPerk: -1,
+   description : "Your pocket sand can now slow down enmies, making it easier to escape combat."},
+   //428
+  {name : "Poisoned Clamps", skill : 9, skillReq : 25,
+   xPos : 225/4, yPos : 125/4, preReqs : [154], nextPerk: -1,
+   description : "Traps can now be poisoned"},
+   //429
+  {name : "Salt on the Wound", skill : 9, skillReq : 50,
+   xPos : 225/4, yPos : 200/4, preReqs : [428], nextPerk: -1,
+   description : "When deploying a trap, you can consume elemental salt to coat it. Affected enemies take minor elemental damage, and on death, summon and attronach."},
+   //430
+  {name : "Battle Muse", skill : 10, skillReq : 0,
+   xPos : 85/4, yPos : 350/4, preReqs : [], nextPerk: -1,
+   description : "Your mastery of musical instruments turns the tide of battle. Drums inspire your allies, the flute soothes your foes and the lute stirs chaos amoung your enemies."},
+   //431
+  {name : "Standing Ovation", skill : 10, skillReq : 25,
+   xPos : 35/4, yPos : 275/4, preReqs : [430], nextPerk: -1,
+   description : "Your captivating performances leave the crowd in awe. The bonuses recieved from playing for a crowd at the inns are now doubled and last twice as long."},
+   //432
+  {name : "Boozy Bard", skill : 10, skillReq : 25,
+   xPos : 70/4, yPos : 255/4, preReqs : [430], nextPerk: -1,
+   description : "Alcohol makes the music flow sweeter! Alcoholic drinks no longer blur your vision and perfoming under the influence enhances your musical powers, increasing their effectiveness."},
+   //434
+  {name : "Windborne Melody", skill : 10, skillReq : 25,
+   xPos : 90/4, yPos : 225/4, preReqs : [430], nextPerk: -1,
+   description : "Your music flows as freely as the wind. Playing an instrument no longer slows your movement."},
+   //435
+  {name : "Skald", skill : 10, skillReq : 50,
+   xPos : 95/4, yPos : 150/4, preReqs : [430], nextPerk: -1,
+   description : "Continuously playing instruments during combat now grrants additional benefits. Drums bolster your allies, while the Lute and Flute weaken your enmies' defences."},
+   //436
+  {name : "Symphony of Storms", skill : 10, skillReq : 75,
+   xPos : 100/4, yPos : 75/4, preReqs : [431], nextPerk: -1,
+   description : "The bard's mastery over their instrument echoes through the heavens. The deep and powerful resonance of your music calls forth elemental storms, which each instrument summoning its own fury."},
+   //437
+  {name : "Wand Mastery", skill : 17, skillReq : 50,
+   xPos : 325/4, yPos : 150/4, preReqs : [416], nextPerk: -1,
+   description : "You have learned to use your wand's innate mystical properties to focus your thoughts. (+100% magicka regeneration when holding a wand)"},
+ ],
 };
 
 addPerkData(perkData);

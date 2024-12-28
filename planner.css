@@ -20,7 +20,7 @@ h1 {
 #freeClassPointDiv {
   text-align:center;
   font-size:15px;
-  padding:5px;
+  padding:2px;
 }
 
 .redText {
@@ -180,14 +180,33 @@ svg > text, .unselectable {
 }
 
 .selectInputWithLabel {
+  position: relative;
+  overflow: visible;
+  width: 100%;
+  float: right;
+  z-index: auto;
   font-size:20px;
   margin-top:5px;
   margin-bottom:5px;
 }
 
-.selectInputWithLabel select {
+.selectInputWithLabelselect {
+  position: absolute;
+  top: 0px;
+  left: 205px;
+  z-index: auto;
   float:right;
   width:50%;
+  font-size:14px;
+}
+
+.selectInputWithLabelselected {
+  position: absolute;
+  top: 0px;
+  left: 205px;
+  float: right;
+  z-index: 1000;
+  width:202px;
   font-size:14px;
 }
 
@@ -205,10 +224,13 @@ svg > text, .unselectable {
 }
 
 .statsSubsectionDiv {
+  display: flex;
+  flex-flow: column nowrap;
   margin:5px;
   padding:3px;
   border-bottom: 2px solid black;
   text-align:left;
+  width: 410px;
   
 }
 
@@ -255,8 +277,8 @@ svg > text, .unselectable {
 #attributesToSpendDiv{
   font-size: 16px;
   text-align:center;
-  margin-top:5px;
-  margin-bottom:15px;
+  margin-top:2px;
+  margin-bottom:5px;
 }
 
 .numberInputWithLabel{
@@ -272,7 +294,7 @@ svg > text, .unselectable {
 .attributeInputAndLabelDiv {
   text-align:left;
   margin-left:20%;
-  margin-bottom:10px;
+  margin-bottom:3px;
 }
 
 #derivedAttributeTableDiv{
@@ -284,13 +306,13 @@ svg > text, .unselectable {
 	column-fill: auto;
 }
 
-#classTableDiv{
-  display: table-cell;
+.classTableDiv{
+  display: flex;
   justify-content:center;
-  padding: 10px;
-  height: 20px;
+  padding: 2px;
+  height: 110px;
   border-style:solid;
-  border-width: 2px;
+  border-width: 1px;
   border-color:transparent;
   width: 100%;
   min-width: 120px;
@@ -325,3 +347,14 @@ svg > text, .unselectable {
   margin-bottom:5px;
   display:block;
 }
+
+.description-box {
+display: none;
+position: absolute;
+background-color: lightyellow;
+border: 1px solid #ccc;
+padding: 10px;
+width: 740px;
+z-index: 1000;
+}
+

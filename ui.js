@@ -5,9 +5,9 @@ $(document).ready(function(){
   curPreset = presetList[getIndexWithID(presetNum,presetList)];
 
   curPerkList = perksList[curPreset.perks];
-  curRaceList = racesList[curPreset.races];
+  curRaceList = raceListData;
   curGameMechanics = gameMechanicsList[curPreset.gameMechanics];
-  curBlessingList = blessingsList[curPreset.blessings];
+  curBlessingList = blessingsData;
 
   sortDataLists();
   let gotBuild = initCharacterData();
@@ -123,10 +123,10 @@ function updateAttributeText(){
   let answers = ["Health: ","Magicka: ","Stamina: "];
   let oghmaVal = Number($("#oghmaSelect").val());
   for(let i = 0; i < 3; i++){
-    let baseVal = curRaceList.races[characterData.race].startingHMS[i];
+    let baseVal = raceListData[characterData.race].startingHMS[i];
     baseVal += curGameMechanics.leveling.hmsGiven[i] * characterData.hmsIncreases[i];
     
-    let bonuses = curRaceList.races[characterData.race].hmsBonus[i];
+    let bonuses = raceListData[characterData.race].hmsBonus[i];
     if( (oghmaVal - 1) == i){
       bonuses += curGameMechanics.oghmaData.hmsGiven[i];
     }
@@ -416,8 +416,8 @@ function updateClassAndTraitDisplay(){
   let freeClass = calcClassPoints();
   let freeTraits = calcFreeTraits()
   let traitPoints = calcTraitPoints();
-  theDiv.html(`Free Class Points: ${freeClass} &nbsp;&nbsp;&nbsp;&nbsp; Trait Points: ${traitPoints} &ndash; Free Traits: ${freeTraits}`);
-  if(freeClass < 0 || freeTraits < 0 || (freeTraits <= 0 && traitPoints < 0)){
+  theDiv.html(`Free Class Points: ${freeClass} &nbsp;&nbsp;&nbsp;&nbsp; Free Traits: ${freeTraits}`);
+  if(freeClass < 0 || freeTraits < 0 || (freeTraits < 0)){
     theDiv.removeClass("whiteText");
     theDiv.addClass("redText");
   }
@@ -526,7 +526,7 @@ function drawActiveSkillTree(){
   $("#activeSkillDisplaySVG").html($("#activeSkillDisplaySVG").html())
   
   $("#activeSkillLevelInput").attr("min",
-    curRaceList.races[characterData.race].startingSkills[activeSkill]);
+    raceListData[characterData.race].startingSkills[activeSkill]);
   
   //Re-attach the handlers to all of the circles
   attachActiveSkillHandlers();
@@ -742,24 +742,27 @@ function updateCustomSelectOptions(){
 function updateRaceSelect(){
   let raceSel = $("#raceSelect");
   raceSel.empty();
-  for(let i = 0; i < curRaceList.races.length; i++){
-    raceSel.append(`<option value="${i}">${curRaceList.races[i].name}</option>`);
+  for(let i = 0; i < curRaceList.length; i++){
+    raceSel.append(`<option value="${i}">${curRaceList[i].name}</option>`);
   }
 }
 
 function updateBlessingSelect(){
   let blessSel = $("#blessingSelect");
   blessSel.empty();
-  for(let i = 0; i < curBlessingList.blessings.length; i++){
-    blessSel.append(`<option value="${i}">${curBlessingList.blessings[i]}</option>`);
+  for(let i = 0; i < curBlessingList.length; i++){
+	let name = curBlessingList[i].name
+	if (name.includes("&mdash;")){
+			blessSel.append(`<optgroup label="${name}">`)
+	}else blessSel.append(`<option value="${i}">${curBlessingList[i].name}</option>`);
   }
 }
 
 function updateStandingStoneSelect(){
   let ssSelect = $("#stoneSelect");
   ssSelect.empty();
-  for(let i = 0; i < standingStoneNames.length; i++){
-    ssSelect.append(`<option value="${i}">${standingStoneNames[i]}</option>`);
+  for(let i = 0; i < standingStoneData.length; i++){
+    ssSelect.append(`<option value="${i}">${standingStoneData[i].name}</option>`);
   }
 }
 
@@ -817,3 +820,5 @@ function updateBuildCodeDisplay(){
     $("#buildCodeText").val(buildCheck.message);
   }
 }
+
+

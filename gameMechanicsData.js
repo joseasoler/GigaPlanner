@@ -107,4 +107,3 @@ const gameMechanicsData = {
   }
 };
 addGameMechanicsData(gameMechanicsData);
-
