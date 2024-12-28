@@ -657,11 +657,11 @@ function buildCodeParserV1(buildCode){
   let perkListID = buildCode.charCodeAt(1);
   curPerkList = perksList[getIndexWithID(perkListID,perksList)];
   let raceListID = buildCode.charCodeAt(2);
-  curRaceList = racesList[getIndexWithID(raceListID,racesList)];
+  curRaceList = raceListData;
   let gmID = buildCode.charCodeAt(3);
   curGameMechanics = gameMechanicsList[getIndexWithID(gmID,gameMechanicsList)];
   let blessingsID = buildCode.charCodeAt(4);
-  curBlessingList = blessingsList[getIndexWithID(blessingsID,blessingsList)];
+  curBlessingList = blessingsData;
   
   characterData.level = buildCode.charCodeAt(5);
   characterData.hmsIncreases[0] = buildCode.charCodeAt(6);

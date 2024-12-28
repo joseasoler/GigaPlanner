@@ -416,6 +416,7 @@ function updateClassAndTraitDisplay(){
   let freeClass = calcClassPoints();
   let freeTraits = calcFreeTraits()
   let traitPoints = calcTraitPoints();
+  characterData.skillLevels[19] = freeTraits
   theDiv.html(`Free Class Points: ${freeClass} &nbsp;&nbsp;&nbsp;&nbsp; Free Traits: ${freeTraits}`);
   if(freeClass < 0 || freeTraits < 0 || (freeTraits < 0)){
     theDiv.removeClass("whiteText");
