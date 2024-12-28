@@ -11,6 +11,7 @@ $(document).ready(function(){
 
   sortDataLists();
   let gotBuild = initCharacterData();
+  updateCustomSelectOptions();
   updateSkillNames();
   updateSkillLevelsDisplay();
   drawMiniSkillTrees();
