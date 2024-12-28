@@ -15,7 +15,6 @@ $(document).ready(function(){
   updateSkillLevelsDisplay();
   drawMiniSkillTrees();
   updateActiveSkillPanel();
-  updateRaceSelect();
   updateStandingStoneSelect();
   updateBlessingSelect();
   updateAttributeText();
@@ -741,7 +740,7 @@ function updateCustomSelectOptions(){
 function updateRaceSelect(){
   let raceSel = $("#raceSelect");
   raceSel.empty();
-  for(let i = 0; i < racesList.length; i++){
+  for(let i = 0; i < curRaceList.length; i++){
     raceSel.append(`<option value="${i}">${curRaceList[i].name}</option>`);
   }
 }
@@ -749,7 +748,7 @@ function updateRaceSelect(){
 function updateBlessingSelect(){
   let blessSel = $("#blessingSelect");
   blessSel.empty();
-  for(let i = 0; i < blessingsList.length; i++){
+  for(let i = 0; i < curBlessingList.length; i++){
 	let name = curBlessingList[i].name
 	if (name.includes("&mdash;")){
 			blessSel.append(`<optgroup label="${name}">`)
