@@ -71,7 +71,7 @@ function initCharacterData(){
     characterData.race = 0;
     characterData.hmsIncreases = [0,0,0];
     characterData.skillLevels = [];
-    for(let i = 0; i < 18; i++){
+    for(let i = 0; i < 20; i++){
       characterData.skillLevels.push(raceListData[0].startingSkills[i]);
     }
     characterData.perksTaken = [];
@@ -696,6 +696,7 @@ function buildCodeParserV1(buildCode){
 function buildCodeParserV2(buildCode){
   let answer = buildCodeParserV1(buildCode);
   characterData.oghmaChoice = characterData.oghmaChoice >> 4;
+  characterData.skillLevels[18] = characterData.level;
   return answer;
 }
 
@@ -717,6 +718,14 @@ function validateBuild(){
   else if (calcFreePerks() < 0){
     answer.valid = false;
     answer.message = "You have too many perks.";
+  }
+   else if (calcFreeTraits() < 0){
+    answer.valid = false;
+    answer.message = "You have too many traits.";
+  }
+  else if (calcClassPoints() < 0){
+    answer.valid = false;
+    answer.message = "You have too many class points.";	
   }
   else if (!checkAllPerksValid()){
     answer.valid = false;

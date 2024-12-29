@@ -375,23 +375,23 @@ perks : [
    description : "As an expert dual-wielder, you can use both a bow and dagger in combat. (50% more dual-wield power attack poise damage, unlocks secondary dagger abilities when using a bow)"},
    //86
   {name : "Hand to Hand", skill : 4, skillReq : 0,
-   xPos : 120/4, yPos : 360/4, preReqs : [], nextPerk: -1,
+   xPos : 125/4, yPos : 375/4, preReqs : [], nextPerk: -1,
    description : "You are trained in hand to hand combat, and can effectively disable opponents with bare hands. (+25 unarmed damage, unarmed attacks damage target stamina by half of the unarmed damage)"},
    //87
   {name : "Grappling", skill : 4, skillReq : 25,
-   xPos : 80/4, yPos : 350/4, preReqs : [86], nextPerk: -1,
+   xPos : 50/4, yPos : 365/4, preReqs : [86], nextPerk: -1,
    description : "You can grapple opponents to disarm or immobilize them. (Unarmed power attacks stagger targets by 50% chance and disarm by 10% chance)"},
    //88
   {name : "Takedown", skill : 4, skillReq : 50,
-   xPos : 50/4, yPos : 320/4, preReqs : [87], nextPerk: -1,
+   xPos : 25/4, yPos : 325/4, preReqs : [87], nextPerk: -1,
    description : "You can knock down enemies by grappling. (Unarmed power attacks knock down targets by 10% chance)"},
    //89
   {name : "Unarmed Defense", skill : 4, skillReq : 25,
-   xPos : 120/4, yPos : 330/4, preReqs : [86], nextPerk: -1,
+   xPos : 100/4, yPos : 325/4, preReqs : [86], nextPerk: -1,
    description : "You can defend yourself better even without weapons or shields. (15% less physical damage taken for each hand empty)"},
    //90
   {name : "Unarmed Stance", skill : 4, skillReq : 50,
-   xPos : 100/4, yPos : 300/4, preReqs : [89], nextPerk: -1,
+   xPos : 50/4, yPos : 275/4, preReqs : [89], nextPerk: -1,
    description : "While unarmed, you can maneuver more freely and resist physical force. (+5% movement speed for each hand empty, +50 mass when both hands are empty)"},
    //91
   {name : "Armed Spelllcasting", skill : 4, skillReq : 50,
@@ -655,14 +655,14 @@ perks : [
    description : "You've learned how to deal with Skyrim's greedy merchants. Prices are 1% better per speech level."},
    //156
   {name : "Merchant", skill : 10, skillReq : 50,
-   xPos : 175/4, yPos : 275/4, preReqs : [155], nextPerk: -1,
+   xPos : 185/4, yPos : 250/4, preReqs : [155], nextPerk: -1,
    description : "You can invest gold to permanently increase the amount of gold that merchants have. Merchants will buy and non-stolen item, sell prices are increased by 15%."},
    //157
   {name : "Fencing", skill : 10, skillReq : 100,
-   xPos : 200/4, yPos : 200/4, preReqs : [156], nextPerk: -1,
+   xPos : 225/4, yPos : 200/4, preReqs : [156], nextPerk: -1,
    description : "You've become so persuasive that you could make almost anyone believe that your goods are of a legal origin."},
    //158
-  {name : "Silver Tongue", skill : 10, skillReq : 25,
+  {name : "Silver <br> Tongue", skill : 10, skillReq : 25,
    xPos : 150/4, yPos : 350/4, preReqs : [155], nextPerk: -1,
    description : "You've spent quite some time improving your rhetorical skills. Intimidation is much more likely to succeed and you gain 10% better prices from the opposite gender."},
    //159
@@ -671,39 +671,39 @@ perks : [
    description : "Your rhetorical skill makes you the perfect leader. By inspiring all those who fight by your side, followers gain 20% damage, -15% spell cost, +75% block, +100 magicka and stamina and 50 carry weight."},
    //160
   {name : "Masquerade", skill : 10, skillReq : 50,
-   xPos : 150/4, yPos : 100/4, preReqs : [158], nextPerk: 161,
+   xPos : 150/4, yPos : 75/4, preReqs : [158], nextPerk: 161,
    description : "You've become proficient at acting, and with the right equipment you can now disguise yourself as a Forsworn, Imperial, Stormcloak, Necromancer, Thalmor or Warlock to (usually) avoid detection."},
    //161
   {name : "Masquerade", skill : 10, skillReq : 100,
-   xPos : 150/4, yPos : 100/4, preReqs : [160], nextPerk: -1,
+   xPos : 150/4, yPos : 75/4, preReqs : [160], nextPerk: -1,
    description : "There is no role you cannot play, and your acting is so believable that there is almost no way for others to see through your disguises."},
    //162
   {name : "War Cry", skill : 10, skillReq : 50,
-   xPos : 125/4, yPos : 150/4, preReqs : [158], nextPerk: -1,
+   xPos : 125/4, yPos : 200/4, preReqs : [158], nextPerk: -1,
    description : "Overwhelm your enemies with a roaring shout, striking fear into their hearts and sending weaker enemies fleeing. (Living enemies up to level 30 do 20% less damage, enemies up to level 20 flee from combat for one minute)"},
    //163
-  {name : "Commander", skill : 10, skillReq : 25,
-   xPos : 225/4, yPos : 250/4, preReqs : [155], nextPerk: 164,
+  {name : "Commander <br> ", skill : 10, skillReq : 25,
+   xPos : 225/4, yPos : 275/4, preReqs : [155], nextPerk: 164,
    description : "Your knowledge in combat tactics allow you to effectively lead your allies in combat. (Improve nearby allies' skills by 10%, increase magicka, stamina and their regeneration by 50%, increase unarmed damage by 5)"},
    //164
-  {name : "Commander", skill : 10, skillReq : 50,
-   xPos : 225/4, yPos : 250/4, preReqs : [163], nextPerk: 165,
+  {name : "Commander <br> ", skill : 10, skillReq : 50,
+   xPos : 225/4, yPos : 275/4, preReqs : [163], nextPerk: 165,
    description : "Your knowledge in combat tactics allow you to effectively lead your allies in combat. (Improve nearby allies' skills by 20%, increase magicka, stamina and their regeneration by 100%, increase unarmed damage by 10)"},
    //165
-  {name : "Commander", skill : 10, skillReq : 75,
-   xPos : 225/4, yPos : 250/4, preReqs : [164], nextPerk: -1,
+  {name : "Commander <br> ", skill : 10, skillReq : 75,
+   xPos : 225/4, yPos : 275/4, preReqs : [164], nextPerk: -1,
    description : "Your knowledge in combat tactics allow you to effectively lead your allies in combat. (Improve nearby allies' skills by 30%, increase magicka, stamina and their regeneration by 150%, increase unarmed damage by 15)"},
    //166
-  {name : "Lore of the Thu'um", skill : 10, skillReq : 0,
+  {name : "Lore of <br> the Thu'um", skill : 10, skillReq : 0,
    xPos : 350/4, yPos : 350/4, preReqs : [], nextPerk: -1,
    description : "You've been studying the lore and ancient script of dragons and the Thu'um. Thus, your shout cooldown is reduced by 10%."},
    //167
-  {name : "Destructive Urge", skill : 10, skillReq : 0,
-   xPos : 275/4, yPos : 350/4, preReqs : [166], nextPerk: -1,
+  {name : "Destructive <br> Urge", skill : 10, skillReq : 0,
+   xPos : 300/4, yPos : 350/4, preReqs : [166], nextPerk: -1,
    description : "The horrors that the Thu'um can inflict are etched into your mind just as you have seen them etched into stone. Your shouts have 15% greater magnitude."},
    //168
   {name : "Indomitable<br>Force", skill : 10, skillReq : 0,
-   xPos : 275/4, yPos : 300/4, preReqs : [166], nextPerk: -1,
+   xPos : 300/4, yPos : 300/4, preReqs : [166], nextPerk: -1,
    description : "You know what it means to be called Ysmir, Dragon of the North. Enemy shout effects are reduced by 50%."},
    //169
   {name : "Spiritual<br>Equilibrium", skill : 10, skillReq : 0,
@@ -718,16 +718,16 @@ perks : [
    xPos : 350/4, yPos : 100/4, preReqs : [166], nextPerk: -1,
    description : "You've spent time meditating on the Way of the Voice, unearthing more knowledge. Grants a dragon soul at the cost of a perk point."},
    //172
-  {name : "Shout Focus", skill : 10, skillReq : 0,
-   xPos : 225/4, yPos : 315/4, preReqs : [], nextPerk: 173,
+  {name : "Shout Focus <br> ", skill : 10, skillReq : 0,
+   xPos : 250/4, yPos : 325/4, preReqs : [], nextPerk: 173,
    description : "You meditate on the Thu'um for deeper understanding of the Words of Power, making them more powerful. (Shouts are 5% more powerful, shout cooldown is reduced by 10%) [Requires Level 10]"},
    //173
-  {name : "Shout Focus", skill : 10, skillReq : 0,
-   xPos : 225/4, yPos : 315/4, preReqs : [172], nextPerk: 174,
+  {name : "Shout Focus <br> ", skill : 10, skillReq : 0,
+   xPos : 250/4, yPos : 325/4, preReqs : [172], nextPerk: 174,
    description : "You meditate on the Thu'um for deeper understanding of the Words of Power, making them more powerful. (Shouts are 10% more powerful, shout cooldown is reduced by 20%) [Requires Level 20]"},
    //174
-  {name : "Shout Focus", skill : 10, skillReq : 0,
-   xPos : 225/4, yPos : 315/4, preReqs : [173], nextPerk: -1,
+  {name : "Shout Focus <br> ", skill : 10, skillReq : 0,
+   xPos : 250/4, yPos : 325/4, preReqs : [173], nextPerk: -1,
    description : "You meditate on the Thu'um for deeper understanding of the Words of Power, making them more powerful. (Shouts are 15% more powerful, shout cooldown is reduced by 30%) [Requires Level 30]"},
    //175
   {name : "Alchemical Lore", skill : 11, skillReq: 0,
@@ -1692,15 +1692,15 @@ perks : [
    
    //413
   {name : "Arcane Assassin", skill : 7, skillReq: 25,
-   xPos : 200/4, yPos : 200/4, preReqs : [119], nextPerk: 414,
+   xPos : 225/4, yPos : 200/4, preReqs : [119], nextPerk: 414,
    description : "You can suppress the noise cast by your spells and deliver stronger effect to unwary targets. (Spells and enchantments are silent when cast out of combat, spells are 10% more powerful on targets while undetected)"},
    //414
   {name : "Arcane Assassin", skill : 7, skillReq: 50,
-   xPos : 200/4, yPos : 200/4, preReqs : [413], nextPerk: 415,
+   xPos : 225/4, yPos : 200/4, preReqs : [413], nextPerk: 415,
    description : "You can suppress the noise cast by your spells and deliver stronger effect to unwary targets. (Spells and enchantments are silent when cast out of combat, spells are 30% more powerful on targets while undetected)"},
    //415
   {name : "Arcane Assassin", skill : 7, skillReq: 75,
-   xPos : 200/4, yPos : 200/4, preReqs : [414], nextPerk: -1,
+   xPos : 225/4, yPos : 200/4, preReqs : [414], nextPerk: -1,
    description : "You can suppress the noise cast by your spells and deliver stronger effect to unwary targets. (Spells and enchantments are silent when cast out of combat, spells are 50% more powerful on targets while undetected)"},
   //416
   {name : "Staff Channeling", skill : 17, skillReq: 30,
@@ -1733,19 +1733,19 @@ perks : [
    description : "You can throw knifes more precisely. (50% more damage with throwing knives)"},
    //422
   {name : "Hunter", skill : 8, skillReq : 20,
-   xPos : 325/4, yPos : 300/4, preReqs : [128], nextPerk: 423,
+   xPos : 325/4, yPos : 275/4, preReqs : [128], nextPerk: 423,
    description : "You've spent significant time hunting in the wilderness and can deal more damage to most animals. (Deal 10% more damage to all animals)"},
    //423
   {name : "Hunter", skill : 8, skillReq : 40,
-   xPos : 325/4, yPos : 300/4, preReqs : [422], nextPerk: -1,
+   xPos : 325/4, yPos : 275/4, preReqs : [422], nextPerk: -1,
    description : "You've spent significant time hunting in the wilderness and can deal more damage to most animals. (Deal 20% more damage to all animals)"}, 
    //424
   {name : "Survival Instincts", skill : 8, skillReq : 40,
-   xPos : 325/4, yPos : 200/4, preReqs : [422], nextPerk: -1,
+   xPos : 325/4, yPos : 175/4, preReqs : [422], nextPerk: -1,
    description : "While others would ignore the threats of the elements, you understand the danger. (Move 10% faster and regenerate stamina 50% faster when outdoors and out of combat)"},  
    //425
   {name : "Taming", skill : 8, skillReq : 60,
-   xPos : 325/4, yPos : 100/4, preReqs : [424], nextPerk: -1,
+   xPos : 325/4, yPos : 75/4, preReqs : [424], nextPerk: -1,
    description : "You have mastered the outdoors and all of Skyrim's fauna. Gain a power to tame nearby animals under 10% health. (Bosmer also get 4x the duration of their racial power)"},
    //426
   {name : "Pocket Sand", skill : 9, skillReq : 25,
@@ -1768,29 +1768,38 @@ perks : [
    xPos : 85/4, yPos : 350/4, preReqs : [], nextPerk: -1,
    description : "Your mastery of musical instruments turns the tide of battle. Drums inspire your allies, the flute soothes your foes and the lute stirs chaos amoung your enemies."},
    //431
-  {name : "Standing Ovation", skill : 10, skillReq : 25,
-   xPos : 35/4, yPos : 275/4, preReqs : [430], nextPerk: -1,
+  {name : "Standing <br> Ovation", skill : 10, skillReq : 25,
+   xPos : 20/4, yPos : 250/4, preReqs : [430], nextPerk: -1,
    description : "Your captivating performances leave the crowd in awe. The bonuses recieved from playing for a crowd at the inns are now doubled and last twice as long."},
    //432
-  {name : "Boozy Bard", skill : 10, skillReq : 25,
-   xPos : 70/4, yPos : 255/4, preReqs : [430], nextPerk: -1,
+  {name : "Boozy <br> Bard", skill : 10, skillReq : 25,
+   xPos : 55/4, yPos : 250/4, preReqs : [430], nextPerk: -1,
    description : "Alcohol makes the music flow sweeter! Alcoholic drinks no longer blur your vision and perfoming under the influence enhances your musical powers, increasing their effectiveness."},
-   //434
-  {name : "Windborne Melody", skill : 10, skillReq : 25,
-   xPos : 90/4, yPos : 225/4, preReqs : [430], nextPerk: -1,
+   //433
+  {name : "Windborne <br> Melody", skill : 10, skillReq : 25,
+   xPos : 90/4, yPos : 250/4, preReqs : [430], nextPerk: -1,
    description : "Your music flows as freely as the wind. Playing an instrument no longer slows your movement."},
-   //435
+   //434
   {name : "Skald", skill : 10, skillReq : 50,
-   xPos : 95/4, yPos : 150/4, preReqs : [430], nextPerk: -1,
+   xPos : 95/4, yPos : 175/4, preReqs : [433], nextPerk: -1,
    description : "Continuously playing instruments during combat now grrants additional benefits. Drums bolster your allies, while the Lute and Flute weaken your enmies' defences."},
-   //436
-  {name : "Symphony of Storms", skill : 10, skillReq : 75,
-   xPos : 100/4, yPos : 75/4, preReqs : [431], nextPerk: -1,
+   //435
+  {name : "Symphony <br> of Storms", skill : 10, skillReq : 75,
+   xPos : 100/4, yPos : 100/4, preReqs : [434], nextPerk: -1,
    description : "The bard's mastery over their instrument echoes through the heavens. The deep and powerful resonance of your music calls forth elemental storms, which each instrument summoning its own fury."},
-   //437
+   //436
   {name : "Wand Mastery", skill : 17, skillReq : 50,
    xPos : 325/4, yPos : 150/4, preReqs : [416], nextPerk: -1,
    description : "You have learned to use your wand's innate mystical properties to focus your thoughts. (+100% magicka regeneration when holding a wand)"},
+   //437
+  {name : "Athletics", skill : 6, skillReq : 25,
+   xPos : 200/4, yPos : 150/4, preReqs : [111], nextPerk: 438,
+   description : "You are more agile and can recover from exhaustion faster. (+5% movement speed and +25% stamina regeneration when not wearing heavy armor)"},
+   //438
+  {name : "Athletics", skill : 6, skillReq : 50,
+   xPos : 200/4, yPos : 150/4, preReqs : [437], nextPerk: -1,
+   description : "You are more agile and can recover from exhaustion faster. (+10% movement speed and +50% stamina regeneration when not wearing heavy armor)"},
+   
  ],
 };
 

@@ -400,14 +400,41 @@ function leftSideSkillClick(){
 function updateLevelAndFreePerksDisplay(){
   let theDiv = $("#freePerkCountDiv");
   let freePerks = calcFreePerks();
+  let freeTraits = calcFreeTraits()
+  let freeClass = calcClassPoints()
+ 
+ if(activeSkill < 18){
   theDiv.html(`Level ${characterData.level}, Free Perks: ${freePerks}`);
-  if(freePerks < 0){
+   if(freePerks < 0){
     theDiv.removeClass("whiteText");
     theDiv.addClass("redText");
   }
   else{
     theDiv.removeClass("redText");
     theDiv.addClass("whiteText");
+}
+  }
+if(activeSkill == 18){
+	theDiv.html(`Level ${characterData.level}, Free Class Points: ${freeClass}`);
+    if(freeClass < 0){
+    theDiv.removeClass("whiteText");
+    theDiv.addClass("redText");
+  }
+  else{
+    theDiv.removeClass("redText");
+    theDiv.addClass("whiteText");
+}
+   }
+  if(activeSkill == 19){
+	theDiv.html(`Level ${characterData.level}, Free Traits: ${freeTraits}`);
+   if(freeTraits < 0){
+    theDiv.removeClass("whiteText");
+    theDiv.addClass("redText");
+  }
+  else{
+    theDiv.removeClass("redText");
+    theDiv.addClass("whiteText");
+}
   }
 }
 
