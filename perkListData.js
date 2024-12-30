@@ -36,7 +36,7 @@ perks : [
    //1
   {name : "Advanced<br>Blacksmithing", skill : 0, skillReq : 50,
    xPos : 250/5, yPos : 300/3.5, preReqs : [-419,-418], nextPerk: -1,
-   description : "You've gained quite some finesse, allowing you to craft plate armor and fine jewelry. You have also found a way to melt and crush certain gems into alchemically usable dust."},
+   description : "You've gained quite some finesse, allowing you to craft plate armor and fine jewellery. You have also found a way to melt and crush certain gems into alchemically usable dust."},
    //2
   {name : "Arcane<br>Craftsmanship", skill : 0, skillReq : 50,
    xPos : 150/5, yPos : 300/3.5, preReqs : [1], nextPerk: -1,
@@ -60,7 +60,7 @@ perks : [
    //7
   {name : "Dwarven<br>Smithing", skill : 0, skillReq : 25,
    xPos : 400/5, yPos : 200/3.5, preReqs : [0], nextPerk: -1,
-   description : "You've studies some long-lost schematics of dawrven equipment and aqquired the secret knowledge of how to create and improve them efficiently."},
+   description : "You've studies some long-lost schematics of dwarven equipment and acquired the secret knowledge of how to create and improve them efficiently."},
    //8
   {name : "Orcish<br>Smithing", skill : 0, skillReq : 50,
    xPos : 400/5, yPos : 150/3.5, preReqs : [7], nextPerk: -1,
@@ -72,7 +72,7 @@ perks : [
    //10
   {name : "Daedric Smithing", skill : 0, skillReq : 100,
    xPos : 250/5, yPos : 65/3.5, preReqs : [-9,-6], nextPerk: -1,
-   description : "You have learned the secrets of creating daedric weapons and armor. (Requires Daedric Craftmanship book)"},
+   description : "You have learned the secrets of creating daedric weapons and armor. (Requires Daedric Craftsmanship book)"},
    //11
   {name : "Draconic Blacksmithing", skill : 0, skillReq : 100,
    xPos : 250/5, yPos : 25/3.5, preReqs : [-9,-6], nextPerk: -1,
@@ -212,7 +212,7 @@ perks : [
    //45
   {name : "Hafted Blade<br>Focus", skill : 3, skillReq : 50,
    xPos : 150/4, yPos : 262/4, preReqs : [44], nextPerk: 46,
-   description : "You've become an advanced battle axe and halberd fighter. (Attacks deal 60 extra damage over 20 seconds, +10% critical hit chance)"},
+   description : "You've become an advanced battle ace and halberd fighter. (Attacks deal 60 extra damage over 20 seconds, +10% critical hit chance)"},
    //46
   {name : "Hafted Blade<br>Focus", skill : 3, skillReq : 75,
    xPos : 150/4, yPos : 262/4, preReqs : [45], nextPerk: -1,
@@ -302,15 +302,15 @@ perks : [
    xPos : 85/4, yPos : 200/4, preReqs : [64], nextPerk: -1,
    description : "You can aim for critical weak points, dealing even more damage. (2x critical damage and +25% critical hit chance)"},
    //68
-  {name : "War Axe<br>Focus", skill : 4, skillReq : 25,
+  {name : "War Abe<br>Focus", skill : 4, skillReq : 25,
    xPos : 145/4, yPos : 240/4, preReqs : [63], nextPerk: 69,
    description : "You've become familiar with war axes. (Attacks deal 20 extra damage over 20 seconds, +5% critical hit chance)"},
    //69
-  {name : "War Axe<br>Focus", skill : 4, skillReq : 50,
+  {name : "War Abe<br>Focus", skill : 4, skillReq : 50,
    xPos : 145/4, yPos : 240/4, preReqs : [68], nextPerk: 70,
    description : "You've become an advanced war axe fighter. (Attacks deal 30 extra damage over 20 seconds, +10% critical hit chance)"},
    //70
-  {name : "War Axe<br>Focus", skill : 4, skillReq : 75,
+  {name : "War Abe<br>Focus", skill : 4, skillReq : 75,
    xPos : 145/4, yPos : 240/4, preReqs : [69], nextPerk: -1,
    description : "You've become a master of war axe combat. (Attacks deal 40 extra damage over 20 seconds, +15% critical hit chance)"},
    //71
@@ -420,7 +420,7 @@ perks : [
    //97
   {name : "Rapid Reload", skill : 5, skillReq : 50,
    xPos : 90/4, yPos : 119/4, preReqs : [95], nextPerk: -1,
-   description : "Your have familiarized yourself with the mechanics of your crossbow. (+50% reload speed with heavy crossbows, +100% with light crossbows)"},
+   description : "You have familiarized yourself with the mechanics of your crossbow. (+50% reload speed with heavy crossbows, +100% with light crossbows)"},
    //98
   {name : "Quick Shot", skill : 5, skillReq : 50,
    xPos : 175/4, yPos : 124/4, preReqs : [95], nextPerk: -1,
@@ -538,7 +538,7 @@ perks : [
    xPos : 227/4, yPos : 79/4, preReqs : [125], nextPerk: -1,
    description : "Your improved balance allows you to silently roll forward, avoid getting knocked down except through magic and move even more quietly."},
    //127
-  {name : "Shadowrunner", skill : 7, skillReq : 100,
+  {name : "Shadow runner", skill : 7, skillReq : 100,
    xPos : 324/4, yPos : 45/4, preReqs : [126], nextPerk: -1,
    description : "There's almost nothing you cannot evade. You are even harder to detect, more silent and all falling damage is decreased."},
    //128
@@ -604,7 +604,7 @@ perks : [
    //143
   {name : "Cutpurse", skill : 9, skillReq : 30,
    xPos : 275/4, yPos : 100/4, preReqs : [141], nextPerk: -1,
-   description : "pickpocketing gold, keys, gems and jewelry is 50% easier. Pickpocketing sleeping people is much easier."},
+   description : "pickpocketing gold, keys, gems and jewelry is 50% easier. Pick pocketing sleeping people is much easier."},
    //144
   {name : "Poisoner", skill : 9, skillReq : 50,
    xPos : 275/4, yPos : 175/4, preReqs : [143], nextPerk: -1,
@@ -632,7 +632,7 @@ perks : [
    //150
   {name : "Sound Spirit", skill : 9, skillReq : 80,
    xPos : 150/4, yPos : 350/4, preReqs : [149], nextPerk: -1,
-   description : "You have unburedened your spirit and now shouts are 10% stronger and last 10% longer also you are 25% more resistant to diseases and poisons when unarmored."},
+   description : "You have unburdened your spirit and now shouts are 10% stronger and last 10% longer also you are 25% more resistant to diseases and poisons when unarmored."},
    //151
   {name : "Outlaw", skill : 9, skillReq : 20,
    xPos : 75/4, yPos : 100/4, preReqs : [141], nextPerk: -1,
@@ -696,11 +696,12 @@ perks : [
    //166
   {name : "Lore of <br> the Thu'um", skill : 10, skillReq : 0,
    xPos : 350/4, yPos : 350/4, preReqs : [], nextPerk: -1,
-   description : "You've been studying the lore and ancient script of dragons and the Thu'um. Thus, your shout cooldown is reduced by 10%."},
+   description : "You've been studying the lore and ancient script of dragons and the Thu'um. Thus, your shout cool down is reduced by 10%."},
    //167
   {name : "Destructive <br> Urge", skill : 10, skillReq : 0,
    xPos : 300/4, yPos : 350/4, preReqs : [166], nextPerk: -1,
-   description : "The horrors that the Thu'um can inflict are etched into your mind just as you have seen them etched into stone. Your shouts have 15% greater magnitude."},
+   description :
+ "The horrors that the Thu'um can inflict are etched into your mind just as you have seen them etched into stone. Your shouts have 15% greater magnitude."},
    //168
   {name : "Indomitable<br>Force", skill : 10, skillReq : 0,
    xPos : 300/4, yPos : 300/4, preReqs : [166], nextPerk: -1,
@@ -720,15 +721,15 @@ perks : [
    //172
   {name : "Shout Focus <br> ", skill : 10, skillReq : 0,
    xPos : 250/4, yPos : 325/4, preReqs : [], nextPerk: 173,
-   description : "You meditate on the Thu'um for deeper understanding of the Words of Power, making them more powerful. (Shouts are 5% more powerful, shout cooldown is reduced by 10%) [Requires Level 10]"},
+   description : "You meditate on the Thu'um for deeper understanding of the Words of Power, making them more powerful. (Shouts are 5% more powerful, shout cool down is reduced by 10%) [Requires Level 10]"},
    //173
   {name : "Shout Focus <br> ", skill : 10, skillReq : 0,
    xPos : 250/4, yPos : 325/4, preReqs : [172], nextPerk: 174,
-   description : "You meditate on the Thu'um for deeper understanding of the Words of Power, making them more powerful. (Shouts are 10% more powerful, shout cooldown is reduced by 20%) [Requires Level 20]"},
+   description : "You meditate on the Thu'um for deeper understanding of the Words of Power, making them more powerful. (Shouts are 10% more powerful, shout cool down is reduced by 20%) [Requires Level 20]"},
    //174
   {name : "Shout Focus <br> ", skill : 10, skillReq : 0,
    xPos : 250/4, yPos : 325/4, preReqs : [173], nextPerk: -1,
-   description : "You meditate on the Thu'um for deeper understanding of the Words of Power, making them more powerful. (Shouts are 15% more powerful, shout cooldown is reduced by 30%) [Requires Level 30]"},
+   description : "You meditate on the Thu'um for deeper understanding of the Words of Power, making them more powerful. (Shouts are 15% more powerful, shout cool down is reduced by 30%) [Requires Level 30]"},
    //175
   {name : "Alchemical Lore", skill : 11, skillReq: 0,
    xPos : 30.7, yPos : 86.25, preReqs : [], nextPerk: 176,
@@ -784,7 +785,7 @@ perks : [
    //188
   {name : "Drunken Combat", skill : 11, skillReq: 0,
    xPos : 30/3, yPos : 300/4, preReqs : [], nextPerk: 189,
-   description : "Alcohol pumps you up, boosting your strength and stamina. (Removes alhocol blur, regenerates 2 stamina per second and do 10% more damage with melee attacks while tipsy) [Requires Level 10]"},
+   description : "Alcohol pumps you up, boosting your strength and stamina. (Removes alcohol blur, regenerates 2 stamina per second and do 10% more damage with melee attacks while tipsy) [Requires Level 10]"},
    //189
   {name : "Drunken Combat", skill : 11, skillReq: 0,
    xPos : 30/3, yPos : 300/4, preReqs : [188], nextPerk: -1,
@@ -828,8 +829,8 @@ perks : [
    //199
   {name : "Deceptive Image", skill : 12, skillReq : 50,
    xPos : 100/4, yPos : 225/4, preReqs : [198], nextPerk: -1,
-   description : "You can stack illusory image on yourself to deceive your enemies, making their attacks miss and expose their weak spots. (10% chance to take no physical damage and 20% chance to ignore 50% of enemy's armor rating while perceptual illusion spells are active)"},
-   //200
+   description : "You can stack illusory image on yourself to deceive your enemies, making their attacks miss and expose their weak spots. (10% chance to take no physical damage and 20% chance to ignore 50% of enemy's armor rating while perceptual illusion spells are active)"}, 
+  //200
   {name : "Environmental<br>Manipulation", skill : 12, skillReq : 50,
    xPos : 75/4, yPos : 175/4, preReqs : [198], nextPerk: -1,
    description : "Perceptual illusion spells are improved with additional effects. (Improved effect for perceptual spells)"},
@@ -948,7 +949,8 @@ perks : [
    //229
   {name : "Gates of Oblivion", skill : 13, skillReq : 50,
    xPos : 50/4, yPos : 150/4, preReqs : [228], nextPerk: -1,
-   description : "You've perfected your spells' formulae to summon the daedra, maintaining them longer and can cast them further away. (3x daedra summon spell duration (overwrite), 3x daedra summon spell range)"},
+   description
+ : "You've perfected your spells' formulae to summon the daedra, maintaining them longer and can cast them further away. (3x daedra summon spell duration (overwrite), 3x daedra summon spell range)"},
    //230
   {name : "Dark Channeling", skill : 13, skillReq : 50,
    xPos : 87.5/4, yPos : 87.5/4, preReqs : [229], nextPerk: -1,
@@ -1077,7 +1079,7 @@ perks : [
   {name : "Cyromancy", skill : 14, skillReq : 25,
    xPos : 175/4, yPos : 225/4, preReqs : [238], nextPerk: 262,
    description : "You now are able to improve your ice spells and thereby increase their effectiveness. (1.1x magnitude, 0.9x cost for frost spells)"},
-   //262
+  //262
   {name : "Cyromancy", skill : 14, skillReq : 50,
    xPos : 175/4, yPos : 225/4, preReqs : [261], nextPerk: -1,
    description : "Your ice spells freeze even air in a trice and make the harsh winters of Skyrim look like a refreshing breeze. (1.2x magnitude, 0.8x cost for frost spells)"},
@@ -1507,6 +1509,7 @@ perks : [
    //368	
   {name : "Shaman", skill : 18, skillReq : 30,
    xPos : 50/4, yPos : 25/4, preReqs : [353], nextPerk: -1,
+
    description : "You deal 20% more damage against impaired enemies"},
    //369	
   {name : "Templar", skill : 18, skillReq : 30,
@@ -1578,7 +1581,7 @@ perks : [
    //385
   {name : "Bad Natured", skill : 19, skillReq: 0,
    xPos : 320/4, yPos : 25/4, preReqs : [], nextPerk: -1,
-   description : "Yiu were born into wickedness. Your attacks while sneaking deals 20% more and you're better at pickpocketing. However, your non-sneak attacks do 20% less and wearing a divine amulet will hurt you."},
+   description : "You were born into wickedness. Your attacks while sneaking deals 20% more and you're better at pickpocketing. However, your non-sneak attacks do 20% less and wearing a divine amulet will hurt you."},
    //386
   {name : "Bane of the Wicked", skill : 19, skillReq: 0,
    xPos : 80/4, yPos : 75/4, preReqs : [], nextPerk: -1,
@@ -1590,7 +1593,7 @@ perks : [
    //388
   {name : "Defiler", skill : 19, skillReq: 0,
    xPos : 240/4, yPos : 75/4, preReqs : [], nextPerk: -1,
-   description : "The only use you have for the living is to ressurect them in death. Deal 20% more damage to playable races. HOwever, do 10% less damage to other beings."},
+   description : "The only use you have for the living is to resurrect them in death. Deal 20% more damage to playable races. However, do 10% less damage to other beings."},
    //389
   {name : "Disciplined", skill : 19, skillReq: 0,
    xPos : 320/4, yPos : 75/4, preReqs : [], nextPerk: -1,
@@ -1602,7 +1605,7 @@ perks : [
    //391
   {name : "Elemental Conduit", skill : 19, skillReq: 0,
    xPos : 160/4, yPos : 125/4, preReqs : [], nextPerk: -1,
-   description : "Fire spells are more powerrful in sunny weather but lose potency in the rain. Shock Spells are enhanced during rain but are less effective in snowy conditions. Frost spells excel in snowy weather but weaken under sunny skies."},
+   description : "Fire spells are more powerful in sunny weather but lose potency in the rain. Shock Spells are enhanced during rain but are less effective in snowy conditions. Frost spells excel in snowy weather but weaken under sunny skies."},
    //392
   {name : "Fast Shot", skill : 19, skillReq: 0,
    xPos : 240/4, yPos : 125/4, preReqs : [], nextPerk: -1,
@@ -1614,7 +1617,7 @@ perks : [
    //394
   {name : "Gambler", skill : 19, skillReq: 0,
    xPos : 80/4, yPos : 175/4, preReqs : [], nextPerk: -1,
-   description : "You go all in or nothing. Gain 50% chance to critial hit. However, overall weapon damage is reduced by 25%."},
+   description : "You go all in or nothing. Gain 50% chance to critical hit. However, overall weapon damage is reduced by 25%."},
    //395
   {name : "Giantkin", skill : 19, skillReq: 0,
    xPos : 160/4, yPos : 175/4, preReqs : [], nextPerk: -1,
@@ -1642,7 +1645,7 @@ perks : [
    //401
   {name : "King of Worms", skill : 19, skillReq: 0,
    xPos : 320/4, yPos : 225/4, preReqs : [], nextPerk: -1,
-   description : "You've gained hidden insights into necromantic arts. You can have 1 additional summon or undead thrall. However, the duration of summon and ressurecting spells is reduced by 50%."},
+   description : "You've gained hidden insights into necromantic arts. You can have 1 additional summon or undead thrall. However, the duration of summon and resurrecting spells is reduced by 50%."},
    //402
   {name : "Light Foot", skill : 19, skillReq: 0,
    xPos : 80/4, yPos : 275/4, preReqs : [], nextPerk: -1,
@@ -1654,7 +1657,7 @@ perks : [
    //404
   {name : "Old Fashioned", skill : 19, skillReq: 0,
    xPos : 240/4, yPos : 275/4, preReqs : [], nextPerk: -1,
-   description : "If it ain't broke, don't fix it. Weapons and armor made of iron, wood, fur or hide are 25% stronger. Othewrwise they are 10% weaker."},
+   description : "If it ain't broke, don't fix it. Weapons and armor made of iron, wood, fur or hide are 25% stronger. Otherwise they are 10% weaker."},
    //405
   {name : "Pacifist", skill : 19, skillReq: 0,
    xPos : 320/4, yPos : 275/4, preReqs : [], nextPerk: -1,
@@ -1662,7 +1665,7 @@ perks : [
    //406
   {name : "Rage", skill : 19, skillReq: 0,
    xPos : 80/4, yPos : 325/4, preReqs : [], nextPerk: -1,
-   description : "You posses a natural flight response. When at less than 20% health, you deal 20% more damage and take 20% less damage. However, you mose 20% slower when below this theshold."},
+   description : "You posses a natural flight response. When at less than 20% health, you deal 20% more damage and take 20% less damage. However, you move 20% slower when below this threshold."},
    //407
   {name : "Skilled", skill : 19, skillReq: 0,
    xPos : 160/4, yPos : 325/4, preReqs : [], nextPerk: -1,
@@ -1670,7 +1673,7 @@ perks : [
    //408
   {name : "Soul Reaver", skill : 19, skillReq: 0,
    xPos : 240/4, yPos : 325/4, preReqs : [], nextPerk: -1,
-   description : "You've calimed countless souls for your gain. Weapon and armor enchantments are 10% stronger and use 10% less charge. Armor rating and weapon damage is reduced by 10%."},
+   description : "You've claimed countless souls for your gain. Weapon and armor enchantments are 10% stronger and use 10% less charge. Armor rating and weapon damage is reduced by 10%."},
    //409
   {name : "Swimmer", skill : 19, skillReq: 0,
    xPos : 320/4, yPos : 325/4, preReqs : [], nextPerk: -1,
@@ -1678,15 +1681,15 @@ perks : [
    //410
   {name : "Unbound Hands", skill : 19, skillReq: 0,
    xPos : 80/4, yPos : 375/4, preReqs : [], nextPerk: -1,
-   description : "Handwear constricts you. Spells are 10% stronger and unarmed attacks do +10 more damage when not wearing gloves/gauntlets. However, they suffer opposite effect when wearing gloves/gauntlets."},
+   description : "Hand wear constricts you. Spells are 10% stronger and unarmed attacks do +10 more damage when not wearing gloves/gauntlets. However, they suffer opposite effect when wearing gloves/gauntlets."},
    //411
   {name : "Way of the Voice", skill : 19, skillReq: 0,
    xPos : 160/4, yPos : 375/4, preReqs : [], nextPerk: -1,
-   description : "You follow the pacifist creed of the Greybeards, and as such your hostile shouts are 30% less effective, but using non-hostile shouts has 20% chance to reset the shout cooldown."},
+   description : "You follow the pacifist creed of the Greybeards, and as such your hostile shouts are 30% less effective, but using non-hostile shouts has 20% chance to reset the shout cool down"},
    //412
   {name : "Witcher", skill : 19, skillReq: 0,
    xPos : 240/4, yPos : 375/4, preReqs : [], nextPerk: -1,
-   description : "Potions and posions you make are 20% stronger, but you can only have up to three potion effects at the same time."},
+   description : "Potions and poisons you make are 20% stronger, but you can only have up to three potion effects at the same time."},
    
    //missed things in 2.8
    
@@ -1703,11 +1706,11 @@ perks : [
    xPos : 225/4, yPos : 200/4, preReqs : [414], nextPerk: -1,
    description : "You can suppress the noise cast by your spells and deliver stronger effect to unwary targets. (Spells and enchantments are silent when cast out of combat, spells are 50% more powerful on targets while undetected)"},
   //416
-  {name : "Staff Channeling", skill : 17, skillReq: 30,
+  {name : "Staff Channelling", skill : 17, skillReq: 30,
    xPos : 325/4, yPos : 225/4, preReqs : [320], nextPerk: 417,
    description : "You can use your staff to empower your own spells and cast them more efficiently. (While holding a staff, spells are 5% more powerful and cost 10% less magicka to cast)"},
   //417
-  {name : "Staff Channeling", skill : 17, skillReq: 60,
+  {name : "Staff Channelling", skill : 17, skillReq: 60,
    xPos : 325/4, yPos : 225/4, preReqs : [416], nextPerk: -1,
    description : "You can use your staff to empower your own spells and cast them more efficiently. (While holding a staff, spells are 10% more powerful and cost 20% less magicka to cast)"},
    
@@ -1750,11 +1753,11 @@ perks : [
    //426
   {name : "Pocket Sand", skill : 9, skillReq : 25,
    xPos : 350/4, yPos : 100/4, preReqs : [154], nextPerk: -1,
-   description : "You're quick thinking and even quicker with your hands. Can now create pocket sand at a forge and use it to imapair enemies."},
+   description : "You're quick thinking and even quicker with your hands. Can now create pocket sand at a forge and use it to impair enemies."},
    //427
   {name : "Quick Sand", skill : 9, skillReq : 50,
    xPos : 350/4, yPos : 150/4, preReqs : [426], nextPerk: -1,
-   description : "Your pocket sand can now slow down enmies, making it easier to escape combat."},
+   description : "Your pocket sand can now slow down enemies, making it easier to escape combat."},
    //428
   {name : "Poisoned Clamps", skill : 9, skillReq : 25,
    xPos : 225/4, yPos : 125/4, preReqs : [154], nextPerk: -1,
@@ -1762,19 +1765,19 @@ perks : [
    //429
   {name : "Salt on the Wound", skill : 9, skillReq : 50,
    xPos : 225/4, yPos : 200/4, preReqs : [428], nextPerk: -1,
-   description : "When deploying a trap, you can consume elemental salt to coat it. Affected enemies take minor elemental damage, and on death, summon and attronach."},
+   description : "When deploying a trap, you can consume elemental salt to coat it. Affected enemies take minor elemental damage, and on death, summon and atronach."},
    //430
   {name : "Battle Muse", skill : 10, skillReq : 0,
    xPos : 85/4, yPos : 350/4, preReqs : [], nextPerk: -1,
-   description : "Your mastery of musical instruments turns the tide of battle. Drums inspire your allies, the flute soothes your foes and the lute stirs chaos amoung your enemies."},
+   description : "Your mastery of musical instruments turns the tide of battle. Drums inspire your allies, the flute soothes your foes and the lute stirs chaos among your enemies."},
    //431
   {name : "Standing <br> Ovation", skill : 10, skillReq : 25,
    xPos : 20/4, yPos : 250/4, preReqs : [430], nextPerk: -1,
-   description : "Your captivating performances leave the crowd in awe. The bonuses recieved from playing for a crowd at the inns are now doubled and last twice as long."},
+   description : "Your captivating performances leave the crowd in awe. The bonuses received from playing for a crowd at the inns are now doubled and last twice as long."},
    //432
   {name : "Boozy <br> Bard", skill : 10, skillReq : 25,
    xPos : 55/4, yPos : 250/4, preReqs : [430], nextPerk: -1,
-   description : "Alcohol makes the music flow sweeter! Alcoholic drinks no longer blur your vision and perfoming under the influence enhances your musical powers, increasing their effectiveness."},
+   description : "Alcohol makes the music flow sweeter! Alcoholic drinks no longer blur your vision and performing under the influence enhances your musical powers, increasing their effectiveness."},
    //433
   {name : "Windborne <br> Melody", skill : 10, skillReq : 25,
    xPos : 90/4, yPos : 250/4, preReqs : [430], nextPerk: -1,
@@ -1782,7 +1785,7 @@ perks : [
    //434
   {name : "Skald", skill : 10, skillReq : 50,
    xPos : 95/4, yPos : 175/4, preReqs : [433], nextPerk: -1,
-   description : "Continuously playing instruments during combat now grrants additional benefits. Drums bolster your allies, while the Lute and Flute weaken your enmies' defences."},
+   description : "Continuously playing instruments during combat now grants additional benefits. Drums bolster your allies, while the Lute and Flute weaken your enemies' defenses."},
    //435
   {name : "Symphony <br> of Storms", skill : 10, skillReq : 75,
    xPos : 100/4, yPos : 100/4, preReqs : [434], nextPerk: -1,

@@ -11,7 +11,7 @@ bonus: "Health increases by 40, all weapons deal 10% more damage, armor penetrat
 	//2
 {name: "Lady", group: "The Lady is one of the Warrior's Charges and her season is Heartfire.", 
 description: "Those under the sign of the Lady have increased vitality.", 
-bonus: "Health and stamina increase by 20, health and stamina regenerate 40 pecent faster, you can run and swim without exhaustion."},
+bonus: "Health and stamina increase by 20, health and stamina regenerate 40 percent faster, you can run and swim without exhaustion."},
 	//3
 {name: "Lord", group: "The Lord's season is First Seed and he oversees all of Tamriel during the planting.", 
 description: "The Stone of the Lord grants natural regeneration and weakened hostile spells, but also afflicts them with the Trollkin curse.", 
@@ -43,7 +43,7 @@ bonus: "Lockpicks are 30% more durable, pickpocketing is 30% more likely to succ
 	//10
 {name: "Lover", group: "The Lover is one of the Thief's Charges and her season is SUn's Dawn", 
 description: "Those under the sign of the Lover have increases agility and natural charm.", 
-bonus: "Stamina increases by 30, increases chance to avoid physical damage by 25%, speek skill is 25 higher, shout cooldown is reduced by 5%."},
+bonus: "Stamina increases by 30, increases chance to avoid physical damage by 25%, speech skill is 25 higher, shout cooldown is reduced by 5%."},
 	//11
 {name: "Shadow", group: "The Shadow's season is Second Seed.", 
 description: "Those under the sign of the Shadow are naturally skilled at stealth and can hide in the shadows once a day.", 
