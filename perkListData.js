@@ -296,7 +296,7 @@ perks : [
    //66
   {name : "Short Blade<br>Focus", skill : 4, skillReq : 75,
    xPos : 85/4, yPos : 240/4, preReqs : [65], nextPerk: -1,
-   description : "You have mastered the deadly art of daggers, claws and tantos. (2x irresistible sneak attack damage, +20% damage from behind, 5% critical hit chance)"},
+   description : "You have mastered the deadly art of daggers, claws and tantos. (4x irresistible sneak attack damage, +40% damage from behind, 15% critical hit chance)"},
    //67
   {name : "Puncture", skill : 4, skillReq : 50,
    xPos : 85/4, yPos : 200/4, preReqs : [64], nextPerk: -1,
