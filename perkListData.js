@@ -302,15 +302,15 @@ perks : [
    xPos : 85/4, yPos : 200/4, preReqs : [64], nextPerk: -1,
    description : "You can aim for critical weak points, dealing even more damage. (2x critical damage and +25% critical hit chance)"},
    //68
-  {name : "War Abe<br>Focus", skill : 4, skillReq : 25,
+  {name : "War Axe<br>Focus", skill : 4, skillReq : 25,
    xPos : 145/4, yPos : 240/4, preReqs : [63], nextPerk: 69,
    description : "You've become familiar with war axes. (Attacks deal 20 extra damage over 20 seconds, +5% critical hit chance)"},
    //69
-  {name : "War Abe<br>Focus", skill : 4, skillReq : 50,
+  {name : "War Axe<br>Focus", skill : 4, skillReq : 50,
    xPos : 145/4, yPos : 240/4, preReqs : [68], nextPerk: 70,
    description : "You've become an advanced war axe fighter. (Attacks deal 30 extra damage over 20 seconds, +10% critical hit chance)"},
    //70
-  {name : "War Abe<br>Focus", skill : 4, skillReq : 75,
+  {name : "War Axe<br>Focus", skill : 4, skillReq : 75,
    xPos : 145/4, yPos : 240/4, preReqs : [69], nextPerk: -1,
    description : "You've become a master of war axe combat. (Attacks deal 40 extra damage over 20 seconds, +15% critical hit chance)"},
    //71
