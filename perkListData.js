@@ -47,7 +47,7 @@ perks : [
    description : "You make steel sing songs on the anvil. Your hammer is no longer a mere tool, but a loom that weaves the fabric of myths. You can even improve the divine artifacts of Aedra and Daedra."},
    //4
   {name : "Advanced<br>Light Armors", skill : 0, skillReq : 25,
-   xPos : 100/5, yPos : 200/3.5, preReqs : [0], nextPerk: -1,
+   xPos : 100/5, yPos : 200/3.5, preReqs : [418], nextPerk: -1,
    description : "You've been able to learn more advanced techniques, allowing you to craft an efficiently improve scale armor."},
    //5
   {name : "Elven Smithing", skill : 0, skillReq : 50,
@@ -59,7 +59,7 @@ perks : [
    description : "Crafting and improving Glass equipment is not for the unskilled, but having studied intensely, you aren't one of them any more."},
    //7
   {name : "Dwarven<br>Smithing", skill : 0, skillReq : 25,
-   xPos : 400/5, yPos : 200/3.5, preReqs : [0], nextPerk: -1,
+   xPos : 400/5, yPos : 200/3.5, preReqs : [418], nextPerk: -1,
    description : "You've studies some long-lost schematics of dwarven equipment and acquired the secret knowledge of how to create and improve them efficiently."},
    //8
   {name : "Orcish<br>Smithing", skill : 0, skillReq : 50,
@@ -428,7 +428,7 @@ perks : [
    //99
   {name : "Power Shot", skill : 5, skillReq : 75,
    xPos : 100/4, yPos : 78/4, preReqs : [95], nextPerk: -1,
-   description : "You have discovered the art of aiming at tendons and joints. (Chance to stagger targets, more forward and hold bash to perform power shot when over 200 stamina)"},
+   description : "You have discovered the art of aiming at tendons and joints. (Chance to stagger targets, move forward and hold bash to perform power shot when over 200 stamina)"},
    //100
   {name : "Precise Aim", skill : 5, skillReq : 20,
    xPos : 322/4, yPos : 288/4, preReqs : [93], nextPerk: -1,
@@ -1286,7 +1286,7 @@ perks : [
    //313
   {name : "Unskilled Spellcasting", skill : 16, skillReq : 0,
    xPos : 50/3, yPos : 350/4, preReqs : [312], nextPerk: -1,
-   description : "You can cast simple spells without mastering them but with less potency. 9Spells up to Adept level cost 50% less magicka to cast without mastery perks, +1% spell power for each skill level) [Requires Level 20]"},
+   description : "You can cast simple spells without mastering them but with less potency. (Spells up to Adept level cost 50% less magicka to cast without mastery perks, +1% spell power for each skill level) [Requires Level 20]"},
    //314
   {name : "Metamagic", skill : 16, skillReq : 0,
    xPos : 200/3, yPos : 350/4, preReqs : [], nextPerk: -1,
