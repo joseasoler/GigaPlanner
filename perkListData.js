@@ -627,7 +627,7 @@ perks : [
    description : "You have unburdened your body. You gain 200 armor rating when not wearing armor and gain 20% armor penetration and 20 unarmed damage when unarmored."},
    //149
   {name : "Sound Mind", skill : 9, skillReq : 60,
-   xPos : 150/4, yPos : 250/4, preReqs : [148], nextPerk: -1,
+   xPos : 150/4, yPos : 250/4, preReqs : [147], nextPerk: -1,
    description : "You have unburdened your inner thoughts, gaining 10% resistance to magic and 50% greater health, stamina and magicka regen when unarmored."},
    //150
   {name : "Sound Spirit", skill : 9, skillReq : 80,
