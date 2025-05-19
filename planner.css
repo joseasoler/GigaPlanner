@@ -1,11 +1,11 @@
 body {
   background-color: #0E0E10;
-  font-family:Arial;
+  font-family: Arial;
 }
 
 h1 {
-  text-align:center;
-  color:white;
+  text-align: center;
+  color: white;
 }
 
 * {
@@ -13,170 +13,170 @@ h1 {
 }
 
 #freePerkCountDiv {
-  text-align:center;
-  font-size:20px;
+  text-align: center;
+  font-size: 20px;
 }
 
 #freeClassPointDiv {
-  text-align:center;
-  font-size:15px;
-  padding:2px;
+  text-align: center;
+  font-size: 15px;
+  padding: 2px;
 }
 
 .redText {
-  color:red;
+  color: red;
 }
 
-.whiteText{
-  color:white:
+.whiteText {
+  color: white;
 }
 
 #activeSkillNameAndLevel {
-  display:flex;
-  justify-content:center;
-  align-items:center;
-  text-align:center;
-  font-size:25px;
-  padding:5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-size: 25px;
+  padding: 5px;
 }
 
 #activeSkillLevelInput {
-  margin-left:10px;
-  width:90px;
-  font-size:25px;
+  margin-left: 10px;
+  width: 90px;
+  font-size: 25px;
   background: rgba(0, 0, 0, 0.0);
-  color:white;
-  text-align:right;
+  color: white;
+  text-align: right;
 }
 
-.tooltipDiv{
-  display:none;
-  position:fixed;
-  max-width:600px;
-  background:lightyellow;
-  padding:5px;
-  border:1px solid black;
-  color:black;
-  
+.tooltipDiv {
+  display: none;
+  position: fixed;
+  max-width: 600px;
+  background: lightyellow;
+  padding: 5px;
+  border: 1px solid black;
+  color: black;
+
 }
 
 .errorMessageDiv {
-  background:firebrick;
-  color:white;
+  background: firebrick;
+  color: white;
 }
 
 #highlightedPerkName {
-  text-align:center;
-  font-size:20px;
+  text-align: center;
+  font-size: 20px;
 }
 
 #highlightedPerkDesc, #highlightedNextPerkDesc {
-  margin-top:10px;
-  margin-left:5px;
-  margin-right:5px;
-  text-align:center;
-  font-size:16px;
+  margin-top: 10px;
+  margin-left: 5px;
+  margin-right: 5px;
+  text-align: center;
+  font-size: 16px;
 }
 
 #mainSkillDisplayDiv {
-  margin:auto;
-  max-width:1500px;
+  margin: auto;
+  max-width: 1500px;
   border: 1px solid black;
   display: flex;
   padding: 3px;
-  background-color:slateblue;
-  color:white;
-  border-radius:25px;
+  background-color: slateblue;
+  color: white;
+  border-radius: 25px;
 }
 
 #activeSkillDisplaySVG {
-  width:780px;
-  height:550px;
-  margin:auto;
-  display:block;
+  width: 780px;
+  height: 550px;
+  margin: auto;
+  display: block;
 }
 
-#activeSkillDisplaySVGDiv{
+#activeSkillDisplaySVGDiv {
   border-bottom: 2px solid black;
 }
 
 #activeSkillDisplayDiv {
-  float:left;
-  width:40%;
-  min-width:760px;
-  margin:5px;
+  float: left;
+  width: 40%;
+  min-width: 760px;
+  margin: 5px;
   border-left: 2px solid black;
   border-right: 2px solid black;
 }
 
 #leftSkillDisplayDiv {
-  display:table;
+  display: table;
   /*border-collapse:collapse;*/
-  border-spacing:3px;
-  float:left;
-  width:25%;
-  width:240px;
-  height:0px;
+  border-spacing: 3px;
+  float: left;
+  width: 25%;
+  width: 240px;
+  height: 0px;
 }
 
 #rightStatsPanelDiv {
-  width:32%;
-  width:425px;
-  padding:3px;
+  width: 32%;
+  width: 425px;
+  padding: 3px;
 }
 
 .leftSkillDisplayRowDiv {
-  display:table-row;
+  display: table-row;
 }
 
 .miniSkillTreeDiv {
   display: table-cell;
   padding: 5px;
-  border-style:solid;
+  border-style: solid;
   border-width: 2px;
-  border-color:transparent;
+  border-color: transparent;
   width: 31%;
   min-width: 80px;
 }
 
-.miniSkillTreeDivSelected{
+.miniSkillTreeDivSelected {
   border: 2px solid red;
 }
 
 .miniSkillTreeSVG {
-  width:80px;
-  height:80px;
-  display:block;
-  margin:auto;
+  width: 80px;
+  height: 80px;
+  display: block;
+  margin: auto;
 }
 
 .miniSkillTreeName {
-  text-align:center;
+  text-align: center;
 }
 
 .miniSkillTreeLevel {
-  text-align:center;
+  text-align: center;
 }
 
 svg > text, .unselectable {
-   -webkit-user-select: none;
-   -moz-user-select: none;
-   -ms-user-select: none;
-   user-select: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
 
-.subsectionTitle{
-  text-align:center;
-  font-size:20px;
-  margin-top:5px;
-  margin-bottom:5px
+.subsectionTitle {
+  text-align: center;
+  font-size: 20px;
+  margin-top: 5px;
+  margin-bottom: 5px
 }
 
-.subsectionSubtitle{
-  text-align:center;
-  font-size:20px;
-  margin-bottom:2px;
-  margin-top:2px;
+.subsectionSubtitle {
+  text-align: center;
+  font-size: 20px;
+  margin-bottom: 2px;
+  margin-top: 2px;
 }
 
 .selectInputWithLabel {
@@ -185,177 +185,177 @@ svg > text, .unselectable {
   width: 100%;
   float: right;
   z-index: auto;
-  font-size:20px;
-  margin-top:5px;
-  margin-bottom:5px;
+  font-size: 20px;
+  margin-top: 5px;
+  margin-bottom: 5px;
 }
 
-.selectInputWithLabelselect {
+.selectInputWithLabelSelect {
   position: absolute;
   top: 0px;
   left: 205px;
   z-index: auto;
-  float:right;
-  width:50%;
-  font-size:14px;
+  float: right;
+  width: 50%;
+  font-size: 14px;
 }
 
-.selectInputWithLabelselected {
+.selectInputWithLabelSelected {
   position: absolute;
   top: 0px;
   left: 205px;
   float: right;
   z-index: 1000;
-  width:202px;
-  font-size:14px;
+  width: 202px;
+  font-size: 14px;
 }
 
 .selectInputWithSmallLabel {
-  font-size:16px;
-  margin-top:5px;
-  margin-bottom:5px;
-  text-align:center;
+  font-size: 16px;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  text-align: center;
 }
 
 .selectInputWithSmallLabel select {
-  float:center;
-  width:20%;
-  font-size:14px;
+  float: center;
+  width: 20%;
+  font-size: 14px;
 }
 
 .statsSubsectionDiv {
   display: flex;
   flex-flow: column nowrap;
-  margin:5px;
-  padding:3px;
+  margin: 5px;
+  padding: 3px;
   border-bottom: 2px solid black;
-  text-align:left;
+  text-align: left;
   width: 410px;
-  
+
 }
 
 .statsSubsectionDiv:last-child {
   border-bottom: 0px solid black;
 }
 
-#rulesTitle{
-  color:white;
+#rulesTitle {
+  color: white;
 }
 
-#presetCustomOptionsDiv{
-  display:none;
-  position:absolute;
-  background:blue;
-  min-width:500px;
-  border:2px solid black;
-  padding:10px;
-  background-color:blue;
-  margin-left:-15px;
+#presetCustomOptionsDiv {
+  display: none;
+  position: absolute;
+  background: blue;
+  min-width: 500px;
+  border: 2px solid black;
+  padding: 10px;
+  background-color: blue;
+  margin-left: -15px;
 }
 
-.clickableText{
-  cursor:pointer;
+.clickableText {
+  cursor: pointer;
 }
 
-#activeSkillControlsDiv{
-  
+#activeSkillControlsDiv {
+
 }
 
-#resetButtonsDiv{
-  display:flex;
-  justify-content:center;
+#resetButtonsDiv {
+  display: flex;
+  justify-content: center;
   border-bottom: 2px solid black;
   padding: 10px;
 }
 
-#resetButtonsDiv button{
-  font-size:16px;
-  margin-left:10px;
-  margin-right:10px;
-}
-
-#attributesToSpendDiv{
+#resetButtonsDiv button {
   font-size: 16px;
-  text-align:center;
-  margin-top:2px;
-  margin-bottom:5px;
+  margin-left: 10px;
+  margin-right: 10px;
 }
 
-.numberInputWithLabel{
-  float:right;
+#attributesToSpendDiv {
+  font-size: 16px;
+  text-align: center;
+  margin-top: 2px;
+  margin-bottom: 5px;
+}
+
+.numberInputWithLabel {
+  float: right;
 }
 
 .numberInputWithLabel input {
-  width:50px;
-  text-align:right;
-  font-size:14px;
+  width: 50px;
+  text-align: right;
+  font-size: 14px;
 }
 
 .attributeInputAndLabelDiv {
-  text-align:left;
-  margin-left:20%;
-  margin-bottom:3px;
+  text-align: left;
+  margin-left: 20%;
+  margin-bottom: 3px;
 }
 
-#derivedAttributeTableDiv{
-  display:flex
-  justify-content:center;
-  	height: 310px;
-	width: 100%;
-	column-count:2;
-	column-fill: auto;
-}
-
-.classTableDiv{
+#derivedAttributeTableDiv {
   display: flex;
-  justify-content:center;
+  justify-content: center;
+  height: 310px;
+  width: 100%;
+  column-count: 2;
+  column-fill: auto;
+}
+
+.classTableDiv {
+  display: flex;
+  justify-content: center;
   padding: 2px;
   height: 110px;
-  border-style:solid;
+  border-style: solid;
   border-width: 1px;
-  border-color:transparent;
+  border-color: transparent;
   width: 100%;
   min-width: 120px;
 }
 
-#derivedAttributeTable{
-  display:table;
+#derivedAttributeTable {
+  display: table;
 }
 
-.derivedAttributeTableRow{
-  display:table-row;
+.derivedAttributeTableRow {
+  display: table-row;
 }
 
-.derivedAttributeTableCellLabel{
-  display:table-cell;
-  padding:5px 5px 5px 2px;
-  font-size:16px;
-  text-align:left;
+.derivedAttributeTableCellLabel {
+  display: table-cell;
+  padding: 5px 5px 5px 2px;
+  font-size: 16px;
+  text-align: left;
 }
 
-.derivedAttributeTableCellValue{
-  display:table-cell;
-  padding:5px 5px 5px 5px;
-  font-size:14px;
-  text-align:right;
+.derivedAttributeTableCellValue {
+  display: table-cell;
+  padding: 5px 5px 5px 5px;
+  font-size: 14px;
+  text-align: right;
 }
 
-#buildCodeText{
-  width:90%;
-  margin-left:auto;
-  margin-right:auto;
-  margin-bottom:5px;
-  display:block;
+#buildCodeText {
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 5px;
+  display: block;
 }
 
 .description-box {
-display: none;
-position: absolute;
-background-color: lightyellow;
-border: 1px solid #ccc;
-padding: 10px;
-width: 740px;
-z-index: 1000;
-font-size: 16px;
+  display: none;
+  position: absolute;
+  background-color: lightyellow;
+  border: 1px solid #ccc;
+  padding: 10px;
+  width: 740px;
+  z-index: 1000;
+  font-size: 16px;
 }
 
