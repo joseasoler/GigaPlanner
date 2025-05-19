@@ -1,6 +1,5 @@
 $(document).ready(function () {
 
-  curPerkList = perksList[0];
   curRaceList = raceListData;
   curGameMechanics = gameMechanicsList[0];
   curBlessingList = blessingsData;
@@ -65,7 +64,6 @@ function attachHandlers() {
   $(".miniSkillTreeDiv").click(leftSideSkillClick);
   $(window).resize(resizeWindowHandler);
   $("#activeSkillLevelInput").on("change", skillInputChange);
-  $("#perksSelect").on("change", perkSelectChange);
   $("#raceSelect").on("change", raceSelectChange);
   $("#racesListSelect").on("change", raceListSelectChange);
   $("#blessingsSelect").on("change", blessingListSelectChange);
@@ -197,25 +195,6 @@ function changeBlessingList(listNum) {
 
 function raceSelectChange() {
   changeRace(Number($(this).val()));
-  updateBuildCodeDisplay();
-}
-
-function changePerkList(listNum) {
-  curPerkList = perksList[getIndexWithID(listNum, perksList)];
-  // Just reset all the selected perks.
-  characterData.spentPerks = 0;
-  characterData.perksTaken = [];
-  for (let i = 0; i < 21; i++) {
-    characterData.perksTaken.push(false);
-  }
-
-  updateSkillNames();
-  drawMiniSkillTrees();
-  updateActiveSkillPanel();
-}
-
-function perkSelectChange() {
-  changePerkList(Number($(this).val()));
   updateBuildCodeDisplay();
 }
 
@@ -669,12 +648,6 @@ function updateSkillLevelsDisplay() {
 
 function updateCustomSelectOptions() {
 
-  let perksSel = $("#perksSelect");
-  perksSel.empty();
-  for (let i = 0; i < perksList.length; i++) {
-    perksSel.append(`<option value="${perksList[i].id}">${perksList[i].name}</option>`);
-  }
-  perksSel.val(curPerkList.id);
 
   let racesSel = $("#racesListSelect");
   racesSel.empty();

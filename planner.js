@@ -1,4 +1,3 @@
-let perksList = [];
 let racesList = [];
 let gameMechanicsList = [];
 let blessingsList = [];
@@ -29,7 +28,6 @@ let characterData = {
 
 // Sort all data lists by name alphabetically
 function sortDataLists() {
-  perksList.sort(dataArrayCompare);
   racesList.sort(dataArrayCompare);
   gameMechanicsList.sort(dataArrayCompare);
 }
@@ -392,7 +390,7 @@ function completePerkData(perkData) {
       }
     }
   }
-  perksList.push(perkData);
+  curPerkList = perkData;
 }
 
 // A little processing to do here: build a table of the cumulative amount of character XP is needed to get to each level
@@ -601,7 +599,6 @@ function parseCharacterDataFromURL() {
 //Decode build data made using v1 of the encoder
 function buildCodeParserV1(buildCode) {
   let perkListID = buildCode.charCodeAt(1);
-  curPerkList = perksList[getIndexWithID(perkListID, perksList)];
   let raceListID = buildCode.charCodeAt(2);
   curRaceList = raceListData;
   let gmID = buildCode.charCodeAt(3);
