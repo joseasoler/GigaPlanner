@@ -1,12 +1,10 @@
 let perksList = [];
 let racesList = [];
 let gameMechanicsList = [];
-let presetList = [];
 let blessingsList = [];
 let curPerkList;
 let curRaceList;
 let curGameMechanics;
-let curPreset;
 let curBlessingList;
 let activeSkill = 0;
 let tookPerkWithLastClick = false;
@@ -17,7 +15,7 @@ let characterData = {
   hmsIncreases: [],
   skillLevels: [],
   perksTaken: [],
-  oghmaChoice: 0, // 0 for nothing, 1 for health, 2 for magicka, 3 for stam
+  oghmaChoice: 0, // 0 for nothing, 1 for warrior, 2 for stealth, 3 for mage
   perkListID: 0,
   raceListID: 0,
   gameMechanicsListID: 0,
@@ -30,29 +28,11 @@ let characterData = {
   blessing: 0,
 };
 
-// Returns the preset number given in the URL.
-// Returns 0 if one was not given
-function parsePresetFromURL() {
-  const queryString = window.location.search;
-  const params = new URLSearchParams(queryString);
-  if (params.has("p")) {
-    let presetNum = Number(params.get("p"));
-    if (isNaN(presetNum) || presetNum < 0 || presetNum > presetList.length) {
-      presetNum = 0;
-    }
-    return presetNum;
-  } else {
-    return 0;
-  }
-
-}
-
 // Sort all data lists by name alphabetically
 function sortDataLists() {
   perksList.sort(dataArrayCompare);
   racesList.sort(dataArrayCompare);
   gameMechanicsList.sort(dataArrayCompare);
-  presetList.sort(dataArrayCompare);
 }
 
 // Helper function for sorting an array of game data by their names
@@ -430,12 +410,6 @@ function addGameMechanicsData(gameData) {
 
   gameMechanicsList.push(gameData);
 }
-
-// Don't need to do any pre-processing here.
-function addPresetData(presetData) {
-  presetList.push(presetData);
-}
-
 // Search the given array of data for the one with id given.
 // Return the index into the array of data where it is found, -1 if it is not found.
 function getIndexWithID(id, dataArray) {

@@ -1,12 +1,8 @@
 $(document).ready(function () {
 
-  let presetNum = parsePresetFromURL();
-
-  curPreset = presetList[getIndexWithID(presetNum, presetList)];
-
-  curPerkList = perksList[curPreset.perks];
+  curPerkList = perksList[0];
   curRaceList = raceListData;
-  curGameMechanics = gameMechanicsList[curPreset.gameMechanics];
+  curGameMechanics = gameMechanicsList[0];
   curBlessingList = blessingsData;
 
   sortDataLists();
@@ -32,7 +28,7 @@ $(document).ready(function () {
 
   attachHandlers();
 
-  $("#mainTitle").html(`Character Planner for ${curPreset.name}`);
+  $("#mainTitle").html(`Character Planner for LoreRim v4.0.3`);
   $("#mainSkillDisplayDiv").fadeIn(500);
 });
 
@@ -69,7 +65,6 @@ function attachHandlers() {
   $(".miniSkillTreeDiv").click(leftSideSkillClick);
   $(window).resize(resizeWindowHandler);
   $("#activeSkillLevelInput").on("change", skillInputChange);
-  $("#presetSelect").on("change", presetSelectChange);
   $("#perksSelect").on("change", perkSelectChange);
   $("#raceSelect").on("change", raceSelectChange);
   $("#racesListSelect").on("change", raceListSelectChange);
@@ -202,43 +197,6 @@ function changeBlessingList(listNum) {
 
 function raceSelectChange() {
   changeRace(Number($(this).val()));
-  updateBuildCodeDisplay();
-}
-
-function presetSelectChange() {
-  let presetIndex = getIndexWithID(Number($(this).val()), presetList);
-  let preset = presetList[presetIndex];
-  curPreset = preset;
-  let oldVal;
-
-  let perksSelect = $("#perksSelect");
-  oldVal = Number(perksSelect.val());
-  perksSelect.val(preset.perks);
-  if (oldVal !== preset.perks) {
-    changePerkList(preset.perks);
-  }
-
-  let racesListSelect = $("#racesListSelect");
-  oldVal = Number(racesListSelect.val());
-  racesListSelect.val(preset.races);
-  if (oldVal !== preset.races) {
-    changeRaceList(preset.races);
-  }
-
-  let mechanicsSelect = $("#mechanicsSelect");
-  oldVal = mechanicsSelect.val();
-  mechanicsSelect.val(preset.gameMechanics);
-  if (oldVal !== preset.gameMechanics) {
-    changeGameMechanics(preset.gameMechanics);
-  }
-
-  let blessingsSelect = $("#blessingsSelect");
-  oldVal = blessingsSelect.val();
-  blessingsSelect.val(preset.blessings);
-  if (oldVal !== preset.blessings) {
-    changeBlessingList(preset.blessings);
-  }
-
   updateBuildCodeDisplay();
 }
 
@@ -711,13 +669,6 @@ function updateSkillLevelsDisplay() {
 
 function updateCustomSelectOptions() {
 
-  let presetSel = $("#presetSelect");
-  presetSel.empty();
-  for (let i = 0; i < presetList.length; i++) {
-    presetSel.append(`<option value="${presetList[i].id}">${presetList[i].name}</option>`);
-  }
-  presetSel.val(curPreset.id);
-
   let perksSel = $("#perksSelect");
   perksSel.empty();
   for (let i = 0; i < perksList.length; i++) {
@@ -823,7 +774,8 @@ function updateBuildCodeDisplay() {
   let buildCheck = validateBuild();
   if (buildCheck.valid) {
     let code = generateBuildCode();
-    let buildLink = `https://multidyls.github.io/GigaPlanner/?p=${curPreset.id}&b=${code}`;
+    // ToDo
+    let buildLink = `file:///C:/dev/GigaPlanner/index.html?b=${code}`;
     $("#buildCodeText").val(buildLink);
   } else {
     $("#buildCodeText").val(buildCheck.message);
