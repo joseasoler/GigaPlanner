@@ -354,45 +354,44 @@ function addBlessingsData(blessingData) {
 
 // Do some additional processing on the perk data, primarily to identify skill chains and add some extra fields to make
 // dealing with them easier.
-function addPerkData(perkData) {
-  //First add the prevPerk property
-  for (let i = 0; i < perkData.perks.length; i++) {
-    let nextPerk = perkData.perks[i].nextPerk
-    if (nextPerk !== -1) {
-      perkData.perks[nextPerk].prevPerk = i;
+function completePerkData(perkData) {
+  // First add the prevPerk property
+  for (let perkIndex = 0; perkIndex < perkData.perks.length; perkIndex++) {
+    let nextPerkIndex = perkData.perks[perkIndex].nextPerk
+    if (nextPerkIndex !== -1) {
+      perkData.perks[nextPerkIndex].prevPerk = perkIndex;
     }
   }
-  // Then find those with the prevPerk property defined and nextPerk == -1
+  // Then find those with the prevPerk property defined and nextPerkIndex == -1
   // These are the ends of the chains
   // If prevPerk isn't defined and nextPerk is -1, then it's not in a chain at all.
-  for (let i = 0; i < perkData.perks.length; i++) {
+  for (let perkIndex = 0; perkIndex < perkData.perks.length; perkIndex++) {
 
-    if (!("prevPerk" in perkData.perks[i]) && perkData.perks[i].nextPerk === -1) {
+    if (!("prevPerk" in perkData.perks[perkIndex]) && perkData.perks[perkIndex].nextPerk === -1) {
       // Not in chain
-      perkData.perks[i].prevPerk = -1;
-      perkData.perks[i].totalInChain = -1;
-      perkData.perks[i].placeInChain = -1;
-    } else if (perkData.perks[i].nextPerk !== -1 && !("prevPerk" in perkData.perks[i])) {
-      perkData.perks[i].prevPerk = -1;
+      perkData.perks[perkIndex].prevPerk = -1;
+      perkData.perks[perkIndex].totalInChain = -1;
+      perkData.perks[perkIndex].placeInChain = -1;
+    } else if (perkData.perks[perkIndex].nextPerk !== -1 && !("prevPerk" in perkData.perks[perkIndex])) {
+      perkData.perks[perkIndex].prevPerk = -1;
       // The start of a chain
       // First count how many are in the chain
       let totalInChain = 1;
-      let checking = i;
+      let checking = perkIndex;
 
       while (perkData.perks[checking].nextPerk !== -1) {
         totalInChain++;
         checking = perkData.perks[checking].nextPerk;
       }
       // Then add the total and running total to each in the chain
-      checking = i;
-      for (let j = 1; j <= totalInChain; j++) {
+      checking = perkIndex;
+      for (let chainIndex = 1; chainIndex <= totalInChain; chainIndex++) {
         perkData.perks[checking].totalInChain = totalInChain;
-        perkData.perks[checking].placeInChain = j;
+        perkData.perks[checking].placeInChain = chainIndex;
         checking = perkData.perks[checking].nextPerk;
       }
     }
   }
-
   perksList.push(perkData);
 }
 

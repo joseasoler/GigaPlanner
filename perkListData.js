@@ -2,7 +2,7 @@ const DestinySkillId = 18;
 const TraitSkillId = 19;
 const SkillCount = 20;
 
-const perkData = {
+let perkData = {
   name: "LoreRim",
   id: 0,
   skillNames: [
@@ -2687,4 +2687,4 @@ const perkData = {
   ],
 };
 
-addPerkData(perkData);
+completePerkData(perkData);
