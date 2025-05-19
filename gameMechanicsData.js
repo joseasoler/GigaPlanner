@@ -1,5 +1,5 @@
 const gameMechanicsData = {
-  name: "2.2.8",
+  name: "4.0.3",
   id: 0,
 
   initialPerks: 3,

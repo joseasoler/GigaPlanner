@@ -28,7 +28,7 @@ $(document).ready(function () {
 
   attachHandlers();
 
-  $("#mainTitle").html(`Character Planner for LoreRim v4.0.3`);
+  $("#mainTitle").html(`Character Planner for LoreRim v${curGameMechanics.name}`);
   $("#mainSkillDisplayDiv").fadeIn(500);
 });
 

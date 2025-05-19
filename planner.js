@@ -20,7 +20,6 @@ let characterData = {
   raceListID: 0,
   gameMechanicsListID: 0,
   level: 1,
-  attrIncreases: 0,
   earnedPerks: 3,
   earnedAttributes: 0,
   spentPerks: 0, // The number of perks actually taken
@@ -60,7 +59,6 @@ function initCharacterData() {
     characterData.raceListID = 0;
     characterData.gameMechanicsListID = 0;
     characterData.level = 1;
-    characterData.attrIncreases = 0;
     characterData.earnedPerks = curGameMechanics.initialPerks;
     characterData.spentPerks = 0;
     characterData.standingStone = 0;
